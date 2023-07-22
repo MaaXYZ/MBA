@@ -1,0 +1,61 @@
+{
+    "StartUp": {
+        "next": [
+            "HomeFlag",
+            "Sub_Goto_Home"
+        ]
+    },
+    "Sub_Goto_Home": {
+        "is_sub": true,
+        "next": [
+            "HomeFlag",
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Click_HomeButton",
+            "Sub_Notice",
+            "Sub_Click_BackButton",
+            "Sub_Click_CloseButton",
+            "Sub_Click_CloseFullscreenButton",
+            "Sub_StartApp"
+        ]
+    },
+    "HomeFlag": {
+        "recognition": "TemplateMatch",
+        "template": "../../Base/pipeline/Campaign/Campaign.png",
+        "roi": [ 1086, 479, 194, 146 ]
+    },
+    "Sub_StartApp": {
+        "is_sub": true,
+        "action": "StartApp",
+        "next": [
+            "MenuFlag_Partial",
+            "KeyBack_StartApp_Information"
+        ]
+    },
+    "MenuFlag_Partial": {
+        "recognition": "OCR",
+        "text": "Memu",
+        "roi": [ 0, 570, 161, 135 ],
+        "next": "ClickAndWait_AppLoading",
+        "times_limit": 4,
+        "runout_next": [
+            "StopTask"
+        ]
+    },
+    "ClickAndWait_AppLoading": {
+        "action": "Click",
+        "target": [ 0, 0, 1280, 700 ],
+        "post_wait_freezes": {
+            "time": 200,
+            "target": [ 363, 136, 553, 437 ]
+        }
+    },
+    "KeyBack_StartApp_Information": {
+        "action": "Key",
+        "key": 4,
+        "post_delay": 5000,
+        "times_limit": 30,
+        "runout_next": [
+            "StopTask"
+        ]
+    }
+}

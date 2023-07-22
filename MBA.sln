@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33712.159
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MBA.Core", "src\MBA.Core\MBA.Core.csproj", "{CA1365AD-1916-4359-AAC9-F54DFBA50C07}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MBA.Cli", "src\MBA.Cli\MBA.Cli.csproj", "{C54D42A5-D657-490B-8CE2-00FC20D50ADF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{0FAFA8D8-F731-463D-85C2-BB92B63EDED4}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA1365AD-1916-4359-AAC9-F54DFBA50C07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA1365AD-1916-4359-AAC9-F54DFBA50C07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA1365AD-1916-4359-AAC9-F54DFBA50C07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA1365AD-1916-4359-AAC9-F54DFBA50C07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C54D42A5-D657-490B-8CE2-00FC20D50ADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C54D42A5-D657-490B-8CE2-00FC20D50ADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C54D42A5-D657-490B-8CE2-00FC20D50ADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C54D42A5-D657-490B-8CE2-00FC20D50ADF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83FFA662-3AC7-407E-A01C-FA31B346C718}
+	EndGlobalSection
+EndGlobal

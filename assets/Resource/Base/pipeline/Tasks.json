@@ -1,0 +1,54 @@
+{
+    "Tasks": {
+        "next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Tasks_Partial",
+            "Sub_Click_ClaimAllButton_Tasks_Partial",
+            "Sub_Click_ClaimButton_Tasks_Partial",
+            "Stop"
+        ]
+    },
+    "Sub_Goto_Tasks_Partial": {
+        "is_sub": true,
+        "inverse": true,
+        "recognition": "OCR",
+        "text": "Tasks",
+        "roi": [ 0, 0, 450, 60 ],
+        "next": [
+            "Click_TasksButton_Partial",
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Home"
+        ]
+    },
+    "Click_TasksButton_Partial": {
+        "recognition": "OCR",
+        "text": "Tasks",
+        "roi": [ 0, 206, 147, 120 ],
+        "action": "Click",
+        "post_delay": 1500
+    },
+    "Sub_Click_ClaimAllButton_Tasks_Partial": {
+        "TODO": "使用颜色匹配",
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "Arona.png",
+        "threshold": 0.9,
+        "roi": [ 1003, 589, 277, 131 ],
+        "action": "Click",
+        "next": [
+            "Click_TouchButton_Partial"
+        ]
+    },
+    "Sub_Click_ClaimButton_Tasks_Partial": {
+        "TODO": "使用颜色匹配",
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "Arona.png",
+        "threshold": 0.9,
+        "roi": [ 880, 591, 185, 129 ],
+        "action": "Click",
+        "next": [
+            "Click_TouchButton_Partial"
+        ]
+    }
+}

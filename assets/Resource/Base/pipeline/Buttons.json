@@ -1,0 +1,191 @@
+{
+    "Sub_Click_HomeButton": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "../../Base/pipeline/Buttons/Home.png",
+        "roi": [ 1165, 0, 115, 138 ],
+        "action": "Click",
+        "post_delay": 1500
+    },
+    "Sub_Click_BackButton": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "../../Base/pipeline/Buttons/Back.png",
+        "roi": [ 0, 0, 143, 140 ],
+        "action": "Click",
+        "post_delay": 1500
+    },
+    "Click_BackButton": {
+        "recognition": "TemplateMatch",
+        "template": "../../Base/pipeline/Buttons/Back.png",
+        "roi": [ 0, 0, 143, 140 ],
+        "action": "Click",
+        "post_delay": 1500
+    },
+    "Sub_Click_CloseButton": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "../../Base/pipeline/Buttons/Close.png",
+        "roi": [
+            [ 1113, 52, 131, 131 ],
+            [ 857, 123, 131, 131 ],
+            [ 822, 97, 131, 131 ]
+        ],
+        "action": "Click",
+        "post_delay": 1500
+    },
+    "Sub_Click_PassButton": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "../../Base/pipeline/Buttons/Pass.png",
+        "roi": [ 1167, 0, 113, 139 ],
+        "action": "Click",
+        "post_delay": 1500
+    },
+    "Sub_Click_CloseFullscreenButton": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "../../Base/pipeline/Buttons/CloseFullscreen.png",
+        "roi": [ 1145, 0, 135, 145 ],
+        "action": "Click",
+        "post_delay": 1500
+    },
+    "Click_TouchButton_Partial": {
+        "recognition": "OCR",
+        "text": "TOUCH",
+        "roi": [ 525, 570, 228, 124 ],
+        "action": "Click"
+    },
+    "Start_SweepMission_Partial": {
+        "recognition": "OCR",
+        "text": "MissionInfo",
+        "roi": [ 496, 76, 290, 129 ],
+        "next": [
+            "Click_PlusButtons",
+            "Stop_SweepZeroTimes",
+            "Click_StartSweepButton_Partial"
+        ]
+    },
+    "Click_PlusButtons": {
+        "doc": "times_limit setted in code",
+        "recognition": "TemplateMatch",
+        "template": "../../Base/pipeline/Buttons/Plus.png",
+        "threshold": 0.8,
+        "roi": [ 970, 235, 130, 130 ],
+        "action": "Click",
+        "next": [
+            "Click_PlusButtons",
+            "Stop_SweepZeroTimes",
+            "Click_StartSweepButton_Partial"
+        ],
+        "runout_next": [
+            "Stop_SweepZeroTimes",
+            "Click_StartSweepButton_Partial"
+        ]
+    },
+    "Stop_SweepZeroTimes": {
+        "recognition": "OCR",
+        "text": "0",
+        "roi": [ 881, 279, 113, 43 ]
+    },
+    "Click_StartSweepButton_Partial": {
+        "recognition": "OCR",
+        "text": "StartSweep",
+        "roi": [ 806, 343, 261, 131 ],
+        "action": "Click",
+        "next": [
+            "Notice_Click_ConfirmButton_OnSweeping_Partial"
+        ]
+    },
+    "Notice_Click_ConfirmButton_OnSweeping_Partial": {
+        "recognition": "OCR",
+        "text": "Confirm",
+        "roi": [ 360, 135, 560, 440 ],
+        "action": "Click",
+        "next": [
+            "Click_SkipButton_Partial",
+            "Click_ConfirmButton_OnSweeped_Partial"
+        ]
+    },
+    "Click_SkipButton_Partial": {
+        "recognition": "OCR",
+        "text": "Skip",
+        "roi": [ 535, 472, 213, 74 ],
+        "target": [ 535, 472, 213, 74 ],
+        "action": "Click",
+        "next": [
+            "Click_ConfirmButton_OnSweeped_Partial"
+        ]
+    },
+    "Click_ConfirmButton_OnSweeped_Partial": {
+        "recognition": "OCR",
+        "text": "Confirm",
+        "roi": [ 535, 547, 213, 74 ],
+        "target": [ 535, 547, 213, 74 ],
+        "action": "Click",
+        "post_delay": 1500
+    },
+    "Sub_Click_EnterButton_OnClearedMission_Partial": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "text": "Enter",
+        "roi": [ 1040, 80, 155, 620 ],
+        "next": [
+            "Click_EnterButton_OnTheRightSideOfThreeStarsFlag1",
+            "Click_EnterButton_OnTheRightSideOfThreeStarsFlag2",
+            "Click_EnterButton_OnTheRightSideOfThreeStarsFlag3",
+            "Click_EnterButton_OnTheRightSideOfThreeStarsFlag4",
+            "Click_EnterButton_OnTheRightSideOfThreeStarsFlag5",
+            "Click_EnterButton_OnTheRightSideOfThreeStarsFlag6",
+            "StopTask"
+        ]
+    },
+    "Click_EnterButton_OnTheRightSideOfThreeStarsFlag1": {
+        "recognition": "TemplateMatch",
+        "template": "../../Base/pipeline/Buttons/ThreeStarsFlag.png",
+        "threshold": 0.9,
+        "roi": [ 665, 555, 110, 130 ],
+        "target_offset": [ 375, 0, 35, -5 ],
+        "action": "Click"
+    },
+    "Click_EnterButton_OnTheRightSideOfThreeStarsFlag2": {
+        "recognition": "TemplateMatch",
+        "template": "../../Base/pipeline/Buttons/ThreeStarsFlag.png",
+        "threshold": 0.9,
+        "roi": [ 665, 470, 110, 130 ],
+        "target_offset": [ 375, 0, 35, -5 ],
+        "action": "Click"
+    },
+    "Click_EnterButton_OnTheRightSideOfThreeStarsFlag3": {
+        "recognition": "TemplateMatch",
+        "template": "../../Base/pipeline/Buttons/ThreeStarsFlag.png",
+        "threshold": 0.9,
+        "roi": [ 665, 385, 110, 130 ],
+        "target_offset": [ 375, 0, 35, -5 ],
+        "action": "Click"
+    },
+    "Click_EnterButton_OnTheRightSideOfThreeStarsFlag4": {
+        "recognition": "TemplateMatch",
+        "template": "../../Base/pipeline/Buttons/ThreeStarsFlag.png",
+        "threshold": 0.9,
+        "roi": [ 665, 300, 110, 130 ],
+        "target_offset": [ 375, 0, 35, -5 ],
+        "action": "Click"
+    },
+    "Click_EnterButton_OnTheRightSideOfThreeStarsFlag5": {
+        "recognition": "TemplateMatch",
+        "template": "../../Base/pipeline/Buttons/ThreeStarsFlag.png",
+        "threshold": 0.9,
+        "roi": [ 665, 215, 110, 130 ],
+        "target_offset": [ 375, 0, 35, -5 ],
+        "action": "Click"
+    },
+    "Click_EnterButton_OnTheRightSideOfThreeStarsFlag6": {
+        "recognition": "TemplateMatch",
+        "template": "../../Base/pipeline/Buttons/ThreeStarsFlag.png",
+        "threshold": 0.9,
+        "roi": [ 665, 130, 110, 130 ],
+        "target_offset": [ 375, 0, 35, -5 ],
+        "action": "Click"
+    }
+}

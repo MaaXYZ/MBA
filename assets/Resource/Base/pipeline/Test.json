@@ -1,0 +1,17 @@
+{
+    "Test": {
+        "next": [
+            "Test1",
+            "Stop"
+        ]
+    },
+    "Test1": {
+        "recognition": "Custom",
+        "custom_recognizer": "ColorMatch",
+        "custom_recognizer_param": {
+            "a": "a"
+        },
+        "roi": [ 1143, 543, 35, 50 ],
+        "action": "Click"
+    }
+}

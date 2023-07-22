@@ -1,0 +1,14 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="Maa.AgentBinary" Version="1.0.0" />
+    <PackageVersion Include="Maa.Framework.Runtimes" Version="0.3.7" />
+    <PackageVersion Include="Maa.ToolKit.Extensions" Version="0.3.7.2" />
+    <PackageVersion Include="Serilog" Version="3.0.1" />
+    <PackageVersion Include="Serilog.Sinks.Debug" Version="2.0.0" />
+    <PackageVersion Include="Serilog.Sinks.Console" Version="4.1.0" />
+    <PackageVersion Include="Serilog.Sinks.File" Version="5.0.0" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,373 @@
+{
+    "MenuFlag_Partial": {
+        "text": [
+            "Menu",
+            "MENU"
+        ]
+    },
+    "CampaignFlag_Partial": {
+        "text": [
+            "Campaign"
+        ]
+    },
+    "Sub_Wait_NowLoading_Partial": {
+        "text": [
+            "NowLoading",
+            "nowLoading"
+        ]
+    },
+    "Notice_Click_CancelButton_Partial": {
+        "text": [
+            "Cancel"
+        ]
+    },
+    "Notice_Click_ConfirmButton_Partial": {
+        "text": [
+            "Confirm"
+        ]
+    },
+    "Click_ConfirmButton_OnBattleComplete_Partial": {
+        "text": [
+            "Confirm"
+        ]
+    },
+    "Click_ConfirmButton_OnRewardAcquired_Partial": {
+        "text": [
+            "Confirm"
+        ]
+    },
+    "Notice_Click_ConfirmButton_OnInviting_Partial": {
+        "text": [
+            "Confirm"
+        ]
+    },
+    "Notice_Click_ConfirmButton_OnSweeping_Partial": {
+        "text": [
+            "Confirm"
+        ]
+    },
+    "Click_ConfirmButton_OnSweeped_Partial": {
+        "text": [
+            "Confirm"
+        ]
+    },
+    "Notice_Quit?_Partial": {
+        "text": [
+            "Quit?"
+        ]
+    },
+    "Notice_TimedOut_Partial": {
+        "text": [
+            "List refresh timed out.",
+            "timed out",
+            "timedout"
+        ]
+    },
+    "Notice_Standby_Partial": {
+        "text": [
+            "Standby"
+        ]
+    },
+    "Notice_BattleResult_Partial": {
+        "text": [
+            "Battle Result",
+            "BattleResult"
+        ]
+    },
+    "Sub_Goto_Mailbox_Partial": {
+        "text": "Mailbox"
+    },
+    "MailboxFlag_Partial": {
+        "text": "Mailbox"
+    },
+    "NoMoreMailFlag_Partial": {
+        "text": [
+            "No more mail.",
+            "No more mail",
+            "Nomoremail.",
+            "Nomoremail"
+        ]
+    },
+    "Click_ClaimAllButton_Mailbox_Partial": {
+        "text": [
+            "Claim All",
+            "ClaimAll"
+        ]
+    },
+
+    
+    "Sub_Goto_Club_Partial": {
+        "text": [
+            "Club Lobby",
+            "Club"
+        ]
+    },
+    "Click_ClubButton_Partial": {
+        "text": [
+            "Club"
+        ]
+    },
+    "TacticalChallengeFlag_Partial": {
+        "text": [
+            "Tactical Challenge",
+            "TacticalChallenge"
+        ]
+    },
+    "Sub_Start_TacticalChallenge_Partial": {
+        "text": [
+            "Tactical Challenge",
+            "TacticalChallenge"
+        ]
+    },
+    "Sub_End_TacticalChallenge_Partial": {
+        "text": [
+            "Tactical Challenge",
+            "TacticalChallenge"
+        ]
+    },
+    "Click_TacticalChallenge_Partial": {
+        "text": [
+            "Tactical",
+            "Challenge"
+        ]
+    },
+    "Click_ClaimButton_ForCreditPoints_Partial": {
+        "text": [
+            "Claim"
+        ]
+    },
+    "Click_ClaimButton_ForPyroxenes_Partial": {
+        "text": [
+            "Claim"
+        ]
+    },
+    "Click_TouchButton_Partial": {
+        "text": [
+            "TOUCH"
+        ]
+    },
+    "Start_SweepMission_Partial": {
+        "text": [
+            "Mission Info",
+            "MissionInfo"
+        ]
+    },
+    "Click_StartSweepButton_Partial": {
+        "text": [
+            "Start Sweep",
+            "Sweep",
+            "sweep"
+        ]
+    },
+    "Click_SkipButton_Partial": {
+        "text": [
+            "Skip",
+            "skip"
+        ]
+    },
+    "Sub_Click_EnterButton_OnClearedMission_Partial": {
+        "text": [
+            "Enter"
+        ]
+    },
+    "Click_RankByTheFront_Partial": {
+        "text": [
+            "Rank"
+        ]
+    },
+    "Click_FormationButton_Partial": {
+        "text": [
+            "Formation"
+        ]
+    },
+    "Click_MobilizeButton_Partial": {
+        "text": [
+            "Mobilize"
+        ]
+    },
+    "CafeFlag_Partial": {
+        "text": [
+            "Schale Cafe",
+            "Cafe"
+        ]
+    },
+    "Click_CafeButton_Partial": {
+        "text": [
+            "Cafe"
+        ]
+    },
+    "Check_RelationshipRankUp_Partial": {
+        "text": [
+            "Relationship rank up!",
+            "Relationship"
+        ]
+    },
+    "Sub_Click_InvitationButton_Partial": {
+        "text": [
+            "Available for Use",
+            "Available"
+        ]
+    },
+    "Click_InviteButton_Partial": {
+        "text": [
+            "Invite"
+        ]
+    },
+    "Sub_Click_CafeEarningsButton_Partial": {
+        "text": [
+            "Available to claim!",
+            "Available",
+            "Full",
+            "full"
+        ]
+    },
+    "Click_ClaimButton_ForCafeEarnings_Partial": {
+        "text": [
+            "Claim"
+        ]
+    },
+    "Click_ComfortButton_Partial": {
+        "text": [
+            "Comfort"
+        ]
+    },
+    "Click_RankUpButton_OnCafeInfo_Partial": {
+        "text": [
+            "Rank Up",
+            "RankUp",
+            "Rank"
+        ]
+    },
+    "Click_RankUpButton_OnCafeRankUp_Partial": {
+        "text": [
+            "Rank Up",
+            "RankUp",
+            "Rank"
+        ]
+    },
+    "Sub_Goto_Scrimmage_Partial": {
+        "text": [
+            "Academy Select",
+            "AcademySelect"
+        ]
+    },
+    "Click_ScrimmageButton_Partial": {
+        "text": [
+            "Scrimmage",
+            "scrimmage"
+        ]
+    },
+    "ScrimmageFlag_Partial": {
+        "text": [
+            "Scrimmage"
+        ]
+    },
+    "AcademySelectFlag_Partial": {
+        "text": [
+            "Academy Select",
+            "AcademySelect"
+        ]
+    },
+    "Click_Trinity_Partial": {
+        "text": [
+            "Trinity"
+        ]
+    },
+    "Click_Gehenna_Partial": {
+        "text": [
+            "Gehenna"
+        ]
+    },
+    "Click_Millennium_Partial": {
+        "text": [
+            "Millennium"
+        ]
+    },
+    "Click_CommissionsButton_Partial": {
+        "text": [
+            "Commissions"
+        ]
+    },
+    "CommissionsFlag_Partial": {
+        "text": [
+            "Commissions"
+        ]
+    },
+    "RequestSelectFlag_Partial": {
+        "text": [
+            "Request Select",
+            "RequestSelect"
+        ]
+    },
+    "Start_Commissions_Partial": {
+        "text": [
+            "Request Select",
+            "RequestSelect"
+        ]
+    },
+    "Click_BaseDefense_Partial": {
+        "text": [
+            "Base Defense",
+            "BaseDefense"
+        ]
+    },
+    "Click_ItemRetrieval_Partial": {
+        "text": [
+            "Item Retrieval",
+            "ItemRetrieval"
+        ]
+    },
+    "Sub_Goto_Bounty_Partial": {
+        "text": [
+            "Location Select",
+            "LocationSelect"
+        ]
+    },
+    "Click_BountyButton_Partial": {
+        "text": [
+            "Bounty"
+        ]
+    },
+    "BountyFlag_Partial": {
+        "text": [
+            "Bounty"
+        ]
+    },
+    "LocationSelectFlag_Partial": {
+        "text": [
+            "Location Select",
+            "LocationSelect"
+        ]
+    },
+    "Click_Overpass_Partial": {
+        "text": [
+            "Overpass"
+        ]
+    },
+    "Click_DesertRailroad_Partial": {
+        "text": [
+            "Desert Railroad",
+            "DesertRailroad"
+        ]
+    },
+    "Click_Classroom_Partial": {
+        "text": [
+            "Classroom"
+        ]
+    },
+    "Sub_Goto_Tasks_Partial": {
+        "text": [
+            "Tasks"
+        ]
+    },
+    "Click_TasksButton_Partial": {
+        "text": [
+            "Tasks"
+        ]
+    },
+    "0": {
+        "text": [
+            "00"
+        ]
+    }
+}

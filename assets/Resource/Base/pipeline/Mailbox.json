@@ -1,0 +1,50 @@
+{
+    "Mailbox": {
+        "next": [
+            "Sub_Goto_Mailbox_Partial",
+            "NoMoreMailFlag_Partial",
+            "Click_ClaimAllButton_Mailbox_Partial"
+        ]
+    },
+    "Sub_Goto_Mailbox_Partial": {
+        "is_sub": true,
+        "inverse": true,
+        "recognition": "OCR",
+        "text": "Mailbox",
+        "roi": [ 0, 0, 450, 60 ],
+        "next": [
+            "MailboxFlag_Partial",
+            "Sub_Wait_NowLoading_Partial",
+            "Click_MailboxButton",
+            "Sub_Goto_Home"
+        ]
+    },
+    "MailboxFlag_Partial": {
+        "recognition": "OCR",
+        "text": "Mailbox",
+        "roi": [ 0, 0, 450, 60 ]
+    },
+    "Click_MailboxButton": {
+        "recognition": "TemplateMatch",
+        "template": "../../Base/pipeline/Mailbox/Mailbox.png",
+        "roi": [ 1077, 0, 131, 126 ],
+        "action": "Click",
+        "post_delay": 1500
+    },
+    "NoMoreMailFlag_Partial": {
+        "recognition": "OCR",
+        "text": "NoMoreMail",
+        "roi": [ 621, 427, 295, 131 ]
+    },
+    "Click_ClaimAllButton_Mailbox_Partial": {
+        "recognition": "OCR",
+        "text": "ClaimAll",
+        "roi": [ 1038, 641, 193, 62 ],
+        "target": [ 1038, 641, 193, 62 ],
+        "action": "Click",
+        "next": [
+            "Click_TouchButton_Partial"
+        ],
+        "timeout": 5000
+    }
+}

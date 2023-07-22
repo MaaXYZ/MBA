@@ -1,0 +1,99 @@
+{
+    "Crafting": {
+        "next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_MaterialSynthesis_Partial",
+            "Sub_Click_Receive_Partial",
+            "Sub_Start_MaterialSynthesis_Partial",
+            "Start_MaterialFusion_Partial",
+            "Stop"
+        ]
+    },
+    "Sub_Goto_Crafting_Partial": {
+        "is_sub": true,
+        "inverse": true,
+        "recognition": "OCR",
+        "text": "Crafting",
+        "roi": [ 0, 0, 450, 60 ],
+        "next": [
+            "Click_CraftingButton_Partial",
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Home"
+        ]
+    },
+    "Click_CraftingButton_Partial": {
+        "recognition": "OCR",
+        "text": "Crafting",
+        "roi": [ 594, 628, 170, 92 ],
+        "action": "Click",
+        "post_delay": 1500
+    },
+    "Sub_Click_Receive_Partial": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "text": "Receive",
+        "roi": [671, 216, 565, 413],
+        "action": "Click",
+        "next": [
+            "Click_TouchButton_Partial"
+        ],
+        "timeout": 5000
+    },
+    "Sub_Start_MaterialSynthesis_Partial": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "text": "StartCrafting",
+        "roi": [671, 216, 565, 413],
+        "action": "Click",
+        "post_delay": 1500,
+        "next": [
+            "Sub_Click_KeystoneButton"
+        ],
+        "timeout": 5000
+    },
+    "Start_MaterialFusion_Partial": {
+        "enabled": false,
+        "next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_MaterialSynthesis_Partial",
+            "Sub_Click_Receive_Partial",
+            "TODO"
+        ]
+    },
+    "Sub_Goto_MaterialSynthesis_Partial": {
+        "is_sub": true,
+        "inverse": true,
+        "recognition": "TemplateMatch",
+        "template": "Arona.png",
+        "next": [
+            "Click_MaterialSynthesis_Partial",
+            "Sub_Notice",
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Crafting_Partial"
+        ]
+    },
+    "Sub_Goto_MaterialFusion_Partial": {
+        "is_sub": true,
+        "inverse": true,
+        "recognition": "TemplateMatch",
+        "template": "Arona.png",
+        "next": [
+            "Click_MaterialFusion_Partial",
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Crafting_Partial"
+        ]
+    },
+    "Click_MaterialSynthesis_Partial": {
+        "recognition": "TemplateMatch",
+        "template": "Arona.png",
+        "roi": [ 0, 105, 285, 165 ],
+        "action": "Click"
+    },
+    "Click_MaterialFusion_Partial": {
+        "recognition": "TemplateMatch",
+        "template": "Arona.png",
+        "roi": [ 0, 185, 285, 165 ],
+        "action": "Click"
+    },
+    "Sub_Click_KeystoneButton":{}
+}

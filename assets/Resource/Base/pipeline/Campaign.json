@@ -1,0 +1,23 @@
+{
+    "Sub_Goto_Campaign": {
+        "is_sub": true,
+        "next": [
+            "CampaignFlag_Partial",
+            "Sub_Wait_NowLoading_Partial",
+            "Click_Campaign",
+            "Sub_Goto_Home"
+        ]
+    },
+    "CampaignFlag_Partial": {
+        "recognition": "OCR",
+        "text": "Campaign",
+        "roi": [ 0, 0, 450, 60 ]
+    },
+    "Click_Campaign": {
+        "recognition": "TemplateMatch",
+        "template": "../../Base/pipeline/Campaign/Campaign.png",
+        "roi": [ 1087, 478, 193, 147 ],
+        "action": "Click",
+        "post_delay": 1500
+    }
+}

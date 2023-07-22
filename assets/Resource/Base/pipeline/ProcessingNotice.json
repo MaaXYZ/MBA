@@ -1,0 +1,73 @@
+{
+    "Stop": { },
+    "StopTask": {
+        "action": "StopTask"
+    },
+    "TODO": {
+        "action": "StopTask"
+    },
+    "Back": {
+        "action": "Key",
+        "key": 4
+    },
+    "Sub_Back": {
+        "is_sub": true,
+        "action": "Key",
+        "key": 4
+    },
+    "Sub_Wait_NowLoading_Partial": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "text": "NowLoading",
+        "roi": [ 922, 642, 204, 43 ]
+    },
+
+
+
+
+    "Sub_Notice":{
+        "is_sub": true,
+        "recognition": "OCR",
+        "text": "Notice",
+        "roi": [ 360, 135, 560, 440 ],
+        "next": [
+            "Notice_Quit?_Partial",
+            "Notice_Unknown"
+        ]
+    },
+    "Notice_Click_CancelButton_Partial": {
+        "recognition": "OCR",
+        "text": "Cancel",
+        "roi": [ 360, 135, 560, 440 ],
+        "action": "Click"
+    },
+    "Notice_Click_ConfirmButton_Partial": {
+        "recognition": "OCR",
+        "text": "Confirm",
+        "roi": [ 360, 135, 560, 440 ],
+        "action": "Click"
+    },
+    "Notice_Unknown": {
+        "notify": true,
+        "next": [
+            "StopTask"
+        ]
+    },
+    "Notice_Quit?_Partial": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "text": "Quit?",
+        "roi": [ 360, 135, 560, 440 ],
+        "next": [
+            "Notice_Click_CancelButton_Partial"
+        ]
+    },
+    "note1": {
+        "text": "The roi (1920*1080) of a Notice MessageBox is",
+        "roi": [ 360, 135, 560, 440 ]
+    },
+    "note2": {
+        "text": "The roi (1920*1080) of a title flag is",
+        "roi": [ 0, 0, 450, 60 ]
+    }
+}

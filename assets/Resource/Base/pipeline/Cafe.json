@@ -1,0 +1,142 @@
+{
+    "Cafe": {
+        "next": [
+            "Start_Cafe_Partial",
+            "Sub_Goto_Cafe"
+        ]
+    },
+    "Sub_Goto_Cafe": {
+        "is_sub": true,
+        "next": [
+            "CafeFlag_Partial",
+            "Sub_Wait_NowLoading_Partial",
+            "Click_CafeButton_Partial",
+            "Sub_Goto_Home"
+        ]
+    },
+    "Click_CafeButton_Partial": {
+        "recognition": "OCR",
+        "text": "Cafe",
+        "roi": [ 23, 627, 144, 93 ],
+        "action": "Click",
+        "post_delay": 1500
+    },
+    "CafeFlag_Partial": {
+        "recognition": "OCR",
+        "text": "Cafe",
+        "roi": [ 0, 0, 450, 60 ]
+    },
+    "Start_Cafe_Partial": {
+        "recognition": "OCR",
+        "text": "Cafe",
+        "roi": [ 0, 0, 450, 60 ],
+        "next": [
+            "Sub_Click_CloseButton",
+            "Sub_Click_StudentAffection",
+            "Sub_Click_InvitationButton_Partial",
+            "Sub_Click_CafeEarningsButton_Partial",
+            "Click_ComfortButton_Partial",
+            "Stop"
+        ]
+    },
+    "Sub_Click_StudentAffection": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "../../Base/pipeline/Cafe/StudentAffection.png",
+        "green_mask": true,
+        "threshold": 0.65,
+        "target_offset": [ 50, 40, 0, 0 ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 1500,
+            "target": [ 0, 660, 1280,60 ]
+        },
+        "next": [
+            "Check_RelationshipRankUp_Partial",
+            "Stop"
+        ]
+    },
+    "Check_RelationshipRankUp_Partial": {
+        "recognition": "OCR",
+        "text": "RelationshipRankUp",
+        "roi": [ 342, 543, 599, 165 ],
+        "target": [ 0, 0, 0, 0 ],
+        "action": "Click"
+    },
+    "Sub_Click_InvitationButton_Partial": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "text": "Available",
+        "roi": [ 687, 538, 229, 117 ],
+        "target": [ 793, 619, 73, 79 ],
+        "action": "Click",
+        "next": [
+            "Click_InviteButton_Partial",
+            "Stop"
+        ]
+    },
+    "Click_InviteButton_Partial": {
+        "recognition": "OCR",
+        "text": "Invite",
+        "roi": [ 417, 187, 437, 79 ],
+        "action": "Click",
+        "next": [
+            "Notice_Click_ConfirmButton_OnInviting_Partial"
+        ]
+    },
+    "Notice_Click_ConfirmButton_OnInviting_Partial": {
+        "recognition": "OCR",
+        "text": "Confirm",
+        "roi": [ 360, 135, 560, 440 ],
+        "action": "Click",
+        "post_wait_freezes": 1500
+    },
+    "Sub_Click_CafeEarningsButton_Partial": {
+        "recognition": "OCR",
+        "text": "Available",
+        "roi": [ 1027, 520, 253, 120 ],
+        "target": [ 1079, 606, 152, 79 ],
+        "action": "Click",
+        "next": [
+            "Click_ClaimButton_ForCafeEarnings_Partial"
+        ]
+    },
+    "Click_ClaimButton_ForCafeEarnings_Partial": {
+        "recognition": "OCR",
+        "text": "Claim",
+        "roi": [ 535, 484, 210, 73 ],
+        "target": [ 535, 484, 210, 73 ],
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "Click_TouchButton_Partial"
+        ],
+        "timeout": 5000
+    },
+    "Click_ComfortButton_Partial": {
+        "recognition": "OCR",
+        "text": "Comfort",
+        "roi": [ 903, 607, 151, 80 ],
+        "target": [ 903, 607, 151, 80 ],
+        "action": "Click",
+        "next": [
+            "Click_RankUpButton_OnCafeInfo_Partial"
+        ]
+    },
+    "Click_RankUpButton_OnCafeInfo_Partial": {
+        "recognition": "OCR",
+        "text": "RankUp",
+        "roi": [ 533, 498, 215, 71 ],
+        "target": [ 533, 498, 215, 71 ],
+        "action": "Click",
+        "next": [
+            "Click_RankUpButton_OnCafeRankUp_Partial"
+        ]
+    },
+    "Click_RankUpButton_OnCafeRankUp_Partial": {
+        "recognition": "OCR",
+        "text": "RankUp",
+        "roi": [ 746, 517, 227, 137 ],
+        "action": "Click"
+    }
+}

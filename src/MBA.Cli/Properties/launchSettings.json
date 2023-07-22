@@ -1,0 +1,10 @@
+{
+    "profiles": {
+        "MBA.Cli": {
+            "commandName": "Project",
+            "environmentVariables": {
+                "MBA_ENVIRONMENT": "Debug"
+            }
+        }
+    }
+}

@@ -1,0 +1,197 @@
+{
+    "TacticalChallenge": {
+        "next": [
+            "Sub_Start_TacticalChallenge_Partial",
+            "Sub_Goto_TacticalChallenge"
+        ]
+    },
+    "TacticalChallenge0": {
+        "times_limit": 1,
+        "next": [
+            "Click_ClaimButton_ForCreditPoints_Partial",
+            "Sub_Goto_TacticalChallenge"
+        ],
+        "runout_next": [
+            "StopTask"
+        ]
+    },
+    "Sub_Goto_TacticalChallenge": {
+        "is_sub": true,
+        "next": [
+            "TacticalChallengeFlag_Partial",
+            "Sub_Wait_NowLoading_Partial",
+            "Click_TacticalChallenge_Partial",
+            "Sub_Goto_Campaign"
+        ]
+    },
+    "TacticalChallengeFlag_Partial": {
+        "recognition": "OCR",
+        "text": "TacticalChallenge",
+        "roi": [ 0, 0, 450, 60 ]
+    },
+    "Click_TacticalChallenge_Partial": {
+        "recognition": "OCR",
+        "text": "TacticalChallenge",
+        "roi": [ 1031, 397, 155, 87 ],
+        "target": [ 1031, 397, 155, 87 ],
+        "action": "Click",
+        "post_delay": 1500
+    },
+    "Sub_Start_TacticalChallenge_Partial": {
+        "doc": "times_limit setted in code",
+        "is_sub": true,
+        "times_limit": 5,
+        "recognition": "OCR",
+        "text": "TacticalChallenge",
+        "roi": [ 0, 0, 450, 150 ],
+        "next": [
+            "End_TacticalChallenge_Partial",
+            "Click_RankByTheFront_Partial"
+        ],
+        "runout_next": [
+            "Sub_End_TacticalChallenge_Partial"
+        ]
+    },
+    "End_TacticalChallenge_Partial": {
+        "recognition": "OCR",
+        "text": "0/5",
+        "roi": [ 167, 427, 128, 121 ],
+        "next": [
+            "Sub_End_TacticalChallenge_Partial"
+        ]
+    },
+    "Sub_End_TacticalChallenge_Partial": {
+        "doc": "times_limit: 0 setted in code, 0 -> TacticalChallenge0",
+        "is_sub": true,
+        "times_limit": 1,
+        "recognition": "OCR",
+        "text": "TacticalChallenge",
+        "roi": [ 0, 0, 450, 150 ],
+        "next": [
+            "Click_ClaimButton_ForPyroxenes_Partial"
+        ],
+        "runout_next": [
+            "TacticalChallenge0"
+        ]
+    },
+    "Click_ClaimButton_ForCreditPoints_Partial": {
+        "recognition": "OCR",
+        "text": "Claim",
+        "roi": [ 307, 359, 89, 58 ],
+        "target": [ 307, 359, 89, 58 ],
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "Click_TouchButton_Partial"
+        ],
+        "timeout": 5000
+    },
+    "Click_ClaimButton_ForPyroxenes_Partial": {
+        "recognition": "OCR",
+        "text": "Claim",
+        "roi": [ 307, 438, 89, 58 ],
+        "target": [ 307, 438, 89, 58 ],
+        "action": "Click",
+        "next": [
+            "Click_TouchButton_Partial"
+        ],
+        "timeout": 5000
+    },
+    "Click_RankByTheFront_Partial": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "text": "Rank",
+        "roi": [ 458, 174, 778, 150 ],
+        "target": [ 458, 174, 778, 150 ],
+        "action": "Click",
+        "next": [
+            "Click_FormationButton_Partial"
+        ]
+    },
+    "Click_FormationButton_Partial": {
+        "recognition": "OCR",
+        "text": "Formation",
+        "roi": [ 537, 537, 205, 70 ],
+        "target": [ 537, 537, 205, 70 ],
+        "action": "Click",
+        "next": [
+            "Notice_TimedOut_Partial",
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Click_SkipTactics_Partial",
+            "Click_MobilizeButton_Partial"
+        ]
+    },
+    "Sub_Click_SkipTactics_Partial": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "Arona.png",
+        "threshold": 0.95,
+        "roi": [ 1040, 532, 240, 143 ],
+        "target": [ 1090, 582, 160, 43 ],
+        "action": "Click"
+    },
+    "Click_MobilizeButton_Partial": {
+        "recognition": "OCR",
+        "text": "Mobilize",
+        "roi": [ 1089, 636, 156, 68 ],
+        "target": [ 1089, 636, 156, 68 ],
+        "action": "Click",
+        "post_delay": 1500,
+        "next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Notice_TimedOut_Partial",
+            "Notice_Standby_Partial",
+            "Sub_Click_PassButton",
+            "Click_ConfirmButton_OnBattleComplete_Partial",
+            "Notice_BattleResult_Partial"
+        ]
+    },
+    "Click_ConfirmButton_OnBattleComplete_Partial": {
+        "recognition": "OCR",
+        "text": "Confirm",
+        "roi": [ 1110, 637, 116, 54 ],
+        "target": [ 1110, 637, 116, 54 ],
+        "action": "Click",
+        "next": [
+            "Click_ConfirmButton_OnRewardAcquired_Partial"
+        ]
+    },
+    "Click_ConfirmButton_OnRewardAcquired_Partial": {
+        "recognition": "OCR",
+        "text": "Confirm",
+        "roi": [ 540, 625, 201, 69 ],
+        "target": [ 540, 625, 201, 69 ],
+        "action": "Click"
+    },
+    "Notice_TimedOut_Partial": {
+        "recognition": "OCR",
+        "text": "List refresh timed out.",
+        "roi": [ 458, 268, 366, 131 ],
+        "target": [ 537, 467, 204, 69 ],
+        "action": "Click",
+        "next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Click_RankByTheFront_Partial"
+        ]
+    },
+    "Notice_Standby_Partial": {
+        "recognition": "OCR",
+        "text": "Standby",
+        "roi": [ 394, 171, 492, 366 ],
+        "target": [ 531, 431, 217, 71 ],
+        "action": "Click",
+        "post_delay": 50000,
+        "next": [
+            "Click_MobilizeButton_Partial"
+        ]
+    },
+    "Notice_BattleResult_Partial": {
+        "recognition": "OCR",
+        "text": "BattleResult",
+        "roi": [ 360, 135, 560, 440 ],
+        "notify": true,
+        "next": [
+            "Notice_Click_ConfirmButton_Partial"
+        ]
+    }
+}
