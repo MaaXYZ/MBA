@@ -140,6 +140,7 @@
         "next": [
             "Sub_Wait_NowLoading_Partial",
             "Notice_TimedOut_Partial",
+            "Notice_RankChanged_Partial",
             "Notice_Standby_Partial",
             "Sub_Click_PassButton",
             "Click_ConfirmButton_OnBattleComplete_Partial",
@@ -166,7 +167,18 @@
     "Notice_TimedOut_Partial": {
         "recognition": "OCR",
         "text": "List refresh timed out.",
-        "roi": [ 458, 268, 366, 131 ],
+        "roi": [ 360, 135, 560, 440 ],
+        "target": [ 537, 467, 204, 69 ],
+        "action": "Click",
+        "next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Click_RankByTheFront_Partial"
+        ]
+    },
+    "Notice_RankChanged_Partial": {
+        "recognition": "OCR",
+        "text": "RankChanged",
+        "roi": [ 360, 135, 560, 440 ],
         "target": [ 537, 467, 204, 69 ],
         "action": "Click",
         "next": [
@@ -177,7 +189,7 @@
     "Notice_Standby_Partial": {
         "recognition": "OCR",
         "text": "Standby",
-        "roi": [ 394, 171, 492, 366 ],
+        "roi": [ 360, 135, 560, 440 ],
         "target": [ 531, 431, 217, 71 ],
         "action": "Click",
         "post_delay": 50000,

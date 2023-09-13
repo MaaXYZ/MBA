@@ -63,6 +63,13 @@
             "timedout"
         ]
     },
+    "Notice_RankChanged_Partial": {
+        "text": [
+            "The opponent's rank has changed.",
+            "rank has changed",
+            "has changed"
+        ]
+    },
     "Notice_Standby_Partial": {
         "text": [
             "Standby"
@@ -95,7 +102,7 @@
         ]
     },
 
-    
+
     "Sub_Goto_Club_Partial": {
         "text": [
             "Club Lobby",
