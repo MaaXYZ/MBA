@@ -1,27 +1,23 @@
 {
     "Sub_Click_SkipTactics_Partial": {
-        "template": "Campaign/TacticalChallenge/SkipTactics.png"
+        "template": "../image/Campaign/TacticalChallenge/SkipTactics.png"
     },
     "Sub_Goto_MaterialSynthesis_Partial": {
-        "inverse": true,
-        "template": "Crafting/MaterialFusion.png"
+        "template": "../image/Crafting/MaterialFusion.png"
     },
     "Sub_Goto_MaterialFusion_Partial": {
-        "inverse": true,
-        "template": "Crafting/MaterialSynthesis.png"
+        "template": "../image/Crafting/MaterialSynthesis.png"
     },
     "Click_MaterialSynthesis_Partial": {
-        "template": "Crafting/MaterialSynthesis.png"
+        "template": "../image/Crafting/MaterialSynthesis.png"
     },
     "Click_MaterialFusion_Partial": {
-        "template": "Crafting/MaterialFusion.png"
+        "template": "../image/Crafting/MaterialFusion.png"
     },
     "Sub_Click_ClaimAllButton_Tasks_Partial": {
-        "template": "Tasks/ClaimAll.png"
+        "template": "../image/Tasks/ClaimAll.png"
     },
     "Sub_Click_ClaimButton_Tasks_Partial": {
-        "template": [
-            "Tasks/Claim.png"
-        ]
+        "template": "../image/Tasks/Claim.png"
     }
 }

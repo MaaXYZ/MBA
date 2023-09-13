@@ -24,7 +24,7 @@ public static class TaskTypeExtensions
     private static readonly List<TaskType> _taskList = new()
     {
         //TaskType.Crafting,          TODO
-        //TaskType.TacticalChallenge, TODO: StopTask Bug
+        TaskType.TacticalChallenge,
         TaskType.Bounty,
         TaskType.Club,
         TaskType.Mailbox,

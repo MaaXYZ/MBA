@@ -67,7 +67,7 @@
     - [ ] Crafting : 需要判断颜色 + 遍历所有可选项
     - [ ] Shop
 - Campaign
-    - [ ] Tactical Challenge : BUG
+    - [x] Tactical Challenge
     - [x] Scrimmage
     - [x] Commissions
     - [x] Bounty

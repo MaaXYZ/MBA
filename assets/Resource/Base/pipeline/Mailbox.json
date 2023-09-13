@@ -26,7 +26,7 @@
     },
     "Click_MailboxButton": {
         "recognition": "TemplateMatch",
-        "template": "../../Base/pipeline/Mailbox/Mailbox.png",
+        "template": "../../Base/image/Mailbox/Mailbox.png",
         "roi": [ 1077, 0, 131, 126 ],
         "action": "Click",
         "post_delay": 1500

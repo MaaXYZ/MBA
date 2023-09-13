@@ -20,7 +20,7 @@
     },
     "HomeFlag": {
         "recognition": "TemplateMatch",
-        "template": "../../Base/pipeline/Campaign/Campaign.png",
+        "template": "../../Base/image/Campaign/Campaign.png",
         "roi": [ 1086, 479, 194, 146 ]
     },
     "Sub_StartApp": {

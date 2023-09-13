@@ -15,7 +15,7 @@
     },
     "Click_Campaign": {
         "recognition": "TemplateMatch",
-        "template": "../../Base/pipeline/Campaign/Campaign.png",
+        "template": "../../Base/image/Campaign/Campaign.png",
         "roi": [ 1087, 478, 193, 147 ],
         "action": "Click",
         "post_delay": 1500
