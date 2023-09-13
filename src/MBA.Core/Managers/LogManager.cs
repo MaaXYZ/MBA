@@ -1,4 +1,4 @@
-using System.Diagnostics;
+using MaaToolKit.Extensions.ComponentModel;
 using MBA.Core.Data;
 using Serilog;
 
@@ -26,9 +26,16 @@ public static class LogManager
         config = isDebugMode
             ? config.MinimumLevel.Verbose()
             : config.MinimumLevel.Information();
+        SetFrameworkLog(isDebugMode);
 
         Logger = config.CreateLogger();
         LogStart(env, isDebugMode);
+    }
+
+    private static void SetFrameworkLog(bool isDebugMode)
+    {
+        MaaObject.FrameworkLogDir = GlobalInfo.DebugFullPath;
+        MaaObject.DebugMode = isDebugMode;
     }
 
     private static void LogStart(string env, bool isDebugMode)

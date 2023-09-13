@@ -15,12 +15,6 @@ public class Main
     // TODO: 去除静态
     private static Config Config { get; } = ConfigManager.Config;
 
-    static Main()
-    {
-        MaaObject.FrameworkLogDir = GlobalInfo.DebugFullPath;
-        MaaObject.DebugMode = Config.UI.DebugMode;
-    }
-
     public void Start()
     {
         var location = $"{nameof(Main)}.{nameof(Start)}";
