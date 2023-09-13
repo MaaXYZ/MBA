@@ -1,0 +1,28 @@
+{
+    "Stop": {},
+    "StopTask": {
+        "action": "StopTask"
+    },
+    "StopTaskOnException": {
+        "TODO": "StopTaskOnException 属于不正常退出，等 focus 完善。",
+        "action": "StopTask"
+    },
+    "TODO": {
+        "action": "StopTask"
+    },
+    "Back": {
+        "action": "Key",
+        "key": 4
+    },
+    "Sub_Back": {
+        "is_sub": true,
+        "action": "Key",
+        "key": 4
+    },
+    "Sub_Wait_NowLoading_Partial": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "text": "NowLoading",
+        "roi": [ 922, 642, 204, 43 ]
+    }
+}

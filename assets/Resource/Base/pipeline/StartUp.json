@@ -38,7 +38,7 @@
         "next": "ClickAndWait_AppLoading",
         "times_limit": 4,
         "runout_next": [
-            "StopTask"
+            "StopTaskOnException"
         ]
     },
     "ClickAndWait_AppLoading": {
@@ -53,9 +53,9 @@
         "action": "Key",
         "key": 4,
         "post_delay": 5000,
-        "times_limit": 30,
+        "times_limit": 20,
         "runout_next": [
-            "StopTask"
+            "StopTaskOnException"
         ]
     }
 }
