@@ -11,9 +11,12 @@
 
 </div>
 
-## How to build
+## 下载地址
 
-***目前运行起来还有 bug，先不 release。***
+- [正式版](https://github.com/MaaAssistantArknights/MBA/releases/latest)
+- [预览版](https://github.com/MaaAssistantArknights/MBA/actions/workflows/ci.yml)
+
+## How to build
 
 0. Clone 本仓库
 
