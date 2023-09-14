@@ -1,0 +1,103 @@
+name: ci
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "**"
+    paths:
+      - ".github/workflows/ci.yml"
+      - "src/**"
+      - "*.sln"
+      - "*.props"
+    tags:
+      - "v*"
+
+  pull_request:
+    branches:
+      - "**"
+    paths:
+      - ".github/workflows/ci.yml"
+      - "src/**"
+      - "*.sln"
+      - "*.props"
+
+jobs:
+  meta:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - id: meta
+        run: |
+          is_release=${{ startsWith(github.ref, 'refs/tags/v') }}
+          tag=$(git describe --tags --match "v*" ${{ github.ref }} || true)
+          if [[ $tag != v* ]]; then
+            tag=$(date "+v0.0.0-%y%m%d-$(git rev-parse --short HEAD)")
+          fi
+          if ! $($is_release) ; then
+            prefix=${tag%-*-*}
+            suffix=${tag#$prefix-}
+            next=${prefix##*.}
+            ((++next))
+            prefix=${prefix%.*}
+            tag="$prefix.$next-Preview.$suffix"
+          fi
+          echo tag=$tag | tee -a $GITHUB_OUTPUT
+          echo version=${tag#v} | tee -a $GITHUB_OUTPUT
+          echo is_release=$is_release | tee -a $GITHUB_OUTPUT
+    outputs:
+      tag: ${{ steps.meta.outputs.tag }}
+      version: ${{ steps.meta.outputs.version }}
+      is_release: ${{ steps.meta.outputs.is_release }}
+
+  publish:
+    needs: [meta]
+    strategy:
+      matrix:
+        project: [MBA.Cli]
+        os: [win, linux, osx]
+        arch: [x64, arm64]
+        suffix: [-single-cut]
+        dotnet: [ '7.0' ]
+      fail-fast: false
+    env:
+      NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
+      PUBLISH_NAME: ${{ matrix.project }}-${{ matrix.os }}-${{ matrix.arch }}${{ matrix.suffix }}-${{ needs.meta.outputs.tag }}
+      PUBLISH_PATH: ./Publish #./Publish/${{ matrix.project }}-${{ matrix.os }}-${{ matrix.arch }}${{ matrix.suffix }}/
+      CSPROJ_PATH: ./src/${{ matrix.project }}/${{ matrix.project }}.csproj
+      PUBXML_PATH: ./src/${{ matrix.project }}/Properties/PublishProfiles/${{ matrix.os }}-${{ matrix.arch }}${{ matrix.suffix }}.pubxml
+
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+      - uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ matrix.dotnet }}
+          cache: true
+          cache-dependency-path: '**/packages.lock.json'
+      - run: dotnet restore --locked-mode
+
+      - run: dotnet publish ${{ env.CSPROJ_PATH }} --no-restore -p:Version=${{ needs.meta.outputs.version }} -p:PublishProfile=${{ env.PUBXML_PATH }}
+
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: ${{ env.PUBLISH_NAME }}
+          path: ${{ env.PUBLISH_PATH }}
+
+      - name: Pack
+        if: ${{ needs.meta.outputs.is_release == 'true' }}
+        working-directory: ${{ env.PUBLISH_PATH }}
+        run: 7z a -r ../${{ env.PUBLISH_NAME }}.zip ./*
+
+      - uses: softprops/action-gh-release@v1
+        if: ${{ needs.meta.outputs.is_release == 'true' }}
+        with:
+          body_path: CHANGELOG.md
+          prerelease: true
+          files: ${{ env.PUBLISH_NAME }}.zip
+          tag_name: ${{ needs.meta.outputs.tag }}

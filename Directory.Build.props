@@ -1,6 +1,10 @@
 <Project>
+    <!-- General Properties -->
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
+        <RuntimeIdentifiers>linux-arm64;linux-x64;osx-arm64;osx-x64;win-arm64;win-x64</RuntimeIdentifiers>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>embedded</DebugType>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
@@ -11,4 +15,18 @@
         <PackageReference Include="Serilog.Sinks.Console" />
         <PackageReference Include="Serilog.Sinks.File" />
     </ItemGroup>
+
+    <!-- Metadata Variable -->
+    <PropertyGroup>
+        <CurrentYear>$([System.DateTime]::Now.Year)</CurrentYear>
+    </PropertyGroup>
+
+    <!-- Assembly Metadata-->
+    <PropertyGroup>
+        <Version Condition="'$(Version)' == ''">1.0.0-dev</Version>
+        <Authors>MAA Team</Authors>
+        <Owners>MAA Team</Owners>
+        <Company>MAA Assistant Arknights</Company>
+        <Copyright>Copyright © 2021-$(CurrentYear) MAA Team and Contributers. All rights reserved.</Copyright>
+    </PropertyGroup>
 </Project>
