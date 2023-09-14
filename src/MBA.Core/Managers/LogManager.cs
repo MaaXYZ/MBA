@@ -1,3 +1,4 @@
+using System.Reflection;
 using MaaToolKit.Extensions.ComponentModel;
 using MBA.Core.Data;
 using Serilog;
@@ -42,10 +43,19 @@ public static class LogManager
     {
         Log.Logger = Logger;
         Log.Information("===================================");
-        Log.Information("  MBA {UI} started", GlobalInfo.IsCli ? "CLI" : "GUI");
-        Log.Information("  Environment: {MBA_ENVIRONMENT}", env);
+        Log.Information("  MBA {UI} v{Version} started", GlobalInfo.IsCli ? "CLI" : "GUI", GetInformationalVersion());
+        Log.Information("  Environment: {env}", env);
         Log.Information("  Debug Mode: {DebugMode}", isDebugMode);
         Log.Information("  User Dir: {CurrentDirectory}", Directory.GetCurrentDirectory());
         Log.Information("===================================");
+    }
+
+    private static string GetInformationalVersion()
+    {
+        var attr = Attribute.GetCustomAttribute(
+                Assembly.GetExecutingAssembly(),
+                typeof(AssemblyInformationalVersionAttribute))
+            as AssemblyInformationalVersionAttribute;
+        return attr?.InformationalVersion ?? " <Unidentified>";
     }
 }
