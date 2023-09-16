@@ -55,13 +55,19 @@ jobs:
   publish:
     needs: [meta]
     strategy:
+      fail-fast: false
       matrix:
         project: [MBA.Cli]
         os: [win, linux, osx]
         arch: [x64, arm64]
         suffix: [-single-cut]
-        dotnet: [ '7.0' ]
-      fail-fast: false
+        dotnet: ['7.0']
+        include:
+          - project: MBA.Cli
+            os: win
+            arch: x64
+            suffix: -single-runtime-relied
+            dotnet: '7.0'
     env:
       NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
       PUBLISH_NAME: ${{ matrix.project }}-${{ matrix.os }}-${{ matrix.arch }}${{ matrix.suffix }}-${{ needs.meta.outputs.tag }}
