@@ -63,7 +63,8 @@ public static class LogManager
         Log.Information("  MBA {UI} v{Version} started", GlobalInfo.IsCli ? "CLI" : "GUI", GetInformationalVersion());
         Log.Information("  Environment: {env}", env);
         Log.Information("  Debug Mode: {DebugMode}", enableDebugMode);
-        Log.Information("  User Dir: {CurrentDirectory}", Directory.GetCurrentDirectory());
+        /* Duplicate in famework log */
+        // Log.Information("  User Dir: {CurrentDirectory}", Directory.GetCurrentDirectory());
         Log.Information("===================================");
     }
 
