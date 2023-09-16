@@ -164,7 +164,7 @@ $@"
     /// <returns>成功与否</returns>
     static bool SetAdb()
     {
-        Console.Write($"请输入 {DocToConsole(Config.Core.Adb_Doc)}\n: ");
+        Console.Write($"请输入 {DocToConsole(Config.Doc.Adb)}\n: ");
         string? read = Console.ReadLine();
         if (string.IsNullOrWhiteSpace(read))
         {
@@ -183,7 +183,7 @@ $@"
     /// <returns>成功与否</returns>
     static bool SetAdbAddress()
     {
-        Console.Write($"请输入 {DocToConsole(Config.Core.AdbAddress_Doc)}\n:");
+        Console.Write($"请输入 {DocToConsole(Config.Doc.AdbAddress)}\n:");
         string? read = Console.ReadLine();
         if (string.IsNullOrWhiteSpace(read))
         {
@@ -202,7 +202,7 @@ $@"
     /// <returns>成功与否</returns>
     static bool SetGameLanguage()
     {
-        Console.Write($"请输入 {DocToConsole(Config.Game.Language_Doc)}\n:");
+        Console.Write($"请输入 {DocToConsole(Config.Doc.Language)}\n:");
         string? read = Console.ReadLine();
         if (string.IsNullOrWhiteSpace(read))
         {
@@ -221,7 +221,7 @@ $@"
     /// <returns>成功与否</returns>
     static bool SetGameServer()
     {
-        Console.Write($"请输入 {DocToConsole(Config.Game.Server_Doc)}\n: ");
+        Console.Write($"请输入 {DocToConsole(Config.Doc.Server)}\n: ");
         string? read = Console.ReadLine();
         if (string.IsNullOrWhiteSpace(read))
         {
@@ -241,7 +241,7 @@ $@"
     static bool SetTasks()
     {
 
-        Console.Write($"请输入 {DocToConsole(Config.Tasks_Doc)}\n可自定义顺序，以空格分隔，例如 1 2 3\n: ");
+        Console.Write($"请输入 {DocToConsole(Config.Doc.Tasks)}\n可自定义顺序，以空格分隔，例如 1 2 3\n: ");
         string? read = Console.ReadLine();
         if (string.IsNullOrWhiteSpace(read))
         {
