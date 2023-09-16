@@ -3,19 +3,19 @@ namespace MBA.Core.Enums;
 public enum TaskType
 {
     Bounty = 1,
-    Cafe,
-    Club,
-    Commissions,
-    Crafting,
-    Mailbox,
-    Scrimmage,
-    Shop,
-    TacticalChallenge,
-    Tasks,
+    Cafe = 2,
+    Club = 3,
+    Commissions = 4,
+    //Crafting = 5,
+    Mailbox = 6,
+    Scrimmage = 7,
+    //Shop = 8,
+    TacticalChallenge = 9,
+    Tasks = 10,
 
-    Daily,
-    Weekly,
-    StartUp,
+    StartUp = 100,
+    Daily = 101,
+    Weekly = 102,
     Test = 0,
 }
 

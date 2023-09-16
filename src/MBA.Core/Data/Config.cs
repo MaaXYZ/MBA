@@ -45,12 +45,12 @@ public class GameConfig
 
 public class DailyConfig
 {
-    public uint TacticalChallengeTimes { get; set; } = 5;
+    public uint TacticalChallengeTimes { get; set; } = 5;/*
     public bool DailyNormalMissionDuringActivities { get; set; } = false;
     public string NormalMissionId { get; set; } = "0-0";
     public uint NormalMissionTimes { get; set; } = 17;
     public string HardMissionId { get; set; } = "H0-0";
-    public uint HardMissionTimes { get; set; } = 3;
+    public uint HardMissionTimes { get; set; } = 3;*/
     public string CommissionsId { get; set; } = "E";
     public uint CommissionsTimes { get; set; } = 1;
 
@@ -86,7 +86,7 @@ public class WeeklyConfig
 
 public class ConfigDoc
 {
-    public string Tasks { get; } = $"要执行的任务, {(int)TaskType.Bounty}.{TaskType.Bounty} (悬赏通缉), {(int)TaskType.Cafe}.{TaskType.Cafe} (咖啡厅), {(int)TaskType.Club}.{TaskType.Club} (社团), {(int)TaskType.Commissions}.{TaskType.Commissions} (特殊任务), {(int)TaskType.Crafting}.{TaskType.Crafting} (制造), {(int)TaskType.Mailbox}.{TaskType.Mailbox} (信箱), {(int)TaskType.Scrimmage}.{TaskType.Scrimmage} (学院交流会), {(int)TaskType.Shop}.{TaskType.Shop} (商店), {(int)TaskType.TacticalChallenge}.{TaskType.TacticalChallenge} (战术大赛), {(int)TaskType.Tasks}.{TaskType.Tasks} (任务，日常周常奖励收菜), {(int)TaskType.Daily}.{TaskType.Daily} (做日常), {(int)TaskType.Weekly}.{TaskType.Weekly} (做周常), {(int)TaskType.StartUp}.{TaskType.StartUp} (只启动游戏)";
+    public string Tasks { get; } = $"要执行的任务, {(int)TaskType.Bounty}.{TaskType.Bounty} (悬赏通缉), {(int)TaskType.Cafe}.{TaskType.Cafe} (咖啡厅), {(int)TaskType.Club}.{TaskType.Club} (社团), {(int)TaskType.Commissions}.{TaskType.Commissions} (特殊任务), {/*(int)TaskType.Crafting}.{TaskType.Crafting*/"  TODO"} (制造), {(int)TaskType.Mailbox}.{TaskType.Mailbox} (信箱), {(int)TaskType.Scrimmage}.{TaskType.Scrimmage} (学院交流会), {/*(int)TaskType.Shop}.{TaskType.Shop*/"  TODO"} (商店), {(int)TaskType.TacticalChallenge}.{TaskType.TacticalChallenge} (战术大赛), {(int)TaskType.Tasks}.{TaskType.Tasks} (任务，日常周常奖励收菜), {(int)TaskType.StartUp}.{TaskType.StartUp} (只启动游戏), {(int)TaskType.Daily}.{TaskType.Daily} (做日常), {(int)TaskType.Weekly}.{TaskType.Weekly} (做周常)";
     public string TasksExcept { get; } = $"要排除的任务 (高优先), 以下任务不可被排除: {(int)TaskType.Daily}.{TaskType.Daily}, {(int)TaskType.Weekly}.{TaskType.Weekly}, {(int)TaskType.StartUp}.{TaskType.StartUp}";
 
     #region UIConfig
@@ -118,11 +118,11 @@ public class ConfigDoc
 
     #region DailyConfig
 
-    public string TacticalChallengeTimes { get; } = "日活打 JJC 的次数, 0 ~ 5, 0 为只领取信用点";
+    public string TacticalChallengeTimes { get; } = "日活打 JJC 的次数, 0 ~ 5, 0 为只领取信用点";/*
     public string NormalMissionId { get; } = "普通任务的 Id, 0-0 为打目前打到的一关";
     public string NormalMissionTimes { get; } = "日活打普通任务的次数, > 0";
     public string HardMissionId { get; } = "困难任务的 Id, H0-0 为打目前打到的一关";
-    public string HardMissionTimes { get; } = "日活打困难任务的次数, 1 ~ 3";
+    public string HardMissionTimes { get; } = "日活打困难任务的次数, 1 ~ 3";*/
     public string CommissionsId { get; } = "特殊任务的 Id, Id 为 E (EXP items) 或 C (Credits)";
     public string CommissionsTimes { get; } = "日活打特殊任务的次数, > 0";
 
