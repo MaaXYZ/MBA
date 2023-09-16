@@ -1,6 +1,5 @@
 using System.Text.Json;
 using MBA.Core.Data;
-using System.Text.Json.Serialization;
 
 namespace MBA.Core.Managers;
 
@@ -10,18 +9,12 @@ public static class ConfigManager
 
     static ConfigManager()
     {
-        _options.Converters.Add(new JsonStringEnumConverter());
+        ConfigContext.InitOptions();
         InitConfig();
         LogManager.ConfigureLogger(Config.UI.DebugMode, true);
     }
 
     private static readonly object _configWriteLock = new();
-
-    private static readonly JsonSerializerOptions _options = new()
-    {
-        WriteIndented = true,
-        Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
-    };
 
     public static string AdbConfig { get; } = File.ReadAllText(GlobalInfo.AdbConfigFileFullPath);
 
@@ -67,8 +60,8 @@ public static class ConfigManager
 
         TaskManager.RunTask(() =>
         {
-            Config = JsonSerializer.Deserialize<Config>(
-                File.ReadAllText(GlobalInfo.ConfigFileFullPath), _options
+            Config = JsonSerializer.Deserialize(
+                File.ReadAllText(GlobalInfo.ConfigFileFullPath), ConfigContext.Default.Config
             ) ?? Config;
         },
         location);
@@ -84,7 +77,7 @@ public static class ConfigManager
             {
                 File.WriteAllText(
                     GlobalInfo.ConfigFileFullPath,
-                    JsonSerializer.Serialize(Config, _options)
+                    JsonSerializer.Serialize(Config, ConfigContext.Default.Config)
                 );
             }
         }
