@@ -1,6 +1,7 @@
 using MBA.Core.Enums;
 using MaaToolKit.Extensions.Enums;
 using System.Text.Json.Serialization;
+using System.Text.Json.Nodes;
 
 namespace MBA.Core.Data;
 
@@ -55,33 +56,67 @@ public class DailyConfig
     public uint CommissionsTimes { get; set; } = 1;
 
     [JsonIgnore]
-    public DiffTaskConfig DiffTask { get; }
+    public DiffTaskDailyConfig DiffTask { get; }
     public DailyConfig() => DiffTask = new(this);
-    public class DiffTaskConfig
-    {
-        private readonly DailyConfig _config;
-        public DiffTaskConfig(DailyConfig dailyConfig)
-            => _config = dailyConfig;
-
-        public string TacticalChallenge => _config.TacticalChallengeTimes == 0 ? TacticalChallenge0 : TacticalChallenge1;
-        private string TacticalChallenge0 => $@"{{ ""diff_task"": {{
-            ""Sub_Start_TacticalChallenge_Partial"": {{ ""times_limit"": {_config.TacticalChallengeTimes} }},
-            ""Sub_End_TacticalChallenge_Partial"": {{ ""times_limit"": {_config.TacticalChallengeTimes} }}
-            }} }}";
-        private string TacticalChallenge1 => $@"{{ ""diff_task"": {{
-            ""Sub_Start_TacticalChallenge_Partial"": {{ ""times_limit"": {_config.TacticalChallengeTimes} }}
-            }} }}";
-
-        public string Commissions => $@"{{ ""diff_task"": {{
-            ""Start_Commissions_Partial"": {{ ""next"": ""{(_config.CommissionsId == "E" ? "Click_BaseDefense_Partial" : "Click_ItemRetrieval_Partial")}"" }},
-            ""Click_PlusButtons"": {{ ""times_limit"": {_config.CommissionsTimes - 1} }}
-            }} }}";
-    }
 }
 
 public class WeeklyConfig
 {
 
+}
+
+public class DiffTaskDailyConfig
+{
+    private readonly DailyConfig _config;
+    public DiffTaskDailyConfig(DailyConfig dailyConfig)
+    {
+        _config = dailyConfig;
+    }
+
+    public string TacticalChallenge => _config.TacticalChallengeTimes == 0
+        ? TacticalChallenge0
+        : TacticalChallenge1;
+    private string TacticalChallenge0 => new JsonObject
+    {
+        ["diff_task"] = new JsonObject
+        {
+            ["Sub_Start_TacticalChallenge_Partial"] = new JsonObject
+            {
+                ["times_limit"] = _config.TacticalChallengeTimes
+            },
+            ["Sub_End_TacticalChallenge_Partial"] = new JsonObject
+            {
+                ["times_limit"] = _config.TacticalChallengeTimes
+            },
+        }
+    }.ToString();
+    private string TacticalChallenge1 => new JsonObject
+    {
+        ["diff_task"] = new JsonObject
+        {
+            ["Sub_Start_TacticalChallenge_Partial"] = new JsonObject
+            {
+                ["times_limit"] = _config.TacticalChallengeTimes
+            },
+        }
+    }.ToString();
+
+    public string Commissions => new JsonObject
+    {
+        ["diff_task"] = new JsonObject
+        {
+            ["Start_Commissions_Partial"] = new JsonObject
+            {
+                ["next"] = _config.CommissionsId == "E"
+                         ? "Click_BaseDefense_Partial"
+                         : "Click_ItemRetrieval_Partial"
+            },
+            ["Click_PlusButtons"] = new JsonObject
+            {
+                ["times_limit"] = _config.CommissionsTimes - 1
+            },
+        }
+    }.ToString();
 }
 
 public class ConfigDoc
