@@ -12,6 +12,7 @@ public static class ConfigManager
     {
         _options.Converters.Add(new JsonStringEnumConverter());
         InitConfig();
+        LogManager.ConfigureLogger(Config.UI.DebugMode, true);
     }
 
     private static readonly object _configWriteLock = new();

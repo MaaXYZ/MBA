@@ -7,45 +7,62 @@ namespace MBA.Core.Managers;
 
 public static class LogManager
 {
-    public static ILogger Logger { get; private set; }
+    public static ILogger Logger { get; private set; } = Serilog.Core.Logger.None;
 
     static LogManager()
     {
+        ConfigureLogger(true);
+    }
+
+    private static bool _logStarted = false;
+
+    /// <summary>
+    /// Configures the <see cref="Logger"/>.
+    /// </summary>
+    /// <param name="enableDebugMode">Indicating whether degub mode is enabled or not.</param>
+    /// <param name="startLog">Indicating whether start infomation is logged or not.</param>
+    public static void ConfigureLogger(bool enableDebugMode, bool startLog = false)
+    {
         var env = Environment.GetEnvironmentVariable("MBA_ENVIRONMENT") ?? "Empty";
-        var isDebugMode = ConfigManager.Config.UI.DebugMode || env == "Debug";
+        enableDebugMode = enableDebugMode || env == "Debug";
+
         var config = new LoggerConfiguration()
             .WriteTo.File(
                 path: GlobalInfo.LogFileFullPath,
                 outputTemplate: "[{Timestamp:yyyy-MM-dd HH:mm:ss.fff}][{Level:u3}] {Message:lj}{NewLine}{Exception}",
                 rollingInterval: RollingInterval.Day,
-                rollOnFileSizeLimit: true);
+                retainedFileCountLimit: 7);
 
         config = GlobalInfo.IsCli
             ? config.WriteTo.Console()
             : config.WriteTo.Debug();
 
-        config = isDebugMode
+        config = enableDebugMode
             ? config.MinimumLevel.Verbose()
             : config.MinimumLevel.Information();
-        SetFrameworkLog(isDebugMode);
+        SetFrameworkLog(enableDebugMode);
 
         Logger = config.CreateLogger();
-        LogStart(env, isDebugMode);
+        Log.Logger = Logger;
+
+        if (startLog)
+            LogStart(env, enableDebugMode);
     }
 
-    private static void SetFrameworkLog(bool isDebugMode)
+    private static void SetFrameworkLog(bool enableDebugMode)
     {
         MaaObject.FrameworkLogDir = GlobalInfo.DebugFullPath;
-        MaaObject.DebugMode = isDebugMode;
+        MaaObject.DebugMode = enableDebugMode;
     }
 
-    private static void LogStart(string env, bool isDebugMode)
+    private static void LogStart(string env, bool enableDebugMode)
     {
-        Log.Logger = Logger;
+        if (_logStarted) return;
+
         Log.Information("===================================");
         Log.Information("  MBA {UI} v{Version} started", GlobalInfo.IsCli ? "CLI" : "GUI", GetInformationalVersion());
         Log.Information("  Environment: {env}", env);
-        Log.Information("  Debug Mode: {DebugMode}", isDebugMode);
+        Log.Information("  Debug Mode: {DebugMode}", enableDebugMode);
         Log.Information("  User Dir: {CurrentDirectory}", Directory.GetCurrentDirectory());
         Log.Information("===================================");
     }
