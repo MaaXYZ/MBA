@@ -41,6 +41,7 @@ internal class Program
         }
 
         Core.Main.Current.Start();
+        Console.ReadKey();
         return 0;
     }
 

@@ -23,10 +23,13 @@ public class Main
         {
             var maa = GetMaa();
             var tasks = GetTasks();
-            if (maa.Instance.Initialized)
-                RunTasks(maa, tasks);
-            else
+            if (!maa.Instance.Initialized)
                 Log.Error("Failed to init Maa instance, a connection error or resource file corruption occurred, please refer to the log.");
+
+            if (TryRunTasks(maa, tasks))
+                Log.Information("Congratulations! All tasks have been successful!");
+            else
+                Log.Warning("Unfortunately, some tasks have failed...");
         },
         location);
     }
@@ -64,10 +67,11 @@ public class Main
         return configTasks;
     }
 
-    private bool RunTasks(MaaObject maa, IList<TaskType> tasks)
+    private bool TryRunTasks(MaaObject maa, IList<TaskType> tasks)
     {
-        bool hasFailed = false;
         Log.Information("Task List: {list}.", tasks);
+        var success = true;
+        var failedTasks = new List<TaskType>(tasks.Count);
 
         foreach (TaskType task in tasks)
         {
@@ -98,11 +102,16 @@ public class Main
             }
             else
             {
+                success = false;
+                failedTasks.Add(task);
                 Log.Warning("{task} done. Result: {status}", task, status);
-                hasFailed = true;
             }
         }
 
-        return hasFailed;
+        if (failedTasks.Any())
+        {
+            Log.Warning("Failed task List: {failedTasks}", failedTasks);
+        }
+        return success;
     }
 }
