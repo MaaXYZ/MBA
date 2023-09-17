@@ -16,6 +16,29 @@
 - [正式版](https://github.com/MaaAssistantArknights/MBA/releases/latest)
 - [预览版](https://github.com/MaaAssistantArknights/MBA/actions/workflows/ci.yml)
 
+#### 注意
+
+- 想要开箱即用，请直接下载 `MBA.Cli-single-cut` 包。
+
+- `runtime-relied` 包在运行前需要预先安装 [.NET 运行时 7.0](https://dotnet.microsoft.com/zh-cn/download/dotnet/7.0)
+
+- 其他系统、架构想要下载预构建好的 `runtime-relied` 包，欢迎 pr 或提 issue。
+
+## 使用说明
+
+### 基本说明
+
+1. 请根据 [模拟器支持情况](https://maa.plus/docs/1.3-模拟器支持.html)，进行对应的操作。
+2. 修改模拟器分辨率为 `16:9` 比例，最低 `1280 * 720`，更高不限。
+3. 开始使用吧！
+
+## 开发相关
+
+- `tools/CropRoi` 可以用来裁剪图片和获取 ROI
+- Pipeline 协议请参考 [MaaFramework 的文档 (Document of MaaFramework)](https://github.com/MaaAssistantArknights/MaaFramework/blob/main/docs/zh_cn/3.3-%E4%BB%BB%E5%8A%A1%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%8D%8F%E8%AE%AE.md)
+- [多语言支持](./assets/README.md#多语言支持)
+- [Multi-language support](./assets/README.md#multi-language-support)
+
 ## How to build
 
 0. Clone 本仓库
@@ -40,11 +63,6 @@
     ```
 
 3. 生成的二进制及相关资源文件在 `MBA\src\MBA.Cli\bin` 目录下
-
-## 开发相关
-
-- `tools/CropRoi` 可以用来裁剪图片和获取 ROI
-- Pipeline 协议请参考 [MaaFramework 的文档](https://github.com/MaaAssistantArknights/MaaFramework/blob/main/docs/zh_cn/3.3-%E4%BB%BB%E5%8A%A1%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%8D%8F%E8%AE%AE.md)
 
 ## 致谢
 
@@ -80,6 +98,8 @@
     - [ ] Event
 
 - [ ] Weekly
+
+- [ ] Support SC / TC / EN / JP
 
 ### v2.0
 
