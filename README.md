@@ -16,7 +16,7 @@
 - [正式版](https://github.com/MaaAssistantArknights/MBA/releases/latest)
 - [预览版](https://github.com/MaaAssistantArknights/MBA/actions/workflows/ci.yml)
 
-#### 注意
+### 注意
 
 - 想要开箱即用，请直接下载 `MBA.Cli-single-cut` 包。
 
@@ -38,6 +38,9 @@
 - Pipeline 协议请参考 [MaaFramework 的文档 (Document of MaaFramework)](https://github.com/MaaAssistantArknights/MaaFramework/blob/main/docs/zh_cn/3.3-%E4%BB%BB%E5%8A%A1%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%8D%8F%E8%AE%AE.md)
 - [多语言支持](./assets/README.md#多语言支持)
 - [Multi-language support](./assets/README.md#multi-language-support)
+
+## Join us
+用户反馈 / 开发 QQ 群：205135027
 
 ## How to build
 
