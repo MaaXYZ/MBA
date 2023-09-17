@@ -55,7 +55,7 @@ def build_commits_tree(commit_hash: str):
     # 第二个 parent 为 Merge commit 的被合并分支
     if len(raw_commit_info["parent"]) == 2:
         if (raw_commit_info["message"].startswith("Release") or
-            re.match(r"Merge pull request #\d+ from MaaAssistantArknights/dev", raw_commit_info["message"])):
+            re.match(r"Merge pull request #\d+ from MBA/dev", raw_commit_info["message"])):
             # 避免合并之后只有一个 Release 主 commit
             # 忽略从 dev 合并的 Merge commit
             res.update(build_commits_tree(raw_commit_info["parent"][1]))
@@ -187,7 +187,7 @@ def convert_contributors_name(name: str, commit_hash: str, name_type: str):
     global contributors
     if name not in contributors:
         try:
-            req = urllib.request.Request(f"https://api.github.com/repos/MaaAssistantArknights/MaaAssistantArknights/commits/{commit_hash}")
+            req = urllib.request.Request(f"https://api.github.com/repos/MaaAssistantArknights/MBA/commits/{commit_hash}")
             token = os.environ.get("GH_TOKEN", os.environ.get("GITHUB_TOKEN", None))
             if token:
                 req.add_header("Authorization", f"Bearer {token}")
