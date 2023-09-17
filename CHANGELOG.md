@@ -1,17 +1,18 @@
-## v0.1.0
+## v0.1.1
 
 ### 新增
 
-- 日志输出版本信息 @Dissectum
-- 更新 Maa.ToolKit.Extensions / MaaFramework 至 0.6.0-beta.1 @Dissectum
+- 添加没有自包含的 win-x64 Release @Dissectum
+- 添加 ChangeLog 提示 @Dissectum
+- 添加更新提示 @Dissectum
 
 ### 修复
 
-- "The opponent's rank has changed." in TacticalChallenge @Dissectum
-- 尝试修复偶尔没收到好感的问题 @Dissectum
-- 未能正常设置 Framework 日志 @Dissectum
+- PublishTrimmed 的可执行文件，不能读取配置文件的问题 @Dissectum
+- 未能正确记录 Debug Mode 及 Logger 可能为 null 的问题 @Dissectum
+- 从可执行文件运行，任务完成后未暂停的问题 @Dissectum
 
 ### 其他
 
-- add CI @Dissectum
-- 转移部分任务至 Utils @Dissectum
+- 注释掉 Config Doc 中现在不可用的任务 @Dissectum
+- 日志去除 User Dir 记录 @Dissectum
