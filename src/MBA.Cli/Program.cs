@@ -17,6 +17,7 @@ internal class Program
 
     static int Main(string[] args)
     {
+        TipChangeLog();
         Console.WriteLine(Greeting);
 
         if (!ResetConfig())
@@ -46,6 +47,17 @@ internal class Program
         Console.WriteLine("按任意键关闭此窗口. . .");
         Console.ReadKey();
         return 0;
+    }
+
+    private static void TipChangeLog()
+    {
+        if (!VersionManager.Updated)
+            return;
+
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("\t\t\t    ChangLog");
+        Console.WriteLine(VersionManager.ChangeLog);
+        Console.ForegroundColor = ConsoleColor.White;
     }
 
     private static void TipNewVersion()

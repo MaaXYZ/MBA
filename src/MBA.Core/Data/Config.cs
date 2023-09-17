@@ -19,6 +19,7 @@ public class Config
 
 public class UIConfig
 {
+    public string CurrentMBACoreVersion { get; set; } = "0.0.0";
     public bool FirstStartUp { get; set; } = true;
     public bool DebugMode { get; set; } = false;
     public string Proxy { get; set; } = string.Empty;

@@ -9,6 +9,7 @@
     <Content Include="..\..\assets\**" Exclude="..\..\assets\*.*">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="..\..\CHANGELOG.md" Visible="false" />
   </ItemGroup>
 
 </Project>

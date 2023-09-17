@@ -9,15 +9,25 @@ namespace MBA.Core.Managers;
 public static class VersionManager
 {
     private static Serilog.ILogger Log => LogManager.Logger;
+    private static Config Config => ConfigManager.Config;
 
     public static string AssemblyVersion { get; private set; }
     public static string InformationalVersion { get; private set; }
+    public static bool IsPreviewVersion { get; private set; } = false;
+    public static bool Updated { get; private set; } = false;
+    public static string ChangeLog { get; private set; } = "<failed to read>";
     public static bool Released { get; private set; } = false;
 
     static VersionManager()
     {
         AssemblyVersion = GetAssemblyVersion();
         InformationalVersion = GetInformationalVersion();
+        if (InformationalVersion.EndsWith("-dev") || InformationalVersion.Contains("Preview"))
+        {
+            IsPreviewVersion = true;
+        }
+
+        SetUpdatedAndChangeLog();
         _ = SetReleasedAsync();
     }
 
@@ -37,10 +47,38 @@ public static class VersionManager
             ?? AssemblyVersion + "-<Unidentified>";
     }
 
+    private static void SetUpdatedAndChangeLog()
+    {
+        if (Config.UI.CurrentMBACoreVersion == InformationalVersion)
+            return;
+
+        Config.UI.CurrentMBACoreVersion = InformationalVersion;
+        if (IsPreviewVersion)
+            return;
+
+        Updated = true;
+        try
+        {
+            var name = Assembly.GetExecutingAssembly().GetManifestResourceNames().First(x => x.Contains("CHANGELOG.md"))!;
+            using var rs = Assembly.GetExecutingAssembly().GetManifestResourceStream(name)!;
+            using StreamReader sr = new StreamReader(rs, detectEncodingFromByteOrderMarks: true);
+            var changeLog = sr.ReadToEnd();
+
+            if (string.IsNullOrWhiteSpace(changeLog))
+                ChangeLog = "<NullOrWhiteSpace>";
+            else
+                ChangeLog = changeLog;
+        }
+        catch (Exception e)
+        {
+            Log.Warning("Failed to read ChangeLog: {Message}", e.Message);
+        }
+    }
+
+
     private static async Task SetReleasedAsync()
     {
-        if (InformationalVersion.EndsWith("-dev")
-         || InformationalVersion.Contains("Preview"))
+        if (IsPreviewVersion)
             return;
 
         try
@@ -55,7 +93,7 @@ public static class VersionManager
                 nameof(GetLatestReleaseVersionAsync),
                 e.Message);
             Log.Warning("Setting the {Proxy} in {Path} may be useful.",
-                nameof(ConfigManager.Config.UI.Proxy),
+                nameof(Config.UI.Proxy),
                 GlobalInfo.ConfigFileFullPath);
         }
     }
@@ -67,12 +105,12 @@ public static class VersionManager
         {
             AllowAutoRedirect = true,
         };
-        if (ConfigManager.Config.UI.ProxyUri != null)
+        if (Config.UI.ProxyUri != null)
         {
             handler.UseProxy = true;
             handler.Proxy = new WebProxy
             {
-                Address = ConfigManager.Config.UI.ProxyUri,
+                Address = Config.UI.ProxyUri,
                 BypassProxyOnLocal = false,
                 UseDefaultCredentials = false,
             };
