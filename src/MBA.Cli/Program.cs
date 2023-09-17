@@ -41,8 +41,21 @@ internal class Program
         }
 
         Core.Main.Current.Start();
+
+        TipNewVersion();
+        Console.WriteLine("按任意键关闭此窗口. . .");
         Console.ReadKey();
         return 0;
+    }
+
+    private static void TipNewVersion()
+    {
+        if (!VersionManager.Released)
+            return;
+
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("New version released, available for download at https://github.com/MaaAssistantArknights/MBA/releases/latest.");
+        Console.ForegroundColor = ConsoleColor.White;
     }
 
     static string Greeting =>

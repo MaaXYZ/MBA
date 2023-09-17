@@ -60,20 +60,11 @@ public static class LogManager
         if (_logStarted) return;
 
         Log.Information("===================================");
-        Log.Information("  MBA {UI} v{Version} started", GlobalInfo.IsCli ? "CLI" : "GUI", GetInformationalVersion());
+        Log.Information("  MBA {UI} v{Version} started", GlobalInfo.IsCli ? "CLI" : "GUI", VersionManager.InformationalVersion);
         Log.Information("  Environment: {env}", env);
         Log.Information("  Debug Mode: {DebugMode}", enableDebugMode);
         /* Duplicate in famework log */
         // Log.Information("  User Dir: {CurrentDirectory}", Directory.GetCurrentDirectory());
         Log.Information("===================================");
-    }
-
-    private static string GetInformationalVersion()
-    {
-        var attr = Attribute.GetCustomAttribute(
-                Assembly.GetExecutingAssembly(),
-                typeof(AssemblyInformationalVersionAttribute))
-            as AssemblyInformationalVersionAttribute;
-        return attr?.InformationalVersion ?? " <Unidentified>";
     }
 }

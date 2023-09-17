@@ -21,6 +21,12 @@ public class UIConfig
 {
     public bool FirstStartUp { get; set; } = true;
     public bool DebugMode { get; set; } = false;
+    public string Proxy { get; set; } = string.Empty;
+
+    [JsonIgnore]
+    public Uri? ProxyUri => string.IsNullOrEmpty(Proxy)
+        ? null
+        : new Uri(Proxy.Contains("://") ? Proxy : $"http://{Proxy}");
 }
 
 public class CoreConfig
@@ -128,6 +134,7 @@ public class ConfigDoc
 
     public string FirstStartUp { get; } = "是否第一次启动";
     public string DebugMode { get; } = "是否开启 Debug Mode (生成的文件会占用大量空间)";
+    public string Proxy { get; } = "代理地址，例如 http://127.0.0.1:7890";
 
     #endregion
 
