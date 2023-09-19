@@ -16,8 +16,8 @@
         "text": "LocationSelect",
         "roi": [ 630, 125, 650, 70 ],
         "next": [
-            "BountyFlag_Partial",
             "Click_BountyButton_Partial",
+            "BountyFlag_Partial",
             "Sub_Wait_NowLoading_Partial",
             "Sub_Goto_Campaign"
         ]
