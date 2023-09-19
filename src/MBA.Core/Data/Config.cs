@@ -115,8 +115,8 @@ public class DiffTaskDailyConfig
             ["Start_Commissions_Partial"] = new JsonObject
             {
                 ["next"] = _config.CommissionsId == "E"
-                         ? "Click_BaseDefense_Partial"
-                         : "Click_ItemRetrieval_Partial"
+                         ? "BaseDefense"
+                         : "ItemRetrieval"
             },
             ["Click_PlusButtons"] = new JsonObject
             {

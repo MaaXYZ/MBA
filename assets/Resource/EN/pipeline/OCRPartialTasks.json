@@ -300,7 +300,7 @@
             "Commissions"
         ]
     },
-    "RequestSelectFlag_Partial": {
+    "Sub_Goto_Commissions_Partial": {
         "text": [
             "Request Select",
             "RequestSelect"
@@ -312,16 +312,32 @@
             "RequestSelect"
         ]
     },
+    "Sub_Goto_BaseDefense_Partial": {
+        "text": [
+            "Base Defense",
+            "BaseDefense",
+            "Base"
+        ]
+    },
     "Click_BaseDefense_Partial": {
         "text": [
             "Base Defense",
-            "BaseDefense"
+            "BaseDefense",
+            "Base"
+        ]
+    },
+    "Sub_Goto_ItemRetrieval_Partial": {
+        "text": [
+            "Item Retrieval",
+            "ItemRetrieval",
+            "Item"
         ]
     },
     "Click_ItemRetrieval_Partial": {
         "text": [
             "Item Retrieval",
-            "ItemRetrieval"
+            "ItemRetrieval",
+            "Item"
         ]
     },
     "Sub_Goto_Bounty_Partial": {

@@ -1,26 +1,61 @@
 {
     "Commissions": {
         "next": [
-            "Start_Commissions_Partial",
-            "Sub_Goto_Commissions"
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Commissions_Partial",
+            "Start_Commissions_Partial"
         ]
     },
-    "Sub_Goto_Commissions": {
-        "is_sub": true,
+    "BaseDefense": {
         "next": [
-            "RequestSelectFlag_Partial",
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_BaseDefense_Partial",
+            "Start_SweepMission_OnCommissions"
+        ]
+    },
+    "ItemRetrieval": {
+        "next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_ItemRetrieval_Partial",
+            "Start_SweepMission_OnCommissions"
+        ]
+    },
+    "Sub_Goto_Commissions_Partial": {
+        "is_sub": true,
+        "inverse": true,
+        "recognition": "OCR",
+        "text": "RequestSelect",
+        "roi": [ 630, 125, 650, 70 ],
+        "next": [
+            "Click_CommissionsButton_Partial",
             "CommissionsFlag_Partial",
             "Sub_Wait_NowLoading_Partial",
-            "Click_CommissionsButton_Partial",
             "Sub_Goto_Campaign"
         ]
     },
-    "Click_CommissionsButton_Partial": {
+    "Sub_Goto_BaseDefense_Partial": {
+        "is_sub": true,
+        "inverse": true,
         "recognition": "OCR",
-        "text": "Commissions",
-        "roi": [ 652, 475, 160, 70 ],
-        "action": "Click",
-        "post_delay": 1500
+        "text": "BaseDefense",
+        "roi": [ 90, 130, 530, 60 ],
+        "next": [
+            "Click_BaseDefense_Partial",
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Commissions_Partial"
+        ]
+    },
+    "Sub_Goto_ItemRetrieval_Partial": {
+        "is_sub": true,
+        "inverse": true,
+        "recognition": "OCR",
+        "text": "ItemRetrieval",
+        "roi": [ 90, 130, 530, 60 ],
+        "next": [
+            "Click_ItemRetrieval_Partial",
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Commissions_Partial"
+        ]
     },
     "CommissionsFlag_Partial": {
         "recognition": "OCR",
@@ -30,10 +65,26 @@
             "Click_BackButton"
         ]
     },
-    "RequestSelectFlag_Partial": {
+    "Click_CommissionsButton_Partial": {
         "recognition": "OCR",
-        "text": "RequestSelect",
-        "roi": [ 630, 125, 650, 70 ]
+        "text": "Commissions",
+        "roi": [ 652, 475, 160, 70 ],
+        "action": "Click",
+        "post_delay": 1500
+    },
+    "Click_BaseDefense_Partial": {
+        "recognition": "OCR",
+        "text": "BaseDefense",
+        "roi": [ 685, 210, 560, 120 ],
+        "action": "Click",
+        "post_delay": 1500
+    },
+    "Click_ItemRetrieval_Partial": {
+        "recognition": "OCR",
+        "text": "ItemRetrieval",
+        "roi": [ 685, 330, 560, 120 ],
+        "action": "Click",
+        "post_delay": 1500
     },
     "Start_Commissions_Partial": {
         "doc": "next setted in code",
@@ -41,22 +92,7 @@
         "text": "RequestSelect",
         "roi": [ 630, 125, 650, 70 ]
     },
-    "Click_BaseDefense_Partial": {
-        "recognition": "OCR",
-        "text": "BaseDefense",
-        "roi": [ 780, 210, 500, 240 ],
-        "action": "Click",
-        "next": [
-            "Start_SweepMission_Partial",
-            "Sub_Click_EnterButton_OnClearedMission_Partial",
-            "StopOnException"
-        ]
-    },
-    "Click_ItemRetrieval_Partial": {
-        "recognition": "OCR",
-        "text": "ItemRetrieval",
-        "roi": [ 780, 210, 500, 240 ],
-        "action": "Click",
+    "Start_SweepMission_OnCommissions": {
         "next": [
             "Start_SweepMission_Partial",
             "Sub_Click_EnterButton_OnClearedMission_Partial",
