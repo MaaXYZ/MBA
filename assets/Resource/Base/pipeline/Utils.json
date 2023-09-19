@@ -1,5 +1,8 @@
 {
     "Stop": {},
+    "StopOnException": {
+        "TODO": "StopTaskOnException 属于不正常退出，等 focus 完善。"
+    },
     "StopTask": {
         "action": "StopTask"
     },

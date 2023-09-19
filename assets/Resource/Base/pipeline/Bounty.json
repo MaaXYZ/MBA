@@ -41,7 +41,7 @@
         "next": [
             "Start_SweepMission_Partial",
             "Sub_Click_EnterButton_OnClearedMission_Partial",
-            "Stop"
+            "StopOnException"
         ]
     },
     "Sub_Check_OverpassTicket": {

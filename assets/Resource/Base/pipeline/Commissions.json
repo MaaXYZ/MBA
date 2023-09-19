@@ -49,7 +49,7 @@
         "next": [
             "Start_SweepMission_Partial",
             "Sub_Click_EnterButton_OnClearedMission_Partial",
-            "Stop"
+            "StopOnException"
         ]
     },
     "Click_ItemRetrieval_Partial": {
@@ -60,7 +60,7 @@
         "next": [
             "Start_SweepMission_Partial",
             "Sub_Click_EnterButton_OnClearedMission_Partial",
-            "Stop"
+            "StopOnException"
         ]
     }
 }
