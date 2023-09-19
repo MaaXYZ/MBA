@@ -269,10 +269,9 @@
             "Scrimmage"
         ]
     },
-    "AcademySelectFlag_Partial": {
+    "Sub_Goto_Trinity_Partial": {
         "text": [
-            "Academy Select",
-            "AcademySelect"
+            "Trinity"
         ]
     },
     "Click_Trinity_Partial": {
@@ -280,9 +279,19 @@
             "Trinity"
         ]
     },
+    "Sub_Goto_Gehenna_Partial": {
+        "text": [
+            "Gehenna"
+        ]
+    },
     "Click_Gehenna_Partial": {
         "text": [
             "Gehenna"
+        ]
+    },
+    "Sub_Goto_Millennium_Partial": {
+        "text": [
+            "Millennium"
         ]
     },
     "Click_Millennium_Partial": {

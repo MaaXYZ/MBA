@@ -7,7 +7,7 @@
         ]
     },
     "Sub_Goto_Club_Partial": {
-        "doc": "这个 json 同时是前往一个位置的最小单元实例，NowLoading 需要和 Goto 的父级绑定（TODO：每次出现场景变化的时候均为使用 Goto 之后，同个场景的任务尽可能使用 Sub 并列）（需要更改的文件有 Buttons Cafe Campaign Club Commissions Mailbox Scrimmage StartUp TacticalChallenge）。非业务类的弹窗则尽可能由 ProcessingNotice 处理",
+        "doc": "这个 json 同时是前往一个位置的最小单元实例，NowLoading 需要和 Goto 的父级绑定（TODO：每次出现场景变化的时候均为使用 Goto 之后，同个场景的任务尽可能使用 Sub 并列）（需要更改的文件有 Buttons Cafe Campaign Club Mailbox StartUp TacticalChallenge）。非业务类的弹窗则尽可能由 ProcessingNotice 处理",
         "is_sub": true,
         "inverse": true,
         "recognition": "OCR",
