@@ -192,7 +192,7 @@
             "Mobilize"
         ]
     },
-    "CafeFlag_Partial": {
+    "Sub_Goto_Cafe_Partial": {
         "text": [
             "Schale Cafe",
             "Cafe"
@@ -203,13 +203,20 @@
             "Cafe"
         ]
     },
-    "Check_RelationshipRankUp_Partial": {
+    "Sub_Check_RelationshipRankUp_Partial": {
         "text": [
-            "Relationship rank up!",
-            "Relationship"
+            "Until Next Visit",
+            "Until",
+            "until"
         ]
     },
     "Sub_Click_InvitationButton_Partial": {
+        "text": [
+            "Available for Use",
+            "Available"
+        ]
+    },
+    "Click_InvitationButton_Partial": {
         "text": [
             "Available for Use",
             "Available"
@@ -221,6 +228,14 @@
         ]
     },
     "Sub_Click_CafeEarningsButton_Partial": {
+        "text": [
+            "Available to claim!",
+            "Available",
+            "Full",
+            "full"
+        ]
+    },
+    "Click_CafeEarningsButton_Partial": {
         "text": [
             "Available to claim!",
             "Available",

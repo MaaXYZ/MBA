@@ -1,16 +1,23 @@
 {
     "Cafe": {
         "next": [
-            "Start_Cafe_Partial",
-            "Sub_Goto_Cafe"
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Cafe_Partial",
+            "Sub_Click_CloseButton",
+            "Sub_Click_StudentAffection",
+            "Sub_Click_InvitationButton_Partial",
+            "End_Cafe"
         ]
     },
-    "Sub_Goto_Cafe": {
+    "Sub_Goto_Cafe_Partial": {
         "is_sub": true,
+        "inverse": true,
+        "recognition": "OCR",
+        "text": "Cafe",
+        "roi": [ 0, 0, 450, 60 ],
         "next": [
-            "CafeFlag_Partial",
-            "Sub_Wait_NowLoading_Partial",
             "Click_CafeButton_Partial",
+            "Sub_Wait_NowLoading_Partial",
             "Sub_Goto_Home"
         ]
     },
@@ -19,23 +26,7 @@
         "text": "Cafe",
         "roi": [ 23, 627, 144, 93 ],
         "action": "Click",
-        "post_delay": 1500
-    },
-    "CafeFlag_Partial": {
-        "recognition": "OCR",
-        "text": "Cafe",
-        "roi": [ 0, 0, 450, 60 ]
-    },
-    "Start_Cafe_Partial": {
-        "recognition": "OCR",
-        "text": "Cafe",
-        "roi": [ 0, 0, 450, 60 ],
-        "next": [
-            "Sub_Click_CloseButton",
-            "Sub_Click_StudentAffection",
-            "Sub_Click_InvitationButton_Partial",
-            "End_Cafe"
-        ]
+        "post_delay": 2500
     },
     "End_Cafe": {
         "inverse": true,
@@ -65,15 +56,18 @@
             "target": [ 0, 660, 1280, 60 ]
         },
         "next": [
-            "Check_RelationshipRankUp_Partial",
+            "Sub_Check_RelationshipRankUp_Partial",
             "Stop"
         ]
     },
-    "Check_RelationshipRankUp_Partial": {
+    "Sub_Check_RelationshipRankUp_Partial": {
+        "is_sub": true,
+        "inverse": true,
+        "times_limit": 10,
         "recognition": "OCR",
-        "text": "RelationshipRankUp",
-        "roi": [ 342, 543, 599, 165 ],
-        "target": [ 0, 0, 0, 0 ],
+        "text": "Until Next Visit",
+        "roi": [ 35, 80, 270, 40 ],
+        "target": [ 35, 80, 270, 40 ],
         "action": "Click"
     },
     "Sub_Click_InvitationButton_Partial": {
@@ -85,6 +79,19 @@
         "action": "Click",
         "next": [
             "Click_InviteButton_Partial",
+            "Click_InvitationButton_Partial",
+            "Stop"
+        ]
+    },
+    "Click_InvitationButton_Partial": {
+        "recognition": "OCR",
+        "text": "Available",
+        "roi": [ 687, 538, 229, 117 ],
+        "target": [ 793, 619, 73, 79 ],
+        "action": "Click",
+        "next": [
+            "Click_InviteButton_Partial",
+            "Click_InvitationButton_Partial",
             "Stop"
         ]
     },
@@ -105,13 +112,28 @@
         "post_wait_freezes": 1500
     },
     "Sub_Click_CafeEarningsButton_Partial": {
+        "is_sub": true,
         "recognition": "OCR",
         "text": "Available",
         "roi": [ 1027, 520, 253, 120 ],
         "target": [ 1079, 606, 152, 79 ],
         "action": "Click",
         "next": [
-            "Click_ClaimButton_ForCafeEarnings_Partial"
+            "Click_ClaimButton_ForCafeEarnings_Partial",
+            "Click_CafeEarningsButton_Partial",
+            "Stop"
+        ]
+    },
+    "Click_CafeEarningsButton_Partial": {
+        "recognition": "OCR",
+        "text": "Available",
+        "roi": [ 1027, 520, 253, 120 ],
+        "target": [ 1079, 606, 152, 79 ],
+        "action": "Click",
+        "next": [
+            "Click_ClaimButton_ForCafeEarnings_Partial",
+            "Click_CafeEarningsButton_Partial",
+            "Stop"
         ]
     },
     "Click_ClaimButton_ForCafeEarnings_Partial": {

@@ -84,7 +84,7 @@
 - Home
     - [x] Tasks
     - [x] Mailbox
-    - [x] Cafe
+    - [x] Cafe : TODO 需要缩放
     - [ ] Lesson : 需要判断颜色 + 遍历所有可选项
     - [x] Club
     - [ ] Crafting : 需要判断颜色 + 遍历所有可选项
