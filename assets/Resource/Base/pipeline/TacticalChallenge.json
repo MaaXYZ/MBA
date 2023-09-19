@@ -144,6 +144,7 @@
             "Notice_Standby_Partial",
             "Sub_Click_PassButton",
             "Click_ConfirmButton_OnBattleComplete_Partial",
+            "Click_MobilizeButton_Partial",
             "Notice_BattleResult_Partial"
         ]
     },
