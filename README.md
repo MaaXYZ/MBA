@@ -18,10 +18,9 @@
 
 ### 注意
 
+- 打不开 / 一闪而过可能是存在中文路径。
 - 想要开箱即用，请直接下载 `MBA.Cli-single-cut` 包。
-
 - `runtime-relied` 包在运行前需要预先安装 [.NET 运行时 7.0](https://dotnet.microsoft.com/zh-cn/download/dotnet/7.0)
-
 - 其他系统、架构想要下载预构建好的 `runtime-relied` 包，欢迎 pr 或提 issue。
 
 ## 使用说明
