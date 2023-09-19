@@ -346,15 +346,28 @@
             "LocationSelect"
         ]
     },
+    "Sub_Goto_Overpass_Partial": {
+        "text": [
+            "Overpass"
+        ]
+    },
     "Click_Overpass_Partial": {
         "text": [
             "Overpass"
         ]
     },
+    "Sub_Goto_DesertRailroad_Partial": {
+        "text": [
+            "Desert Railroad",
+            "DesertRailroad",
+            "Desert"
+        ]
+    },
     "Click_DesertRailroad_Partial": {
         "text": [
             "Desert Railroad",
-            "DesertRailroad"
+            "DesertRailroad",
+            "Desert"
         ]
     },
     "Click_Classroom_Partial": {

@@ -1,10 +1,11 @@
 {
     "Bounty": {
         "next": [
+            "Sub_Wait_NowLoading_Partial",
             "Sub_Goto_Bounty_Partial",
-            "Sub_Check_OverpassTickets",
-            "Sub_Check_DesertRailroadTickets",
-            "Sub_Check_ClassroomTickets",
+            "Sub_Check_OverpassTicket",
+            "Sub_Check_DesertRailroadTicket",
+            "Sub_Check_ClassroomTicket",
             "Stop"
         ]
     },
@@ -15,10 +16,9 @@
         "text": "LocationSelect",
         "roi": [ 630, 125, 650, 70 ],
         "next": [
-            "LocationSelectFlag_Partial",
             "BountyFlag_Partial",
-            "Sub_Wait_NowLoading_Partial",
             "Click_BountyButton_Partial",
+            "Sub_Wait_NowLoading_Partial",
             "Sub_Goto_Campaign"
         ]
     },
@@ -37,56 +37,45 @@
             "Click_BackButton"
         ]
     },
-    "LocationSelectFlag_Partial": {
-        "recognition": "OCR",
-        "text": "LocationSelect",
-        "roi": [ 630, 125, 650, 70 ]
+    "Start_SweepMission_OnBounty": {
+        "next": [
+            "Start_SweepMission_Partial",
+            "Sub_Click_EnterButton_OnClearedMission_Partial",
+            "Stop"
+        ]
     },
-    "Sub_Check_OverpassTickets": {
+    "Sub_Check_OverpassTicket": {
         "is_sub": true,
         "inverse": true,
         "times_limit": 5,
         "recognition": "OCR",
         "text": "0/2",
-        "roi": [ 680, 210, 600, 136 ],
+        "roi": [
+            [ 680, 210, 600, 136 ]
+        ],
         "next": [
-            "Click_Overpass_Partial"
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Overpass_Partial",
+            "Start_SweepMission_OnBounty"
         ],
         "runout_next": [
+            "Sub_Wait_NowLoading_Partial",
             "Sub_Goto_Bounty_Partial",
-            "Sub_Check_DesertRailroadTickets",
-            "Sub_Check_ClassroomTickets",
+            "Sub_Check_DesertRailroadTicket",
+            "Sub_Check_ClassroomTicket",
             "StopTask"
         ]
     },
-    "Sub_Check_DesertRailroadTickets": {
+    "Sub_Goto_Overpass_Partial": {
         "is_sub": true,
         "inverse": true,
-        "times_limit": 5,
         "recognition": "OCR",
-        "text": "0/2",
-        "roi": [ 680, 346, 600, 136 ],
+        "text": "Overpass",
+        "roi": [ 90, 130, 530, 85 ],
         "next": [
-            "Click_DesertRailroad_Partial"
-        ],
-        "runout_next": [
-            "Sub_Goto_Bounty_Partial",
-            "Sub_Check_ClassroomTickets",
-            "StopTask"
-        ]
-    },
-    "Sub_Check_ClassroomTickets": {
-        "is_sub": true,
-        "inverse": true,
-        "times_limit": 5,
-        "recognition": "OCR",
-        "text": "0/2",
-        "roi": [ 680, 482, 600, 136 ],
-        "next": [
-            "Click_Classroom_Partial"
-        ],
-        "runout_next": [
-            "StopTask"
+            "Click_Overpass_Partial",
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Bounty_Partial"
         ]
     },
     "Click_Overpass_Partial": {
@@ -94,10 +83,37 @@
         "text": "Overpass",
         "roi": [ 680, 210, 600, 136 ],
         "action": "Click",
+        "post_delay": 1500
+    },
+    "Sub_Check_DesertRailroadTicket": {
+        "is_sub": true,
+        "inverse": true,
+        "times_limit": 5,
+        "recognition": "OCR",
+        "text": "0/2",
+        "roi": [ 680, 346, 600, 136 ],
         "next": [
-            "Start_SweepMission_Partial",
-            "Sub_Click_EnterButton_OnClearedMission_Partial",
-            "Stop"
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_DesertRailroad_Partial",
+            "Start_SweepMission_OnBounty"
+        ],
+        "runout_next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Bounty_Partial",
+            "Sub_Check_ClassroomTicket",
+            "StopTask"
+        ]
+    },
+    "Sub_Goto_DesertRailroad_Partial": {
+        "is_sub": true,
+        "inverse": true,
+        "recognition": "OCR",
+        "text": "DesertRailroad",
+        "roi": [ 90, 130, 530, 85 ],
+        "next": [
+            "Click_DesertRailroad_Partial",
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Bounty_Partial"
         ]
     },
     "Click_DesertRailroad_Partial": {
@@ -105,10 +121,34 @@
         "text": "DesertRailroad",
         "roi": [ 680, 346, 600, 136 ],
         "action": "Click",
+        "post_delay": 1500
+    },
+    "Sub_Check_ClassroomTicket": {
+        "is_sub": true,
+        "inverse": true,
+        "times_limit": 5,
+        "recognition": "OCR",
+        "text": "0/2",
+        "roi": [ 680, 482, 600, 136 ],
         "next": [
-            "Start_SweepMission_Partial",
-            "Sub_Click_EnterButton_OnClearedMission_Partial",
-            "Stop"
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Classroom_Partial",
+            "Start_SweepMission_OnBounty"
+        ],
+        "runout_next": [
+            "StopTask"
+        ]
+    },
+    "Sub_Goto_Classroom_Partial": {
+        "is_sub": true,
+        "inverse": true,
+        "recognition": "OCR",
+        "text": "Classroom",
+        "roi": [ 90, 130, 530, 85 ],
+        "next": [
+            "Click_Classroom_Partial",
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Bounty_Partial"
         ]
     },
     "Click_Classroom_Partial": {
@@ -116,10 +156,6 @@
         "text": "Classroom",
         "roi": [ 680, 482, 600, 136 ],
         "action": "Click",
-        "next": [
-            "Start_SweepMission_Partial",
-            "Sub_Click_EnterButton_OnClearedMission_Partial",
-            "Stop"
-        ]
+        "post_delay": 1500
     }
 }

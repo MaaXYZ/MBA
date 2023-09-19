@@ -63,7 +63,7 @@
         "roi": [ 496, 76, 290, 129 ],
         "next": [
             "Click_PlusButtons",
-            "Stop_SweepZeroTimes",
+            "Stop_Sweep_OnZeroTimes",
             "Click_StartSweepButton_Partial"
         ]
     },
@@ -72,19 +72,22 @@
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Buttons/Plus.png",
         "threshold": 0.8,
-        "roi": [ 970, 235, 130, 130 ],
+        "roi": [
+            [ 990, 254, 88, 88 ],
+            [ 970, 235, 130, 130 ]
+        ],
         "action": "Click",
         "next": [
             "Click_PlusButtons",
-            "Stop_SweepZeroTimes",
+            "Stop_Sweep_OnZeroTimes",
             "Click_StartSweepButton_Partial"
         ],
         "runout_next": [
-            "Stop_SweepZeroTimes",
+            "Stop_Sweep_OnZeroTimes",
             "Click_StartSweepButton_Partial"
         ]
     },
-    "Stop_SweepZeroTimes": {
+    "Stop_Sweep_OnZeroTimes": {
         "recognition": "OCR",
         "text": "0",
         "roi": [ 881, 279, 113, 43 ]
