@@ -1,0 +1,365 @@
+{
+    "MenuFlag_Partial": {
+        "text": [
+            "Menu",
+            "MENU"
+        ]
+    },
+    "CampaignFlag_Partial": {
+        "text": [
+            "任務"
+        ]
+    },
+    "Sub_Wait_NowLoading_Partial": {
+        "text": [
+            "NowLoading",
+            "nowLoading"
+        ]
+    },
+    "Notice_Click_CancelButton_Partial": {
+        "text": [
+            "取消"
+        ]
+    },
+    "Notice_Click_ConfirmButton_Partial": {
+        "text": [
+            "確認"
+        ]
+    },
+    "Click_ConfirmButton_OnBattleComplete_Partial": {
+        "text": [
+            "確認"
+        ]
+    },
+    "Click_ConfirmButton_OnRewardAcquired_Partial": {
+        "text": [
+            "確認"
+        ]
+    },
+    "Notice_Click_ConfirmButton_OnInviting_Partial": {
+        "text": [
+            "確認"
+        ]
+    },
+    "Notice_Click_ConfirmButton_OnSweeping_Partial": {
+        "text": [
+            "確認"
+        ]
+    },
+    "Click_ConfirmButton_OnSweeped_Partial": {
+        "text": [
+            "確認"
+        ]
+    },
+    "Notice_Quit?_Partial": {
+        "text": [
+            "是否結束"
+        ]
+    },
+    "Notice_TimedOut_Partial": {
+        "text": [
+            "已超過清單更新時間"
+        ]
+    },
+    "Notice_RankChanged_Partial": {
+        "text": [
+            "The opponent's rank has changed.",
+            "rank has changed",
+            "has changed"
+        ]
+    },
+    "Notice_Standby_Partial": {
+        "text": [
+            "等待"
+        ]
+    },
+    "Notice_BattleResult_Partial": {
+        "text": [
+            "戰鬥結果"
+        ]
+    },
+    "Sub_Goto_Mailbox_Partial": {
+        "text": "信箱"
+    },
+    "MailboxFlag_Partial": {
+        "text": "信箱"
+    },
+    "NoMoreMailFlag_Partial": {
+        "text": [
+            "沒有郵件"
+        ]
+    },
+    "Click_ClaimAllButton_Mailbox_Partial": {
+        "text": [
+            "一次領取"
+        ]
+    },
+
+
+    "Sub_Goto_Club_Partial": {
+        "text": [
+            "社團大廳"
+        ]
+    },
+    "Click_ClubButton_Partial": {
+        "text": [
+            "社團"
+        ]
+    },
+    "TacticalChallengeFlag_Partial": {
+        "text": [
+            "戰術大賽"
+        ]
+    },
+    "Sub_Start_TacticalChallenge_Partial": {
+        "text": [
+            "戰術大賽"
+        ]
+    },
+    "Sub_End_TacticalChallenge_Partial": {
+        "text": [
+            "戰術大賽"
+        ]
+    },
+    "Click_TacticalChallenge_Partial": {
+        "text": [
+            "戰術大賽"
+        ]
+    },
+    "Click_ClaimButton_ForCreditPoints_Partial": {
+        "text": [
+            "領取"
+        ]
+    },
+    "Click_ClaimButton_ForPyroxenes_Partial": {
+        "text": [
+            "領取"
+        ]
+    },
+    "Click_TouchButton_Partial": {
+        "text": [
+            "TOUCH"
+        ]
+    },
+    "Start_SweepMission_Partial": {
+        "text": [
+            "任務資訊"
+        ]
+    },
+    "Click_StartSweepButton_Partial": {
+        "text": [
+            "掃蕩開始"
+        ]
+    },
+    "Click_SkipButton_Partial": {
+        "text": [
+            "Skip",
+            "skip"
+        ]
+    },
+    "Sub_Click_EnterButton_OnClearedMission_Partial": {
+        "text": [
+            "入場"
+        ]
+    },
+    "Click_RankByTheFront_Partial": {
+        "text": [
+            "第"
+        ]
+    },
+    "Click_FormationButton_Partial": {
+        "text": [
+            "編輯部隊"
+        ]
+    },
+    "Click_MobilizeButton_Partial": {
+        "text": [
+            "出擊"
+        ]
+    },
+    "CafeFlag_Partial": {
+        "text": [
+            "夏萊附設",
+            "咖啡廰"
+        ]
+    },
+    "Click_CafeButton_Partial": {
+        "text": [
+            "咖啡廰"
+        ]
+    },
+    "Check_RelationshipRankUp_Partial": {
+        "text": [
+            "羈絆升級"
+        ]
+    },
+    "Sub_Click_InvitationButton_Partial": {
+        "text": [
+            "可使用"
+        ]
+    },
+    "Click_InviteButton_Partial": {
+        "text": [
+            "邀請"
+        ]
+    },
+    "Sub_Click_CafeEarningsButton_Partial": {
+        "text": [
+            "Available to claim!",
+            "Available",
+            "Full",
+            "full"
+        ]
+    },
+    "Click_ClaimButton_ForCafeEarnings_Partial": {
+        "text": [
+            "領取"
+        ]
+    },
+    "Click_ComfortButton_Partial": {
+        "text": [
+            "舒適度"
+        ]
+    },
+    "Click_RankUpButton_OnCafeInfo_Partial": {
+        "text": [
+            "升級"
+        ]
+    },
+    "Click_RankUpButton_OnCafeRankUp_Partial": {
+        "text": [
+            "升級"
+        ]
+    },
+    "Sub_Goto_Scrimmage_Partial": {
+        "text": [
+            "Academy Select",
+            "AcademySelect"
+        ]
+    },
+    "Click_ScrimmageButton_Partial": {
+        "text": [
+            "學園交流會"
+        ]
+    },
+    "ScrimmageFlag_Partial": {
+        "text": [
+            "學園交流會"
+        ]
+    },
+    "AcademySelectFlag_Partial": {
+        "text": [
+            "Academy Select",
+            "AcademySelect"
+        ]
+    },
+    "Click_Trinity_Partial": {
+        "text": [
+            "三一"
+        ]
+    },
+    "Click_Gehenna_Partial": {
+        "text": [
+            "格黑娜"
+        ]
+    },
+    "Click_Millennium_Partial": {
+        "text": [
+            "千年"
+        ]
+    },
+    "Click_CommissionsButton_Partial": {
+        "text": [
+            "特殊任務"
+        ]
+    },
+    "CommissionsFlag_Partial": {
+        "text": [
+            "特殊任務"
+        ]
+    },
+    "RequestSelectFlag_Partial": {
+        "text": [
+            "Request Select",
+            "RequestSelect"
+        ]
+    },
+    "Start_Commissions_Partial": {
+        "text": [
+            "Request Select",
+            "RequestSelect"
+        ]
+    },
+    "Click_BaseDefense_Partial": {
+        "text": [
+            "據點防禦"
+        ]
+    },
+    "Click_ItemRetrieval_Partial": {
+        "text": [
+            "信用貨幣回收"
+        ]
+    },
+    "Sub_Goto_Bounty_Partial": {
+        "text": [
+            "Location Select",
+            "LocationSelect"
+        ]
+    },
+    "Click_BountyButton_Partial": {
+        "text": [
+            "懸賞通緝"
+        ]
+    },
+    "BountyFlag_Partial": {
+        "text": [
+            "懸賞通緝"
+        ]
+    },
+    "LocationSelectFlag_Partial": {
+        "text": [
+            "Location Select",
+            "LocationSelect"
+        ]
+    },
+    "Sub_Goto_Overpass_Partial": {
+        "text": [
+            "高架公路"
+        ]
+    },
+    "Click_Overpass_Partial": {
+        "text": [
+            "高架公路"
+        ]
+    },
+    "Sub_Goto_DesertRailroad_Partial": {
+        "text": [
+            "沙漠鐵道"
+        ]
+    },
+    "Click_DesertRailroad_Partial": {
+        "text": [
+            "沙漠鐵道"
+        ]
+    },
+    "Click_Classroom_Partial": {
+        "text": [
+            "教室"
+        ]
+    },
+    "Sub_Goto_Tasks_Partial": {
+        "text": [
+            "任務"
+        ]
+    },
+    "Click_TasksButton_Partial": {
+        "text": [
+            "任務"
+        ]
+    },
+    "0": {
+        "text": [
+            "00"
+        ]
+    }
+}
