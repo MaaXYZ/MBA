@@ -29,6 +29,7 @@
         "post_delay": 2500
     },
     "End_Cafe": {
+        "skip_review": 6,
         "inverse": true,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Cafe/StudentAffection.png",
@@ -44,6 +45,7 @@
         ]
     },
     "Sub_Click_StudentAffection": {
+        "skip_review": 6,
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Cafe/StudentAffection.png",

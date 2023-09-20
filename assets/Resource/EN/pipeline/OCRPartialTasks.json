@@ -12,8 +12,12 @@
     },
     "Sub_Wait_NowLoading_Partial": {
         "text": [
-            "NowLoading",
-            "nowLoading"
+            "Loading"
+        ]
+    },
+    "Sub_Notice_Partial": {
+        "text": [
+            "Notice"
         ]
     },
     "Notice_Click_CancelButton_Partial": {
@@ -51,7 +55,7 @@
             "Confirm"
         ]
     },
-    "Notice_Quit?_Partial": {
+    "Sub_Notice_Quit_Partial": {
         "text": [
             "Quit?"
         ]
@@ -82,10 +86,9 @@
         ]
     },
     "Sub_Goto_Mailbox_Partial": {
-        "text": "Mailbox"
-    },
-    "MailboxFlag_Partial": {
-        "text": "Mailbox"
+        "text": [
+            "Mailbox"
+        ]
     },
     "NoMoreMailFlag_Partial": {
         "text": [
@@ -101,8 +104,6 @@
             "ClaimAll"
         ]
     },
-
-
     "Sub_Goto_Club_Partial": {
         "text": [
             "Club Lobby",
@@ -114,7 +115,7 @@
             "Club"
         ]
     },
-    "TacticalChallengeFlag_Partial": {
+    "Sub_Goto_TacticalChallenge_Partial": {
         "text": [
             "Tactical Challenge",
             "TacticalChallenge"
@@ -177,7 +178,7 @@
             "Enter"
         ]
     },
-    "Click_RankByTheFront_Partial": {
+    "Sub_Click_RankByTheFront_Partial": {
         "text": [
             "Rank"
         ]
@@ -380,12 +381,6 @@
             "Bounty"
         ]
     },
-    "LocationSelectFlag_Partial": {
-        "text": [
-            "Location Select",
-            "LocationSelect"
-        ]
-    },
     "Sub_Goto_Overpass_Partial": {
         "text": [
             "Overpass"
@@ -408,6 +403,11 @@
             "Desert Railroad",
             "DesertRailroad",
             "Desert"
+        ]
+    },
+    "Sub_Goto_Classroom_Partial": {
+        "text": [
+            "Classroom"
         ]
     },
     "Click_Classroom_Partial": {

@@ -1,6 +1,7 @@
 {
     "Mailbox": {
         "next": [
+            "Sub_Wait_NowLoading_Partial",
             "Sub_Goto_Mailbox_Partial",
             "NoMoreMailFlag_Partial",
             "Click_ClaimAllButton_Mailbox_Partial"
@@ -13,18 +14,13 @@
         "text": "Mailbox",
         "roi": [ 0, 0, 450, 60 ],
         "next": [
-            "MailboxFlag_Partial",
-            "Sub_Wait_NowLoading_Partial",
             "Click_MailboxButton",
+            "Sub_Wait_NowLoading_Partial",
             "Sub_Goto_Home"
         ]
     },
-    "MailboxFlag_Partial": {
-        "recognition": "OCR",
-        "text": "Mailbox",
-        "roi": [ 0, 0, 450, 60 ]
-    },
     "Click_MailboxButton": {
+        "skip_review": 6,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Mailbox/Mailbox.png",
         "roi": [ 1077, 0, 131, 126 ],

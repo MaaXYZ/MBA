@@ -2,6 +2,7 @@
     "StartUp": {
         "next": [
             "HomeFlag",
+            "Sub_Wait_NowLoading_Partial",
             "Sub_Goto_Home"
         ]
     },
@@ -11,7 +12,7 @@
             "HomeFlag",
             "Sub_Wait_NowLoading_Partial",
             "Sub_Click_HomeButton",
-            "Sub_Notice",
+            "Sub_Notice_Partial",
             "Sub_Click_BackButton",
             "Sub_Click_CloseButton",
             "Sub_Click_CloseFullscreenButton",
@@ -19,6 +20,7 @@
         ]
     },
     "HomeFlag": {
+        "skip_review": 6,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Campaign/Campaign.png",
         "roi": [ 1086, 479, 194, 146 ]

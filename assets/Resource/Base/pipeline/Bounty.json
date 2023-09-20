@@ -45,6 +45,7 @@
         ]
     },
     "Sub_Check_OverpassTicket": {
+        "skip_review": 4,
         "is_sub": true,
         "inverse": true,
         "times_limit": 5,
@@ -86,6 +87,7 @@
         "post_delay": 1500
     },
     "Sub_Check_DesertRailroadTicket": {
+        "skip_review": 4,
         "is_sub": true,
         "inverse": true,
         "times_limit": 5,
@@ -124,6 +126,7 @@
         "post_delay": 1500
     },
     "Sub_Check_ClassroomTicket": {
+        "skip_review": 4,
         "is_sub": true,
         "inverse": true,
         "times_limit": 5,

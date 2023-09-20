@@ -1,11 +1,11 @@
 {
-    "Sub_Notice":{
+    "Sub_Notice_Partial": {
         "is_sub": true,
         "recognition": "OCR",
         "text": "Notice",
         "roi": [ 360, 135, 560, 440 ],
         "next": [
-            "Notice_Quit?_Partial",
+            "Sub_Notice_Quit_Partial",
             "Notice_Unknown"
         ]
     },
@@ -22,12 +22,12 @@
         "action": "Click"
     },
     "Notice_Unknown": {
-        "notify": true,
+        "TODO": "回调通知",
         "next": [
             "StopTask"
         ]
     },
-    "Notice_Quit?_Partial": {
+    "Sub_Notice_Quit_Partial": {
         "is_sub": true,
         "recognition": "OCR",
         "text": "Quit?",

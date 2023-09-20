@@ -1,5 +1,6 @@
 {
     "Sub_Click_HomeButton": {
+        "skip_review": 6,
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Buttons/Home.png",
@@ -8,6 +9,7 @@
         "post_delay": 1500
     },
     "Sub_Click_BackButton": {
+        "skip_review": 6,
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Buttons/Back.png",
@@ -16,6 +18,7 @@
         "post_delay": 1500
     },
     "Click_BackButton": {
+        "skip_review": 6,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Buttons/Back.png",
         "roi": [ 0, 0, 143, 140 ],
@@ -23,6 +26,7 @@
         "post_delay": 1500
     },
     "Sub_Click_CloseButton": {
+        "skip_review": 6,
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Buttons/Close.png",
@@ -36,6 +40,7 @@
         "post_delay": 1500
     },
     "Sub_Click_PassButton": {
+        "skip_review": 6,
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Buttons/Pass.png",
@@ -44,6 +49,7 @@
         "post_delay": 1500
     },
     "Sub_Click_CloseFullscreenButton": {
+        "skip_review": 6,
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Buttons/CloseFullscreen.png",
@@ -68,6 +74,7 @@
         ]
     },
     "Click_PlusButtons": {
+        "skip_review": 6,
         "doc": "times_limit setted in code",
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Buttons/Plus.png",
@@ -88,6 +95,7 @@
         ]
     },
     "Stop_Sweep_OnZeroTimes": {
+        "skip_review": 4,
         "recognition": "OCR",
         "text": "0",
         "roi": [ 881, 279, 113, 43 ]
@@ -145,6 +153,7 @@
         ]
     },
     "Click_EnterButton_OnTheRightSideOfThreeStarsFlag1": {
+        "skip_review": 6,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Buttons/ThreeStarsFlag.png",
         "threshold": 0.9,
@@ -153,6 +162,7 @@
         "action": "Click"
     },
     "Click_EnterButton_OnTheRightSideOfThreeStarsFlag2": {
+        "skip_review": 6,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Buttons/ThreeStarsFlag.png",
         "threshold": 0.9,
@@ -161,6 +171,7 @@
         "action": "Click"
     },
     "Click_EnterButton_OnTheRightSideOfThreeStarsFlag3": {
+        "skip_review": 6,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Buttons/ThreeStarsFlag.png",
         "threshold": 0.9,
@@ -169,6 +180,7 @@
         "action": "Click"
     },
     "Click_EnterButton_OnTheRightSideOfThreeStarsFlag4": {
+        "skip_review": 6,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Buttons/ThreeStarsFlag.png",
         "threshold": 0.9,
@@ -177,6 +189,7 @@
         "action": "Click"
     },
     "Click_EnterButton_OnTheRightSideOfThreeStarsFlag5": {
+        "skip_review": 6,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Buttons/ThreeStarsFlag.png",
         "threshold": 0.9,
@@ -185,6 +198,7 @@
         "action": "Click"
     },
     "Click_EnterButton_OnTheRightSideOfThreeStarsFlag6": {
+        "skip_review": 6,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Buttons/ThreeStarsFlag.png",
         "threshold": 0.9,

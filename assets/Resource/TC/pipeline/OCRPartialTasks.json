@@ -12,8 +12,12 @@
     },
     "Sub_Wait_NowLoading_Partial": {
         "text": [
-            "NowLoading",
-            "nowLoading"
+            "Loading"
+        ]
+    },
+    "Sub_Notice_Partial": {
+        "text": [
+            "通知"
         ]
     },
     "Notice_Click_CancelButton_Partial": {
@@ -51,7 +55,7 @@
             "確認"
         ]
     },
-    "Notice_Quit?_Partial": {
+    "Sub_Notice_Quit_Partial": {
         "text": [
             "是否結束"
         ]
@@ -79,10 +83,9 @@
         ]
     },
     "Sub_Goto_Mailbox_Partial": {
-        "text": "信箱"
-    },
-    "MailboxFlag_Partial": {
-        "text": "信箱"
+        "text": [
+            "信箱"
+        ]
     },
     "NoMoreMailFlag_Partial": {
         "text": [
@@ -94,8 +97,6 @@
             "一次領取"
         ]
     },
-
-
     "Sub_Goto_Club_Partial": {
         "text": [
             "社團大廳"
@@ -106,7 +107,7 @@
             "社團"
         ]
     },
-    "TacticalChallengeFlag_Partial": {
+    "Sub_Goto_TacticalChallenge_Partial": {
         "text": [
             "戰術大賽"
         ]
@@ -162,7 +163,7 @@
             "入場"
         ]
     },
-    "Click_RankByTheFront_Partial": {
+    "Sub_Click_RankByTheFront_Partial": {
         "text": [
             "第"
         ]
@@ -177,7 +178,7 @@
             "出擊"
         ]
     },
-    "CafeFlag_Partial": {
+    "Sub_Goto_Cafe_Partial": {
         "text": [
             "夏萊附設",
             "咖啡廰"
@@ -188,12 +189,18 @@
             "咖啡廰"
         ]
     },
-    "Check_RelationshipRankUp_Partial": {
+    "Sub_Check_RelationshipRankUp_Partial": {
         "text": [
-            "羈絆升級"
+            "距離",
+            "下次訪問"
         ]
     },
     "Sub_Click_InvitationButton_Partial": {
+        "text": [
+            "可使用"
+        ]
+    },
+    "Click_InvitationButton_Partial": {
         "text": [
             "可使用"
         ]
@@ -205,8 +212,14 @@
     },
     "Sub_Click_CafeEarningsButton_Partial": {
         "text": [
-            "Available to claim!",
-            "Available",
+            "可獲得",
+            "Full",
+            "full"
+        ]
+    },
+    "Click_CafeEarningsButton_Partial": {
+        "text": [
+            "可獲得",
             "Full",
             "full"
         ]
@@ -233,6 +246,7 @@
     },
     "Sub_Goto_Scrimmage_Partial": {
         "text": [
+            "選擇學園",
             "Academy Select",
             "AcademySelect"
         ]
@@ -247,10 +261,9 @@
             "學園交流會"
         ]
     },
-    "AcademySelectFlag_Partial": {
+    "Sub_Goto_Trinity_Partial": {
         "text": [
-            "Academy Select",
-            "AcademySelect"
+            "三一"
         ]
     },
     "Click_Trinity_Partial": {
@@ -258,9 +271,19 @@
             "三一"
         ]
     },
+    "Sub_Goto_Gehenna_Partial": {
+        "text": [
+            "格黑娜"
+        ]
+    },
     "Click_Gehenna_Partial": {
         "text": [
             "格黑娜"
+        ]
+    },
+    "Sub_Goto_Millennium_Partial": {
+        "text": [
+            "千年"
         ]
     },
     "Click_Millennium_Partial": {
@@ -278,30 +301,47 @@
             "特殊任務"
         ]
     },
-    "RequestSelectFlag_Partial": {
+    "Sub_Goto_Commissions_Partial": {
         "text": [
+            "選擇委託",
             "Request Select",
             "RequestSelect"
         ]
     },
     "Start_Commissions_Partial": {
         "text": [
+            "選擇委託",
             "Request Select",
             "RequestSelect"
         ]
     },
+    "Sub_Goto_BaseDefense_Partial": {
+        "text": [
+            "據點防禦",
+            "據點"
+        ]
+    },
     "Click_BaseDefense_Partial": {
         "text": [
-            "據點防禦"
+            "據點防禦",
+            "據點"
+        ]
+    },
+    "Sub_Goto_ItemRetrieval_Partial": {
+        "text": [
+            "信用貨幣回收",
+            "信用"
         ]
     },
     "Click_ItemRetrieval_Partial": {
         "text": [
-            "信用貨幣回收"
+            "信用貨幣回收",
+            "信用"
         ]
     },
     "Sub_Goto_Bounty_Partial": {
         "text": [
+            "選擇委託",
             "Location Select",
             "LocationSelect"
         ]
@@ -314,12 +354,6 @@
     "BountyFlag_Partial": {
         "text": [
             "懸賞通緝"
-        ]
-    },
-    "LocationSelectFlag_Partial": {
-        "text": [
-            "Location Select",
-            "LocationSelect"
         ]
     },
     "Sub_Goto_Overpass_Partial": {
@@ -340,6 +374,11 @@
     "Click_DesertRailroad_Partial": {
         "text": [
             "沙漠鐵道"
+        ]
+    },
+    "Sub_Goto_Classroom_Partial": {
+        "text": [
+            "教室"
         ]
     },
     "Click_Classroom_Partial": {

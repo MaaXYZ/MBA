@@ -2,32 +2,32 @@
     "TacticalChallenge": {
         "next": [
             "Sub_Start_TacticalChallenge_Partial",
-            "Sub_Goto_TacticalChallenge"
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_TacticalChallenge_Partial"
         ]
     },
     "TacticalChallenge0": {
         "times_limit": 1,
         "next": [
             "Click_ClaimButton_ForCreditPoints_Partial",
-            "Sub_Goto_TacticalChallenge"
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_TacticalChallenge_Partial"
         ],
         "runout_next": [
             "StopTask"
         ]
     },
-    "Sub_Goto_TacticalChallenge": {
+    "Sub_Goto_TacticalChallenge_Partial": {
         "is_sub": true,
-        "next": [
-            "TacticalChallengeFlag_Partial",
-            "Sub_Wait_NowLoading_Partial",
-            "Click_TacticalChallenge_Partial",
-            "Sub_Goto_Campaign"
-        ]
-    },
-    "TacticalChallengeFlag_Partial": {
+        "inverse": true,
         "recognition": "OCR",
         "text": "TacticalChallenge",
-        "roi": [ 0, 0, 450, 60 ]
+        "roi": [ 0, 0, 450, 60 ],
+        "next": [
+            "Click_TacticalChallenge_Partial",
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Campaign"
+        ]
     },
     "Click_TacticalChallenge_Partial": {
         "recognition": "OCR",
@@ -45,14 +45,15 @@
         "text": "TacticalChallenge",
         "roi": [ 0, 0, 450, 150 ],
         "next": [
-            "End_TacticalChallenge_Partial",
-            "Click_RankByTheFront_Partial"
+            "End_TacticalChallenge",
+            "Sub_Click_RankByTheFront_Partial"
         ],
         "runout_next": [
             "Sub_End_TacticalChallenge_Partial"
         ]
     },
-    "End_TacticalChallenge_Partial": {
+    "End_TacticalChallenge": {
+        "skip_review": 4,
         "recognition": "OCR",
         "text": "0/5",
         "roi": [ 167, 427, 128, 121 ],
@@ -97,7 +98,7 @@
         ],
         "timeout": 5000
     },
-    "Click_RankByTheFront_Partial": {
+    "Sub_Click_RankByTheFront_Partial": {
         "is_sub": true,
         "recognition": "OCR",
         "text": "Rank",
@@ -173,7 +174,7 @@
         "action": "Click",
         "next": [
             "Sub_Wait_NowLoading_Partial",
-            "Click_RankByTheFront_Partial"
+            "Sub_Click_RankByTheFront_Partial"
         ]
     },
     "Notice_RankChanged_Partial": {
@@ -184,7 +185,7 @@
         "action": "Click",
         "next": [
             "Sub_Wait_NowLoading_Partial",
-            "Click_RankByTheFront_Partial"
+            "Sub_Click_RankByTheFront_Partial"
         ]
     },
     "Notice_Standby_Partial": {

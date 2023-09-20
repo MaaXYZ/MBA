@@ -45,6 +45,7 @@
         ]
     },
     "Sub_Check_TrinityTicket": {
+        "skip_review": 4,
         "is_sub": true,
         "inverse": true,
         "times_limit": 5,
@@ -84,6 +85,7 @@
         "post_delay": 1500
     },
     "Sub_Check_GehennaTicket": {
+        "skip_review": 4,
         "is_sub": true,
         "inverse": true,
         "times_limit": 5,
@@ -122,6 +124,7 @@
         "post_delay": 1500
     },
     "Sub_Check_MillenniumTicket": {
+        "skip_review": 4,
         "is_sub": true,
         "inverse": true,
         "times_limit": 5,
