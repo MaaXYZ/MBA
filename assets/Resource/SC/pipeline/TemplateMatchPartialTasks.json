@@ -1,0 +1,23 @@
+{
+    "Sub_Click_SkipTactics_Partial": {
+        "template": "../image/Campaign/TacticalChallenge/SkipTactics.png"
+    },
+    "Sub_Goto_MaterialSynthesis_Partial": {
+        "template": "../image/Crafting/MaterialFusion.png"
+    },
+    "Sub_Goto_MaterialFusion_Partial": {
+        "template": "../image/Crafting/MaterialSynthesis.png"
+    },
+    "Click_MaterialSynthesis_Partial": {
+        "template": "../image/Crafting/MaterialSynthesis.png"
+    },
+    "Click_MaterialFusion_Partial": {
+        "template": "../image/Crafting/MaterialFusion.png"
+    },
+    "Sub_Click_ClaimAllButton_Tasks_Partial": {
+        "template": "../image/Tasks/ClaimAll.png"
+    },
+    "Sub_Click_ClaimButton_Tasks_Partial": {
+        "template": "../image/Tasks/Claim.png"
+    }
+}
