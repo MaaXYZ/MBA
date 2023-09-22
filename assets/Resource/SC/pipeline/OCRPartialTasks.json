@@ -1,0 +1,397 @@
+{
+    "MenuFlag_Partial": {
+        "text": [
+            "菜单"
+        ]
+    },
+    "CampaignFlag_Partial": {
+        "text": [
+            "任务"
+        ]
+    },
+    "Sub_Wait_NowLoading_Partial": {
+        "text": [
+            "NowLoading",
+            "nowLoading"
+        ]
+    },
+    "Notice_Click_CancelButton_Partial": {
+        "text": [
+            "取消"
+        ]
+    },
+    "Notice_Click_ConfirmButton_Partial": {
+        "text": [
+            "确认"
+        ]
+    },
+    "Click_ConfirmButton_OnBattleComplete_Partial": {
+        "text": [
+            "确认"
+        ]
+    },
+    "Click_ConfirmButton_OnRewardAcquired_Partial": {
+        "text": [
+            "确认"
+        ]
+    },
+    "Notice_Click_ConfirmButton_OnInviting_Partial": {
+        "text": [
+            "确认"
+        ]
+    },
+    "Notice_Click_ConfirmButton_OnSweeping_Partial": {
+        "text": [
+            "确认"
+        ]
+    },
+    "Click_ConfirmButton_OnSweeped_Partial": {
+        "text": [
+            "确认"
+        ]
+    },
+    "Sub_Notice_Quit_Partial": {
+        "text": [
+            "Quit?"
+        ]
+    },
+    "Notice_TimedOut_Partial": {
+        "text": [
+            "List refresh timed out.",
+            "timed out",
+            "timedout"
+        ]
+    },
+    "Notice_RankChanged_Partial": {
+        "text": [
+            "The opponent's rank has changed.",
+            "rank has changed",
+            "has changed"
+        ]
+    },
+    "Notice_Standby_Partial": {
+        "text": [
+            "Standby"
+        ]
+    },
+    "Notice_BattleResult_Partial": {
+        "text": [
+            "Battle Result",
+            "BattleResult"
+        ]
+    },
+    "Sub_Goto_Mailbox_Partial": {
+        "text": "邮箱"
+    },
+    "MailboxFlag_Partial": {
+        "text": "邮箱"
+    },
+    "NoMoreMailFlag_Partial": {
+        "text": [
+            "暂无邮件"
+        ]
+    },
+    "Click_ClaimAllButton_Mailbox_Partial": {
+        "text": [
+            "一键领取"
+        ]
+    },
+    "Sub_Goto_Club_Partial": {
+        "text": [
+            "小组大厅"
+        ]
+    },
+    "Click_ClubButton_Partial": {
+        "text": [
+            "小组"
+        ]
+    },
+    "TacticalChallengeFlag_Partial": {
+        "text": [
+            "战术对抗赛"
+        ]
+    },
+    "Sub_Start_TacticalChallenge_Partial": {
+        "text": [
+            "战术对抗赛"
+        ]
+    },
+    "Sub_End_TacticalChallenge_Partial": {
+        "text": [
+            "战术对抗赛"
+        ]
+    },
+    "Click_TacticalChallenge_Partial": {
+        "text": [
+            "战术对抗赛"
+        ]
+    },
+    "Click_ClaimButton_ForCreditPoints_Partial": {
+        "text": [
+            "领取"
+        ]
+    },
+    "Click_ClaimButton_ForPyroxenes_Partial": {
+        "text": [
+            "领取"
+        ]
+    },
+    "Click_TouchButton_Partial": {
+        "text": [
+            "TOUCH"
+        ]
+    },
+    "Start_SweepMission_Partial": {
+        "text": [
+            "任务信息"
+        ]
+    },
+    "Click_StartSweepButton_Partial": {
+        "text": [
+            "开始扫荡"
+        ]
+    },
+    "Click_SkipButton_Partial": {
+        "text": [
+            "Skip",
+            "skip"
+        ]
+    },
+    "Sub_Click_EnterButton_OnClearedMission_Partial": {
+        "text": [
+            "入场"
+        ]
+    },
+    "Click_RankByTheFront_Partial": {
+        "text": [
+            "Rank"
+        ]
+    },
+    "Click_FormationButton_Partial": {
+        "text": [
+            "Formation"
+        ]
+    },
+    "Click_MobilizeButton_Partial": {
+        "text": [
+            "出击"
+        ]
+    },
+    "Sub_Goto_Cafe_Partial": {
+        "text": [
+            "沙勒附属",
+            "咖啡厅"
+        ]
+    },
+    "Click_CafeButton_Partial": {
+        "text": [
+            "咖啡厅"
+        ]
+    },
+    "Sub_Check_RelationshipRankUp_Partial": {
+        "text": [
+            "距离",
+            "下一次访问"
+        ]
+    },
+    "Sub_Click_InvitationButton_Partial": {
+        "text": [
+            "可使用"
+        ]
+    },
+    "Click_InvitationButton_Partial": {
+        "text": [
+            "可使用"
+        ]
+    },
+    "Click_InviteButton_Partial": {
+        "text": [
+            "邀请"
+        ]
+    },
+    "Sub_Click_CafeEarningsButton_Partial": {
+        "text": [
+            "可获得",
+            "Full",
+            "full"
+        ]
+    },
+    "Click_CafeEarningsButton_Partial": {
+        "text": [
+            "可获得",
+            "Full",
+            "full"
+        ]
+    },
+    "Click_ClaimButton_ForCafeEarnings_Partial": {
+        "text": [
+            "领取"
+        ]
+    },
+    "Click_ComfortButton_Partial": {
+        "text": [
+            "舒适度"
+        ]
+    },
+    "Click_RankUpButton_OnCafeInfo_Partial": {
+        "text": [
+            "升级"
+        ]
+    },
+    "Click_RankUpButton_OnCafeRankUp_Partial": {
+        "text": [
+            "升级"
+        ]
+    },
+    "Sub_Goto_Scrimmage_Partial": {
+        "text": [
+            "Academy Select",
+            "AcademySelect"
+        ]
+    },
+    "Click_ScrimmageButton_Partial": {
+        "text": []
+    },
+    "ScrimmageFlag_Partial": {
+        "text": []
+    },
+    "Sub_Goto_Trinity_Partial": {
+        "text": [
+            "崔尼蒂"
+        ]
+    },
+    "Click_Trinity_Partial": {
+        "text": [
+            "崔尼蒂"
+        ]
+    },
+    "Sub_Goto_Gehenna_Partial": {
+        "text": [
+            "歌赫娜"
+        ]
+    },
+    "Click_Gehenna_Partial": {
+        "text": [
+            "歌赫娜"
+        ]
+    },
+    "Sub_Goto_Millennium_Partial": {
+        "text": [
+            "千禧年"
+        ]
+    },
+    "Click_Millennium_Partial": {
+        "text": [
+            "千禧年"
+        ]
+    },
+    "Click_CommissionsButton_Partial": {
+        "text": [
+            "特别委托"
+        ]
+    },
+    "CommissionsFlag_Partial": {
+        "text": [
+            "特别委托"
+        ]
+    },
+    "Sub_Goto_Commissions_Partial": {
+        "text": [
+            "选择委托",
+            "Request Select",
+            "RequestSelect"
+        ]
+    },
+    "Start_Commissions_Partial": {
+        "text": [
+            "选择委托",
+            "Request Select",
+            "RequestSelect"
+        ]
+    },
+    "Sub_Goto_BaseDefense_Partial": {
+        "text": [
+            "据点防御",
+            "据点"
+        ]
+    },
+    "Click_BaseDefense_Partial": {
+        "text": [
+            "据点防御",
+            "据点"
+        ]
+    },
+    "Sub_Goto_ItemRetrieval_Partial": {
+        "text": [
+            "信用回收",
+            "信用"
+        ]
+    },
+    "Click_ItemRetrieval_Partial": {
+        "text": [
+            "信用回收",
+            "信用"
+        ]
+    },
+    "Sub_Goto_Bounty_Partial": {
+        "text": [
+            "特别委托"
+        ]
+    },
+    "Click_BountyButton_Partial": {
+        "text": [
+            "悬赏通缉"
+        ]
+    },
+    "BountyFlag_Partial": {
+        "text": [
+            "悬赏通缉"
+        ]
+    },
+    "LocationSelectFlag_Partial": {
+        "text": [
+            "Location Select",
+            "LocationSelect"
+        ]
+    },
+    "Sub_Goto_Overpass_Partial": {
+        "text": [
+            "高架公路"
+        ]
+    },
+    "Click_Overpass_Partial": {
+        "text": [
+            "高架公路"
+        ]
+    },
+    "Sub_Goto_DesertRailroad_Partial": {
+        "text": [
+            "沙漠铁路"
+        ]
+    },
+    "Click_DesertRailroad_Partial": {
+        "text": [
+            "沙漠铁路"
+        ]
+    },
+    "Click_Classroom_Partial": {
+        "text": [
+            "讲堂"
+        ]
+    },
+    "Sub_Goto_Tasks_Partial": {
+        "text": [
+            "任务"
+        ]
+    },
+    "Click_TasksButton_Partial": {
+        "text": [
+            "任务"
+        ]
+    },
+    "0": {
+        "text": [
+            "00"
+        ]
+    }
+}
