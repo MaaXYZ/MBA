@@ -1,4 +1,4 @@
-using MaaToolKit.Extensions.ComponentModel;
+using MaaToolKit.Extensions;
 
 namespace MBA.Core.Extensions;
 

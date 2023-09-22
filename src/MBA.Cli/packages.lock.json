@@ -39,7 +39,7 @@
         "type": "Project",
         "dependencies": {
           "Maa.AgentBinary": "[1.0.0, )",
-          "Maa.ToolKit.Extensions": "[0.6.0-beta.1.1, )",
+          "Maa.ToolKit.Extensions": "[1.0.0-beta.2.1, )",
           "Serilog": "[3.0.1, )",
           "Serilog.Sinks.Console": "[4.1.0, )",
           "Serilog.Sinks.Debug": "[2.0.0, )",
@@ -55,16 +55,16 @@
       "Maa.Framework.Runtimes": {
         "type": "CentralTransitive",
         "requested": "[0.3.7, )",
-        "resolved": "0.6.0-beta.1",
-        "contentHash": "aXkvpmPOa4zkguYaOOqWz0Pvfk0aexplmz6OGhfV7exREKw52ZArJqQE1jd1e/oBZ88q5Qhz3IYDeH2RppwQiA=="
+        "resolved": "1.0.0-beta.2",
+        "contentHash": "QKOddDHKVdSeps/l1qw8AAI4hxhGEisRNIZE8YEHVB1Q9vliM3Lo8C+UEOLdvWS7yZhUlRq9oUo7ju9hhOlk+A=="
       },
       "Maa.ToolKit.Extensions": {
         "type": "CentralTransitive",
-        "requested": "[0.6.0-beta.1.1, )",
-        "resolved": "0.6.0-beta.1.1",
-        "contentHash": "rwnJNWaccmX27scx953IvFUtyfiFNIg8ePecBLX2ewsSy6s/SklPl0+XpfmNRD8ltTTdRzz+2fNuAbB2pxZJ8g==",
+        "requested": "[1.0.0-beta.2.1, )",
+        "resolved": "1.0.0-beta.2.1",
+        "contentHash": "thrl7AxC1syPjp3ls5BLaK3dnECjCcCJyLxAM42bqrMuoHqQ7E8gsrbOmy1w862CJYtSAdAVXY8HSa6PoeIH5w==",
         "dependencies": {
-          "Maa.Framework.Runtimes": "0.6.0-beta.1"
+          "Maa.Framework.Runtimes": "1.0.0-beta.2"
         }
       }
     },
@@ -72,48 +72,48 @@
       "Maa.Framework.Runtimes": {
         "type": "CentralTransitive",
         "requested": "[0.3.7, )",
-        "resolved": "0.6.0-beta.1",
-        "contentHash": "aXkvpmPOa4zkguYaOOqWz0Pvfk0aexplmz6OGhfV7exREKw52ZArJqQE1jd1e/oBZ88q5Qhz3IYDeH2RppwQiA=="
+        "resolved": "1.0.0-beta.2",
+        "contentHash": "QKOddDHKVdSeps/l1qw8AAI4hxhGEisRNIZE8YEHVB1Q9vliM3Lo8C+UEOLdvWS7yZhUlRq9oUo7ju9hhOlk+A=="
       }
     },
     "net7.0/linux-x64": {
       "Maa.Framework.Runtimes": {
         "type": "CentralTransitive",
         "requested": "[0.3.7, )",
-        "resolved": "0.6.0-beta.1",
-        "contentHash": "aXkvpmPOa4zkguYaOOqWz0Pvfk0aexplmz6OGhfV7exREKw52ZArJqQE1jd1e/oBZ88q5Qhz3IYDeH2RppwQiA=="
+        "resolved": "1.0.0-beta.2",
+        "contentHash": "QKOddDHKVdSeps/l1qw8AAI4hxhGEisRNIZE8YEHVB1Q9vliM3Lo8C+UEOLdvWS7yZhUlRq9oUo7ju9hhOlk+A=="
       }
     },
     "net7.0/osx-arm64": {
       "Maa.Framework.Runtimes": {
         "type": "CentralTransitive",
         "requested": "[0.3.7, )",
-        "resolved": "0.6.0-beta.1",
-        "contentHash": "aXkvpmPOa4zkguYaOOqWz0Pvfk0aexplmz6OGhfV7exREKw52ZArJqQE1jd1e/oBZ88q5Qhz3IYDeH2RppwQiA=="
+        "resolved": "1.0.0-beta.2",
+        "contentHash": "QKOddDHKVdSeps/l1qw8AAI4hxhGEisRNIZE8YEHVB1Q9vliM3Lo8C+UEOLdvWS7yZhUlRq9oUo7ju9hhOlk+A=="
       }
     },
     "net7.0/osx-x64": {
       "Maa.Framework.Runtimes": {
         "type": "CentralTransitive",
         "requested": "[0.3.7, )",
-        "resolved": "0.6.0-beta.1",
-        "contentHash": "aXkvpmPOa4zkguYaOOqWz0Pvfk0aexplmz6OGhfV7exREKw52ZArJqQE1jd1e/oBZ88q5Qhz3IYDeH2RppwQiA=="
+        "resolved": "1.0.0-beta.2",
+        "contentHash": "QKOddDHKVdSeps/l1qw8AAI4hxhGEisRNIZE8YEHVB1Q9vliM3Lo8C+UEOLdvWS7yZhUlRq9oUo7ju9hhOlk+A=="
       }
     },
     "net7.0/win-arm64": {
       "Maa.Framework.Runtimes": {
         "type": "CentralTransitive",
         "requested": "[0.3.7, )",
-        "resolved": "0.6.0-beta.1",
-        "contentHash": "aXkvpmPOa4zkguYaOOqWz0Pvfk0aexplmz6OGhfV7exREKw52ZArJqQE1jd1e/oBZ88q5Qhz3IYDeH2RppwQiA=="
+        "resolved": "1.0.0-beta.2",
+        "contentHash": "QKOddDHKVdSeps/l1qw8AAI4hxhGEisRNIZE8YEHVB1Q9vliM3Lo8C+UEOLdvWS7yZhUlRq9oUo7ju9hhOlk+A=="
       }
     },
     "net7.0/win-x64": {
       "Maa.Framework.Runtimes": {
         "type": "CentralTransitive",
         "requested": "[0.3.7, )",
-        "resolved": "0.6.0-beta.1",
-        "contentHash": "aXkvpmPOa4zkguYaOOqWz0Pvfk0aexplmz6OGhfV7exREKw52ZArJqQE1jd1e/oBZ88q5Qhz3IYDeH2RppwQiA=="
+        "resolved": "1.0.0-beta.2",
+        "contentHash": "QKOddDHKVdSeps/l1qw8AAI4hxhGEisRNIZE8YEHVB1Q9vliM3Lo8C+UEOLdvWS7yZhUlRq9oUo7ju9hhOlk+A=="
       }
     }
   }

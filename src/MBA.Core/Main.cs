@@ -1,4 +1,4 @@
-using MaaToolKit.Extensions.ComponentModel;
+using MaaToolKit.Extensions;
 using MaaToolKit.Extensions.Enums;
 using MBA.Core.Data;
 using MBA.Core.Enums;
@@ -44,7 +44,12 @@ public class Main
                 GlobalInfo.BaseResourceFullPath,
                 $"{GlobalInfo.ResourceFullPath}/{Config.Game.Language}");
 
-        maa.Controller.SetOption(ControllerOption.ScreenshotTargetShortSide, GlobalInfo.ScreenshotHeight);
+        maa.Controller.SetOption(
+            ControllerOption.ScreenshotTargetShortSide,
+            GlobalInfo.ScreenshotHeight);
+        maa.Controller.SetOption(
+            ControllerOption.DefaultAppPackageEntry,
+            Config.Game.PackageEntry);
 
         return maa;
     }
@@ -75,16 +80,9 @@ public class Main
 
         foreach (TaskType task in tasks)
         {
-            // Fix: MaaFramework PackageEntry
-            var diff = $@"{{ ""diff_task"": {{
-                ""Sub_StartApp"": {{ ""package"": ""{Config.Game.PackageEntry}"" }}
-                }} }}";
-            maa.Instance
-               .AppendTask(TaskType.StartUp.ToString(), diff);
-
             Log.Information("{task} start.", task);
 
-            diff = task switch
+            var diff = task switch
             {
                 TaskType.Commissions => Config.Daily.DiffTask.Commissions,
                 TaskType.TacticalChallenge => Config.Daily.DiffTask.TacticalChallenge,
