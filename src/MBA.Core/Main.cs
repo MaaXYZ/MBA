@@ -21,6 +21,7 @@ public class Main
 
         TaskManager.RunTask(() =>
         {
+            // TODO: GetMaa 抛出的错误应该是可选择的
             var maa = GetMaa();
             var tasks = GetTasks();
             if (!maa.Instance.Initialized)
@@ -102,7 +103,7 @@ public class Main
             {
                 success = false;
                 failedTasks.Add(task);
-                Log.Warning("{task} done. Result: {status}", task, status);
+                Log.Error("{task} done. Result: {status}", task, status);
             }
         }
 

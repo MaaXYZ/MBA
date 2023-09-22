@@ -23,6 +23,7 @@ internal class Program
         if (!ResetConfig())
         {
             Log.Fatal("Failed to reset config.");
+            Console.WriteLine("请检查 配置输入 是否正确，按任意键关闭此窗口. . .");
             Console.ReadKey();
             return -1;
         }
@@ -30,6 +31,7 @@ internal class Program
         if (!ProcArgs(args))
         {
             Log.Fatal("Failed to parse args.");
+            Console.WriteLine("请检查 命令行参数 是否正确，按任意键关闭此窗口. . .");
             Console.ReadKey();
             return -1;
         }
@@ -37,6 +39,7 @@ internal class Program
         if (!Config.Tasks.Any())
         {
             Log.Fatal("Task List is empty.");
+            Console.WriteLine("请检查 任务列表 是否为空，按任意键关闭此窗口. . .");
             Console.ReadKey();
             return -1;
         }

@@ -85,7 +85,11 @@ public static class VersionManager
         {
             var latest = await GetLatestReleaseVersionAsync();
             if (latest != AssemblyVersion && latest != InformationalVersion)
+            {
+                var url = "https://github.com/MaaAssistantArknights/MBA/releases/latest";
                 Released = true;
+                Log.Information("New version released, available for download at {URL}.", url);
+            }
         }
         catch (Exception e)
         {
