@@ -181,7 +181,6 @@ $@"
             _ = SetGameServer();
         }
         while (!Config.Game.LanguageServer.IsValid());
-        Config.Game.PackageEntry = Config.Game.LanguageServer.GetPackageName();
         Console.WriteLine();
         return ret;
     }
