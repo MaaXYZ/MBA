@@ -28,20 +28,25 @@ import json
 
 pipeline_path = 'assets/Resource/{}/pipeline'
 base_tag = 'Base'
-lang_tags = ['EN', 'TC'] # 基准资源放第 0 位
+lang_tags = ['EN', 'JP', 'KR', 'TH', 'TC', 'SC'] # 基准资源放第 0 位
 skip_key = 'skip_review'
 
-def load_json_files(directory: str) -> (dict, dict):
+def load_json_files(directory: str) -> (dict, dict, bool):
     datas = {}
     merged_data = {}
-    for filename in os.listdir(directory):
-        if filename.endswith('.json'):
-            path = f'{directory}/{filename}'
-            with open(path, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-                datas[path] = data          # 将 path 和 data 添加到 datas
-                merged_data.update(data)    # 合并 data
-    return (datas, merged_data)
+    failed = False
+    try:
+        for filename in os.listdir(directory):
+            if filename.endswith('.json'):
+                path = f'{directory}/{filename}'
+                with open(path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    datas[path] = data          # 将 path 和 data 添加到 datas
+                    merged_data.update(data)    # 合并 data
+    except Exception as e:
+        print(f'::warning:: title=读取 {directory} 时出现错误::{e}')
+        failed = True
+    return (datas, merged_data, failed)
 
 def review_Sub(datas: dict) -> int:
     rule = 1
@@ -217,12 +222,19 @@ review_Basics_in_Langs = [
 ret = 0
 os.chdir('../../')
 
-Bases, Base = load_json_files(pipeline_path.format(base_tag))
+Bases, Base, Failed = load_json_files(pipeline_path.format(base_tag))
+if Failed:
+    print(f'::error::读取 {base_tag} 失败')
+    sys.exit(1)
+
 for review in review_Bases:
     ret += review(Bases)
 
 for lang_tag in lang_tags:
-    Langs, Lang = load_json_files(pipeline_path.format(lang_tag))
+    Langs, Lang, Failed= load_json_files(pipeline_path.format(lang_tag))
+    if Failed:
+        continue
+    
     for review in review_Bases_in_Lang:
         ret += review(Bases, Lang, lang_tag)
     for review in review_Langs_in_Base:
