@@ -50,7 +50,7 @@ public class Main
             GlobalInfo.ScreenshotHeight);
         maa.Controller.SetOption(
             ControllerOption.DefaultAppPackageEntry,
-            Config.Game.PackageEntry);
+            Config.Game.LanguageServer.GetPackageEntry());
 
         return maa;
     }
