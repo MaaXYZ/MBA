@@ -43,10 +43,10 @@
         "times_limit": 5,
         "recognition": "OCR",
         "text": "TacticalChallenge",
-        "roi": [ 0, 0, 450, 150 ],
+        "roi": [ 0, 0, 450, 60 ],
         "next": [
             "End_TacticalChallenge",
-            "Sub_Click_RankByTheFront_Partial"
+            "Click_RankByTheFront_Partial"
         ],
         "runout_next": [
             "Sub_End_TacticalChallenge_Partial"
@@ -54,9 +54,13 @@
     },
     "End_TacticalChallenge": {
         "skip_review": 4,
+        "model": "../../../Base/model/ocr/",
         "recognition": "OCR",
-        "text": "0/5",
-        "roi": [ 167, 427, 128, 121 ],
+        "text": [
+            "0/5",
+            "[oO0ｏＯ０][1１/／5５]"
+        ],
+        "roi": [ 147, 447, 148, 101 ],
         "next": [
             "Sub_End_TacticalChallenge_Partial"
         ]
@@ -76,9 +80,7 @@
         ]
     },
     "Click_ClaimButton_ForCreditPoints_Partial": {
-        "recognition": "OCR",
-        "text": "Claim",
-        "roi": [ 307, 359, 89, 58 ],
+        "TODO": "颜色匹配",
         "target": [ 307, 359, 89, 58 ],
         "action": "Click",
         "post_delay": 1000,
@@ -88,9 +90,7 @@
         "timeout": 5000
     },
     "Click_ClaimButton_ForPyroxenes_Partial": {
-        "recognition": "OCR",
-        "text": "Claim",
-        "roi": [ 307, 438, 89, 58 ],
+        "TODO": "颜色匹配",
         "target": [ 307, 438, 89, 58 ],
         "action": "Click",
         "next": [
@@ -98,15 +98,25 @@
         ],
         "timeout": 5000
     },
-    "Sub_Click_RankByTheFront_Partial": {
-        "is_sub": true,
+    "Click_RankByTheFront_Partial": {
         "recognition": "OCR",
         "text": "Rank",
         "roi": [ 458, 174, 778, 150 ],
         "target": [ 458, 174, 778, 150 ],
         "action": "Click",
         "next": [
+            "ZeroTicket1Flag",
             "Click_FormationButton_Partial"
+        ]
+    },
+    "ZeroTicket1Flag": {
+        "skip_review": 6,
+        "recognition": "TemplateMatch",
+        "template": "../../Base/image/TacticalChallenge/ZeroTicket1.png",
+        "roi": [ 646, 460, 154, 129 ],
+        "next": [
+            "Sub_Click_CloseButton",
+            "Stop"
         ]
     },
     "Click_FormationButton_Partial": {
@@ -115,11 +125,23 @@
         "roi": [ 537, 537, 205, 70 ],
         "target": [ 537, 537, 205, 70 ],
         "action": "Click",
+        "post_delay": 1500,
         "next": [
             "Notice_TimedOut_Partial",
+            "Notice_InsufficientTacticalChallengeTickets",
             "Sub_Wait_NowLoading_Partial",
             "Sub_Click_SkipTactics_Partial",
             "Click_MobilizeButton_Partial"
+        ]
+    },
+    "Notice_InsufficientTacticalChallengeTickets": {
+        "skip_review": 6,
+        "recognition": "TemplateMatch",
+        "template": "../../Base/image/TacticalChallenge/Pyroxene.png",
+        "roi": [ 565, 345, 135, 138 ],
+        "next": [
+            "Sub_Click_CloseButton",
+            "Stop"
         ]
     },
     "Sub_Click_SkipTactics_Partial": {
@@ -152,8 +174,7 @@
     "Click_ConfirmButton_OnBattleComplete_Partial": {
         "recognition": "OCR",
         "text": "Confirm",
-        "roi": [ 1110, 637, 116, 54 ],
-        "target": [ 1110, 637, 116, 54 ],
+        "roi": [ 533, 624, 215, 72 ],
         "action": "Click",
         "next": [
             "Click_ConfirmButton_OnRewardAcquired_Partial"
@@ -164,7 +185,15 @@
         "text": "Confirm",
         "roi": [ 540, 625, 201, 69 ],
         "target": [ 540, 625, 201, 69 ],
-        "action": "Click"
+        "action": "Click",
+        "next": [
+            "TacticalChallengeFlag_Partial"
+        ]
+    },
+    "TacticalChallengeFlag_Partial": {
+        "recognition": "OCR",
+        "text": "TacticalChallenge",
+        "roi": [ 0, 0, 450, 60 ]
     },
     "Notice_TimedOut_Partial": {
         "recognition": "OCR",
@@ -174,7 +203,7 @@
         "action": "Click",
         "next": [
             "Sub_Wait_NowLoading_Partial",
-            "Sub_Click_RankByTheFront_Partial"
+            "Click_RankByTheFront_Partial"
         ]
     },
     "Notice_RankChanged_Partial": {
@@ -185,7 +214,7 @@
         "action": "Click",
         "next": [
             "Sub_Wait_NowLoading_Partial",
-            "Sub_Click_RankByTheFront_Partial"
+            "Click_RankByTheFront_Partial"
         ]
     },
     "Notice_Standby_Partial": {
