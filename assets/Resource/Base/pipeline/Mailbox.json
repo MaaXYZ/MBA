@@ -33,6 +33,7 @@
         "roi": [ 621, 427, 295, 131 ]
     },
     "Click_ClaimAllButton_Mailbox_Partial": {
+        "TODO": "顏色識別",
         "recognition": "OCR",
         "text": "ClaimAll",
         "roi": [ 1038, 641, 193, 62 ],

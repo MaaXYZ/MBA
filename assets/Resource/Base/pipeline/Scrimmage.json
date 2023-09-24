@@ -46,11 +46,12 @@
     },
     "Sub_Check_TrinityTicket": {
         "skip_review": 4,
+        "model": "../../../Base/model/ocr/",
         "is_sub": true,
         "inverse": true,
         "times_limit": 5,
         "recognition": "OCR",
-        "text": "0/2",
+        "text": [ "0/2", "0/"],
         "roi": [ 680, 210, 600, 136 ],
         "next": [
             "Sub_Wait_NowLoading_Partial",
@@ -86,11 +87,12 @@
     },
     "Sub_Check_GehennaTicket": {
         "skip_review": 4,
+        "model": "../../../Base/model/ocr/",
         "is_sub": true,
         "inverse": true,
         "times_limit": 5,
         "recognition": "OCR",
-        "text": "0/2",
+        "text": [ "0/2", "0/"],
         "roi": [ 680, 346, 600, 136 ],
         "next": [
             "Sub_Wait_NowLoading_Partial",
@@ -125,11 +127,12 @@
     },
     "Sub_Check_MillenniumTicket": {
         "skip_review": 4,
+        "model": "../../../Base/model/ocr/",
         "is_sub": true,
         "inverse": true,
         "times_limit": 5,
         "recognition": "OCR",
-        "text": "0/2",
+        "text": [ "0/2", "0/"],
         "roi": [ 680, 482, 600, 136 ],
         "next": [
             "Sub_Wait_NowLoading_Partial",

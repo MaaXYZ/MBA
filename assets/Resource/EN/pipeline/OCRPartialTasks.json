@@ -57,7 +57,7 @@
     },
     "Sub_Notice_Quit_Partial": {
         "text": [
-            "Quit?"
+            "Quit"
         ]
     },
     "Notice_TimedOut_Partial": {
@@ -113,6 +113,12 @@
     "Click_ClubButton_Partial": {
         "text": [
             "Club"
+        ]
+    },
+    "TacticalChallengeFlag_Partial": {
+        "text": [
+            "Tactical Challenge",
+            "TacticalChallenge"
         ]
     },
     "Sub_Goto_TacticalChallenge_Partial": {
@@ -178,7 +184,7 @@
             "Enter"
         ]
     },
-    "Sub_Click_RankByTheFront_Partial": {
+    "Click_RankByTheFront_Partial": {
         "text": [
             "Rank"
         ]
@@ -271,7 +277,8 @@
     "Sub_Goto_Scrimmage_Partial": {
         "text": [
             "Academy Select",
-            "AcademySelect"
+            "AcademySelect",
+            "A.*Select"
         ]
     },
     "Click_ScrimmageButton_Partial": {
@@ -328,13 +335,15 @@
     "Sub_Goto_Commissions_Partial": {
         "text": [
             "Request Select",
-            "RequestSelect"
+            "RequestSelect",
+            "R.*Select"
         ]
     },
     "Start_Commissions_Partial": {
         "text": [
             "Request Select",
-            "RequestSelect"
+            "RequestSelect",
+            "R.*Select"
         ]
     },
     "Sub_Goto_BaseDefense_Partial": {
@@ -368,7 +377,8 @@
     "Sub_Goto_Bounty_Partial": {
         "text": [
             "Location Select",
-            "LocationSelect"
+            "LocationSelect",
+            "L.*Select"
         ]
     },
     "Click_BountyButton_Partial": {
@@ -416,11 +426,6 @@
         ]
     },
     "Sub_Goto_Tasks_Partial": {
-        "text": [
-            "Tasks"
-        ]
-    },
-    "Click_TasksButton_Partial": {
         "text": [
             "Tasks"
         ]

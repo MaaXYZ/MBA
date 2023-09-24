@@ -25,7 +25,11 @@
     "Click_BountyButton_Partial": {
         "recognition": "OCR",
         "text": "Bounty",
-        "roi": [ 669, 391, 158, 73 ],
+        "roi": [
+            [ 650, 390, 180, 125 ],
+            [ 660, 390, 170, 75 ],
+            [ 668, 407, 103, 33 ]
+        ],
         "action": "Click",
         "post_delay": 1500
     },
@@ -46,14 +50,13 @@
     },
     "Sub_Check_OverpassTicket": {
         "skip_review": 4,
+        "model": "../../../Base/model/ocr/",
         "is_sub": true,
         "inverse": true,
         "times_limit": 5,
         "recognition": "OCR",
-        "text": "0/2",
-        "roi": [
-            [ 680, 210, 600, 136 ]
-        ],
+        "text": [ "0/2", "0/"],
+        "roi": [ 680, 210, 600, 136 ],
         "next": [
             "Sub_Wait_NowLoading_Partial",
             "Sub_Goto_Overpass_Partial",
@@ -82,17 +85,21 @@
     "Click_Overpass_Partial": {
         "recognition": "OCR",
         "text": "Overpass",
-        "roi": [ 680, 210, 600, 136 ],
+        "roi": [
+            [ 680, 210, 600, 136 ],
+            [ 1044, 214, 186, 57 ]
+        ],
         "action": "Click",
         "post_delay": 1500
     },
     "Sub_Check_DesertRailroadTicket": {
         "skip_review": 4,
+        "model": "../../../Base/model/ocr/",
         "is_sub": true,
         "inverse": true,
         "times_limit": 5,
         "recognition": "OCR",
-        "text": "0/2",
+        "text": [ "0/2", "0/"],
         "roi": [ 680, 346, 600, 136 ],
         "next": [
             "Sub_Wait_NowLoading_Partial",
@@ -121,17 +128,21 @@
     "Click_DesertRailroad_Partial": {
         "recognition": "OCR",
         "text": "DesertRailroad",
-        "roi": [ 680, 346, 600, 136 ],
+        "roi": [
+            [ 680, 346, 600, 136 ],
+            [ 1047, 337, 182, 52 ]
+        ],
         "action": "Click",
         "post_delay": 1500
     },
     "Sub_Check_ClassroomTicket": {
         "skip_review": 4,
+        "model": "../../../Base/model/ocr/",
         "is_sub": true,
         "inverse": true,
         "times_limit": 5,
         "recognition": "OCR",
-        "text": "0/2",
+        "text": [ "0/2", "0/"],
         "roi": [ 680, 482, 600, 136 ],
         "next": [
             "Sub_Wait_NowLoading_Partial",
@@ -157,7 +168,10 @@
     "Click_Classroom_Partial": {
         "recognition": "OCR",
         "text": "Classroom",
-        "roi": [ 680, 482, 600, 136 ],
+        "roi": [
+            [ 680, 482, 600, 136 ],
+            [ 1132, 460, 98, 52 ]
+        ],
         "action": "Click",
         "post_delay": 1500
     }
