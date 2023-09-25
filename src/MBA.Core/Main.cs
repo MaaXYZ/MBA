@@ -22,7 +22,7 @@ public class Main
         TaskManager.RunTask(() =>
         {
             // TODO: GetMaa 抛出的错误应该是可选择的
-            var maa = GetMaa();
+            using var maa = GetMaa();
             var tasks = GetTasks();
             if (!maa.Instance.Initialized)
                 Log.Error("Failed to init Maa instance, a connection error or resource file corruption occurred, please refer to the log.");
