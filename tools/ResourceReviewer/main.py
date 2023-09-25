@@ -104,6 +104,8 @@ def review_text(datas: dict, lang: dict, lang_tag: str) -> int:
                 print(f'::error file={path},title={k}::必须在 {lang_tag} 资源中也含有任务')
                 print(f'::error file={path},title={k}::必须在 {lang_tag} 资源中也含有键 "text"')
                 err += 2
+            elif lang[k].get(skip_key) == rule:
+                continue
             elif not lang[k].get('text'):
                 print(f'::error file={path},title={k}::必须在 {lang_tag} 资源中也含有键 "text"')
                 err += 1
@@ -139,6 +141,8 @@ def review_template(datas: dict, lang: dict, lang_tag: str) -> int:
                 print(f'::error file={path},title={k}::必须在 {lang_tag} 资源中也含有任务')
                 print(f'::error file={path},title={k}::必须在 {lang_tag} 资源中也含有键 "template"')
                 err += 2
+            elif lang[k].get(skip_key) == rule:
+                continue
             elif not lang[k].get('template'):
                 print(f'::error file={path},title={k}::必须在 {lang_tag} 资源中也含有键 "template"')
                 err += 1
