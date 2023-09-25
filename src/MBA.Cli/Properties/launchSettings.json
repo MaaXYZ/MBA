@@ -2,6 +2,7 @@
     "profiles": {
         "MBA.Cli": {
             "commandName": "Project",
+            "commandLineArgs": "NoPause",
             "environmentVariables": {
                 "MBA_ENVIRONMENT": "Debug"
             }
