@@ -74,7 +74,9 @@ public static class GameLanguageServerExtensions
         => type & G.ServerMask;
 
     public static bool IsValid(this G type)
-        => type.IsValidJP() || type.IsValidGL() || type.IsValidCN();
+        => type.GetServer() != G.None
+        && type.GetLanguage() != G.None
+        && (type.IsValidJP() || type.IsValidGL() || type.IsValidCN());
 
     internal static bool IsValidJP(this G type)
         => (type & G.NonJPMask) == G.None;
