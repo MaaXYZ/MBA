@@ -3,6 +3,7 @@
         "next": [
             "Sub_Wait_NowLoading_Partial",
             "Sub_Goto_Cafe_Partial",
+            "Sub_CloseSidebar",
             "Sub_Click_CloseButton",
             "Sub_Click_StudentAffection",
             "Sub_Click_InvitationButton_Partial",
@@ -27,6 +28,14 @@
         "roi": [ 23, 627, 144, 93 ],
         "action": "Click",
         "post_delay": 2500
+    },
+    "Sub_CloseSidebar": {
+        "skip_review": 6,
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "../../Base/image/Cafe/CloseSidebar.png",
+        "roi": [ 500, 570, 100, 100 ],
+        "action": "Click"
     },
     "End_Cafe": {
         "skip_review": 6,
