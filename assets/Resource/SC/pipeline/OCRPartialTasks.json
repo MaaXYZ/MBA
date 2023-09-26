@@ -6,13 +6,19 @@
     },
     "CampaignFlag_Partial": {
         "text": [
-            "任务"
+            "业务区",
+            "业务"
         ]
     },
     "Sub_Wait_NowLoading_Partial": {
+        "model": "../../../Base/model/ocr/",
         "text": [
-            "NowLoading",
-            "nowLoading"
+            "Loading"
+        ]
+    },
+    "Sub_Notice_Partial": {
+        "text": [
+            "通知"
         ]
     },
     "Notice_Click_CancelButton_Partial": {
@@ -52,14 +58,13 @@
     },
     "Sub_Notice_Quit_Partial": {
         "text": [
-            "Quit?"
+            "是否结束游戏"
         ]
     },
     "Notice_TimedOut_Partial": {
         "text": [
-            "List refresh timed out.",
-            "timed out",
-            "timedout"
+            "已超出编队时间限制",
+            "超出..时间"
         ]
     },
     "Notice_RankChanged_Partial": {
@@ -71,20 +76,18 @@
     },
     "Notice_Standby_Partial": {
         "text": [
-            "Standby"
+            "等待时间"
         ]
     },
     "Notice_BattleResult_Partial": {
         "text": [
-            "Battle Result",
-            "BattleResult"
+            "对战结果"
         ]
     },
     "Sub_Goto_Mailbox_Partial": {
-        "text": "邮箱"
-    },
-    "MailboxFlag_Partial": {
-        "text": "邮箱"
+        "text": [
+            "邮箱"
+        ]
     },
     "NoMoreMailFlag_Partial": {
         "text": [
@@ -108,22 +111,32 @@
     },
     "TacticalChallengeFlag_Partial": {
         "text": [
-            "战术对抗赛"
+            "战术对抗赛",
+            "战术"
+        ]
+    },
+    "Sub_Goto_TacticalChallenge_Partial": {
+        "text": [
+            "战术对抗赛",
+            "战术"
         ]
     },
     "Sub_Start_TacticalChallenge_Partial": {
         "text": [
-            "战术对抗赛"
+            "战术对抗赛",
+            "战术"
         ]
     },
     "Sub_End_TacticalChallenge_Partial": {
         "text": [
-            "战术对抗赛"
+            "战术对抗赛",
+            "战术"
         ]
     },
     "Click_TacticalChallenge_Partial": {
         "text": [
-            "战术对抗赛"
+            "战术对抗赛",
+            "战术"
         ]
     },
     "Click_ClaimButton_ForCreditPoints_Partial": {
@@ -138,7 +151,9 @@
     },
     "Click_TouchButton_Partial": {
         "text": [
-            "TOUCH"
+            "点击继续",
+            "点击",
+            "继续"
         ]
     },
     "Start_SweepMission_Partial": {
@@ -153,8 +168,7 @@
     },
     "Click_SkipButton_Partial": {
         "text": [
-            "Skip",
-            "skip"
+            "跳过"
         ]
     },
     "Sub_Click_EnterButton_OnClearedMission_Partial": {
@@ -164,12 +178,12 @@
     },
     "Click_RankByTheFront_Partial": {
         "text": [
-            "Rank"
+            "第"
         ]
     },
     "Click_FormationButton_Partial": {
         "text": [
-            "Formation"
+            "编队"
         ]
     },
     "Click_MobilizeButton_Partial": {
@@ -196,12 +210,12 @@
     },
     "Sub_Click_InvitationButton_Partial": {
         "text": [
-            "可使用"
+            "可以使用"
         ]
     },
     "Click_InvitationButton_Partial": {
         "text": [
-            "可使用"
+            "可以使用"
         ]
     },
     "Click_InviteButton_Partial": {
@@ -212,15 +226,13 @@
     "Sub_Click_CafeEarningsButton_Partial": {
         "text": [
             "可获得",
-            "Full",
-            "full"
+            "已满"
         ]
     },
     "Click_CafeEarningsButton_Partial": {
         "text": [
             "可获得",
-            "Full",
-            "full"
+            "已满"
         ]
     },
     "Click_ClaimButton_ForCafeEarnings_Partial": {
@@ -235,59 +247,40 @@
     },
     "Click_RankUpButton_OnCafeInfo_Partial": {
         "text": [
-            "升级"
+            "提升评级"
         ]
     },
     "Click_RankUpButton_OnCafeRankUp_Partial": {
         "text": [
-            "升级"
+            "提升评级"
         ]
     },
     "Sub_Goto_Scrimmage_Partial": {
-        "text": [
-            "Academy Select",
-            "AcademySelect"
-        ]
+        "skip_review": 4
     },
     "Click_ScrimmageButton_Partial": {
-        "text": [
-            ""
-        ]
+        "skip_review": 4
     },
     "ScrimmageFlag_Partial": {
-        "text": [
-            ""
-        ]
+        "skip_review": 4
     },
     "Sub_Goto_Trinity_Partial": {
-        "text": [
-            "崔尼蒂"
-        ]
+        "skip_review": 4
     },
     "Click_Trinity_Partial": {
-        "text": [
-            "崔尼蒂"
-        ]
+        "skip_review": 4
     },
     "Sub_Goto_Gehenna_Partial": {
-        "text": [
-            "歌赫娜"
-        ]
+        "skip_review": 4
     },
     "Click_Gehenna_Partial": {
-        "text": [
-            "歌赫娜"
-        ]
+        "skip_review": 4
     },
     "Sub_Goto_Millennium_Partial": {
-        "text": [
-            "千禧年"
-        ]
+        "skip_review": 4
     },
     "Click_Millennium_Partial": {
-        "text": [
-            "千禧年"
-        ]
+        "skip_review": 4
     },
     "Click_CommissionsButton_Partial": {
         "text": [
@@ -300,17 +293,19 @@
         ]
     },
     "Sub_Goto_Commissions_Partial": {
+        "model": "../../../Base/model/ocr/",
         "text": [
-            "选择委托",
             "Request Select",
-            "RequestSelect"
+            "RequestSelect",
+            "R.*Select"
         ]
     },
     "Start_Commissions_Partial": {
+        "model": "../../../Base/model/ocr/",
         "text": [
-            "选择委托",
             "Request Select",
-            "RequestSelect"
+            "RequestSelect",
+            "R.*Select"
         ]
     },
     "Sub_Goto_BaseDefense_Partial": {
@@ -338,24 +333,25 @@
         ]
     },
     "Sub_Goto_Bounty_Partial": {
+        "model": "../../../Base/model/ocr/",
         "text": [
-            "特别委托"
+            "Location Select",
+            "LocationSelect",
+            "L.*Select"
         ]
     },
     "Click_BountyButton_Partial": {
         "text": [
-            "悬赏通缉"
+            "悬赏通缉",
+            "悬赏",
+            "通缉"
         ]
     },
     "BountyFlag_Partial": {
         "text": [
-            "悬赏通缉"
-        ]
-    },
-    "LocationSelectFlag_Partial": {
-        "text": [
-            "Location Select",
-            "LocationSelect"
+            "悬赏通缉",
+            "悬赏",
+            "通缉"
         ]
     },
     "Sub_Goto_Overpass_Partial": {
@@ -378,6 +374,11 @@
             "沙漠铁路"
         ]
     },
+    "Sub_Goto_Classroom_Partial": {
+        "text": [
+            "讲堂"
+        ]
+    },
     "Click_Classroom_Partial": {
         "text": [
             "讲堂"
@@ -385,12 +386,7 @@
     },
     "Sub_Goto_Tasks_Partial": {
         "text": [
-            "任务"
-        ]
-    },
-    "Click_TasksButton_Partial": {
-        "text": [
-            "任务"
+            "工作任务"
         ]
     },
     "0": {

@@ -55,16 +55,16 @@ public enum GameLanguageServer
 
 public static class GameLanguageServerExtensions
 {
-    private static readonly string JapanesePackageEntry = string.Empty;
-    private static readonly string GlobalPackageEntry = Encoding.UTF8.GetString(Convert.FromBase64String("Y29tLm5leG9uLmJsdWVhcmNoaXZlL2NvbS5uZXhvbi5ibHVlYXJjaGl2ZS5NeFVuaXR5UGxheWVyQWN0aXZpdHk="));
-    private static readonly string YoStarCNPackageEntry = Encoding.UTF8.GetString(Convert.FromBase64String("Y29tLlJvYW1pbmdTdGFyLkJsdWVBcmNoaXZlL2NvbS55b3N0YXIuc2RrLmJyaWRnZS5Zb1N0YXJVbml0eVBsYXllckFjdGl2aXR5"));
-    private static readonly string BilibiliPackageEntry = Encoding.UTF8.GetString(Convert.FromBase64String("Y29tLlJvYW1pbmdTdGFyLkJsdWVBcmNoaXZlLmJpbGliaWxpL2NvbS55b3N0YXIuc2RrLmJyaWRnZS5Zb1N0YXJVbml0eVBsYXllckFjdGl2aXR5"));
+    private static readonly string _packageEntryJapanese = Encoding.UTF8.GetString(Convert.FromBase64String("Y29tLllvc3RhckpQLkJsdWVBcmNoaXZlL2NvbS55b3N0YXJqcC5ibHVlYXJjaGl2ZS5NeFVuaXR5UGxheWVyQWN0aXZpdHk="));
+    private static readonly string _packageEntryGlobal = Encoding.UTF8.GetString(Convert.FromBase64String("Y29tLm5leG9uLmJsdWVhcmNoaXZlL2NvbS5uZXhvbi5ibHVlYXJjaGl2ZS5NeFVuaXR5UGxheWVyQWN0aXZpdHk="));
+    private static readonly string _packageEntryYoStarCN = Encoding.UTF8.GetString(Convert.FromBase64String("Y29tLlJvYW1pbmdTdGFyLkJsdWVBcmNoaXZlL2NvbS55b3N0YXIuc3VwZXJzZGsuYWN0aXZpdHkuWW9TdGFyU3BsYXNoQWN0aXZpdHk="));
+    private static readonly string _packageEntryBilibili = Encoding.UTF8.GetString(Convert.FromBase64String("Y29tLlJvYW1pbmdTdGFyLkJsdWVBcmNoaXZlLmJpbGliaWxpL2NvbS55b3N0YXIuc3VwZXJzZGsuYWN0aXZpdHkuWW9TdGFyU3BsYXNoQWN0aXZpdHk="));
 
-    public static string GetPackageName(this G type)
-        => type.IsValidJP() ? JapanesePackageEntry
-         : type.IsValidGL() ? GlobalPackageEntry
-        : type.IsYoStarCN() ? YoStarCNPackageEntry
-        : type.IsBilibili() ? BilibiliPackageEntry
+    public static string GetPackageEntry(this G type)
+        => type.IsValidJP() ? _packageEntryJapanese
+         : type.IsValidGL() ? _packageEntryGlobal
+        : type.IsYoStarCN() ? _packageEntryYoStarCN
+        : type.IsBilibili() ? _packageEntryBilibili
         : ConfigManager.Config.Game.PackageEntry;
 
     public static G GetLanguage(this G type)

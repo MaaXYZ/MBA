@@ -25,7 +25,7 @@
         "inverse": true,
         "recognition": "OCR",
         "text": "RequestSelect",
-        "roi": [ 630, 125, 650, 70 ],
+        "roi": [ 630, 125, 650, 83 ],
         "next": [
             "Click_CommissionsButton_Partial",
             "CommissionsFlag_Partial",
@@ -68,7 +68,7 @@
     "Click_CommissionsButton_Partial": {
         "recognition": "OCR",
         "text": "Commissions",
-        "roi": [ 652, 475, 160, 70 ],
+        "roi": [ 580, 420, 290, 260 ],
         "action": "Click",
         "post_delay": 1500
     },

@@ -1,5 +1,6 @@
 {
     "MenuFlag_Partial": {
+        "model": "../../../Base/model/ocr/",
         "text": [
             "Menu",
             "MENU"
@@ -11,6 +12,7 @@
         ]
     },
     "Sub_Wait_NowLoading_Partial": {
+        "model": "../../../Base/model/ocr/",
         "text": [
             "Loading"
         ]
@@ -79,7 +81,8 @@
     },
     "Notice_BattleResult_Partial": {
         "text": [
-            "戰鬥結果"
+            "戰鬥結果",
+            "結果"
         ]
     },
     "Sub_Goto_Mailbox_Partial": {
@@ -89,7 +92,8 @@
     },
     "NoMoreMailFlag_Partial": {
         "text": [
-            "沒有郵件"
+            "沒有郵件",
+            "..郵件"
         ]
     },
     "Click_ClaimAllButton_Mailbox_Partial": {
@@ -99,60 +103,79 @@
     },
     "Sub_Goto_Club_Partial": {
         "text": [
-            "社團大廳"
+            "社團大廳",
+            "社."
         ]
     },
     "Click_ClubButton_Partial": {
         "text": [
-            "社團"
+            "社團",
+            "社."
+        ]
+    },
+    "TacticalChallengeFlag_Partial": {
+        "text": [
+            "戰術大賽",
+            "戰..賽"
         ]
     },
     "Sub_Goto_TacticalChallenge_Partial": {
         "text": [
-            "戰術大賽"
+            "戰術大賽",
+            "戰..賽"
         ]
     },
     "Sub_Start_TacticalChallenge_Partial": {
         "text": [
-            "戰術大賽"
+            "戰術大賽",
+            "戰..賽"
         ]
     },
     "Sub_End_TacticalChallenge_Partial": {
         "text": [
-            "戰術大賽"
+            "戰術大賽",
+            "戰..賽"
         ]
     },
     "Click_TacticalChallenge_Partial": {
         "text": [
-            "戰術大賽"
+            "戰術大賽",
+            "戰..賽"
         ]
     },
     "Click_ClaimButton_ForCreditPoints_Partial": {
         "text": [
+            "領取獎勵",
             "領取"
         ]
     },
     "Click_ClaimButton_ForPyroxenes_Partial": {
         "text": [
+            "領取獎勵",
             "領取"
         ]
     },
     "Click_TouchButton_Partial": {
+        "model": "../../../Base/model/ocr/",
         "text": [
             "TOUCH"
         ]
     },
     "Start_SweepMission_Partial": {
         "text": [
-            "任務資訊"
+            "任務資訊",
+            "任務",
+            "資訊"
         ]
     },
     "Click_StartSweepButton_Partial": {
         "text": [
-            "掃蕩開始"
+            "掃蕩開始",
+            "開始"
         ]
     },
     "Click_SkipButton_Partial": {
+        "model": "../../../Base/model/ocr/",
         "text": [
             "Skip",
             "skip"
@@ -163,14 +186,15 @@
             "入場"
         ]
     },
-    "Sub_Click_RankByTheFront_Partial": {
+    "Click_RankByTheFront_Partial": {
         "text": [
             "第"
         ]
     },
     "Click_FormationButton_Partial": {
         "text": [
-            "編輯部隊"
+            "編輯部隊",
+            "編輯"
         ]
     },
     "Click_MobilizeButton_Partial": {
@@ -180,19 +204,21 @@
     },
     "Sub_Goto_Cafe_Partial": {
         "text": [
-            "夏萊附設",
-            "咖啡廰"
+            "夏萊附設咖啡廰",
+            ".+咖.+",
+            ".+設.+"
         ]
     },
     "Click_CafeButton_Partial": {
         "text": [
-            "咖啡廰"
+            "咖啡廰",
+            "咖.."
         ]
     },
     "Sub_Check_RelationshipRankUp_Partial": {
         "text": [
-            "距離",
-            "下次訪問"
+            "距離下次訪問",
+            "下次"
         ]
     },
     "Sub_Click_InvitationButton_Partial": {
@@ -213,15 +239,15 @@
     "Sub_Click_CafeEarningsButton_Partial": {
         "text": [
             "可獲得",
-            "Full",
-            "full"
+            "FULL",
+            "[FfＦｆ][UuＵｕ][LlＬｌ][LlＬｌ]"
         ]
     },
     "Click_CafeEarningsButton_Partial": {
         "text": [
             "可獲得",
-            "Full",
-            "full"
+            "FULL",
+            "[FfＦｆ][UuＵｕ][LlＬｌ][LlＬｌ]"
         ]
     },
     "Click_ClaimButton_ForCafeEarnings_Partial": {
@@ -231,7 +257,8 @@
     },
     "Click_ComfortButton_Partial": {
         "text": [
-            "舒適度"
+            "舒適度",
+            "舒.+"
         ]
     },
     "Click_RankUpButton_OnCafeInfo_Partial": {
@@ -245,20 +272,25 @@
         ]
     },
     "Sub_Goto_Scrimmage_Partial": {
+        "model": "../../../Base/model/ocr/",
         "text": [
-            "選擇學園",
             "Academy Select",
-            "AcademySelect"
+            "AcademySelect",
+            "A.*Select"
         ]
     },
     "Click_ScrimmageButton_Partial": {
         "text": [
-            "學園交流會"
+            "學園交流會",
+            "學園",
+            "交流"
         ]
     },
     "ScrimmageFlag_Partial": {
         "text": [
-            "學園交流會"
+            "學園交流會",
+            "學園",
+            "交流"
         ]
     },
     "Sub_Goto_Trinity_Partial": {
@@ -293,26 +325,32 @@
     },
     "Click_CommissionsButton_Partial": {
         "text": [
-            "特殊任務"
+            "特殊任務",
+            "特殊",
+            "任務"
         ]
     },
     "CommissionsFlag_Partial": {
         "text": [
-            "特殊任務"
+            "特殊任務",
+            "特殊",
+            "任務"
         ]
     },
     "Sub_Goto_Commissions_Partial": {
+        "model": "../../../Base/model/ocr/",
         "text": [
-            "選擇委託",
             "Request Select",
-            "RequestSelect"
+            "RequestSelect",
+            "R.*Select"
         ]
     },
     "Start_Commissions_Partial": {
+        "model": "../../../Base/model/ocr/",
         "text": [
-            "選擇委託",
             "Request Select",
-            "RequestSelect"
+            "RequestSelect",
+            "R.*Select"
         ]
     },
     "Sub_Goto_BaseDefense_Partial": {
@@ -340,40 +378,53 @@
         ]
     },
     "Sub_Goto_Bounty_Partial": {
+        "model": "../../../Base/model/ocr/",
         "text": [
-            "選擇委託",
             "Location Select",
-            "LocationSelect"
+            "LocationSelect",
+            "L.*Select"
         ]
     },
     "Click_BountyButton_Partial": {
         "text": [
-            "懸賞通緝"
+            "懸賞通緝",
+            "懸賞",
+            "通緝"
         ]
     },
     "BountyFlag_Partial": {
         "text": [
-            "懸賞通緝"
+            "懸賞通緝",
+            "懸賞",
+            "通緝"
         ]
     },
     "Sub_Goto_Overpass_Partial": {
         "text": [
-            "高架公路"
+            "高架公路",
+            "高架",
+            "公路"
         ]
     },
     "Click_Overpass_Partial": {
         "text": [
-            "高架公路"
+            "高架公路",
+            "高架",
+            "公路"
         ]
     },
     "Sub_Goto_DesertRailroad_Partial": {
         "text": [
-            "沙漠鐵道"
+            "沙漠鐵道",
+            "沙漠",
+            "鐵道"
         ]
     },
     "Click_DesertRailroad_Partial": {
         "text": [
-            "沙漠鐵道"
+            "沙漠鐵道",
+            "沙漠",
+            "鐵道"
         ]
     },
     "Sub_Goto_Classroom_Partial": {
@@ -387,11 +438,6 @@
         ]
     },
     "Sub_Goto_Tasks_Partial": {
-        "text": [
-            "任務"
-        ]
-    },
-    "Click_TasksButton_Partial": {
         "text": [
             "任務"
         ]

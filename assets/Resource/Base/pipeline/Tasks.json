@@ -15,15 +15,15 @@
         "text": "Tasks",
         "roi": [ 0, 0, 450, 60 ],
         "next": [
-            "Click_TasksButton_Partial",
+            "Click_TasksButton",
             "Sub_Wait_NowLoading_Partial",
             "Sub_Goto_Home"
         ]
     },
-    "Click_TasksButton_Partial": {
-        "recognition": "OCR",
-        "text": "Tasks",
-        "roi": [ 0, 206, 147, 120 ],
+    "Click_TasksButton": {
+        "recognition": "TemplateMatch",
+        "template": "../../Base/image/Tasks/Tasks.png",
+        "roi": [ 2, 171, 127, 126 ],
         "action": "Click",
         "post_delay": 1500
     },

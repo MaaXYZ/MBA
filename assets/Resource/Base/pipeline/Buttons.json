@@ -34,7 +34,8 @@
             [ 1113, 52, 131, 131 ],
             [ 857, 123, 131, 131 ],
             [ 822, 97, 131, 131 ],
-            [ 880, 145, 80, 80 ]
+            [ 880, 145, 80, 80 ],
+            [ 972, 58, 80, 80 ]
         ],
         "action": "Click",
         "post_delay": 1500
@@ -96,6 +97,7 @@
     },
     "Stop_Sweep_OnZeroTimes": {
         "skip_review": 4,
+        "model": "../../../Base/model/ocr/",
         "recognition": "OCR",
         "text": "0",
         "roi": [ 881, 279, 113, 43 ]
@@ -156,7 +158,7 @@
         "skip_review": 6,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Buttons/ThreeStarsFlag.png",
-        "threshold": 0.9,
+        "threshold": 0.8,
         "roi": [ 665, 555, 110, 130 ],
         "target_offset": [ 375, 0, 35, -5 ],
         "action": "Click"
@@ -165,7 +167,7 @@
         "skip_review": 6,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Buttons/ThreeStarsFlag.png",
-        "threshold": 0.9,
+        "threshold": 0.8,
         "roi": [ 665, 470, 110, 130 ],
         "target_offset": [ 375, 0, 35, -5 ],
         "action": "Click"
@@ -174,7 +176,7 @@
         "skip_review": 6,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Buttons/ThreeStarsFlag.png",
-        "threshold": 0.9,
+        "threshold": 0.8,
         "roi": [ 665, 385, 110, 130 ],
         "target_offset": [ 375, 0, 35, -5 ],
         "action": "Click"
@@ -183,7 +185,7 @@
         "skip_review": 6,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Buttons/ThreeStarsFlag.png",
-        "threshold": 0.9,
+        "threshold": 0.8,
         "roi": [ 665, 300, 110, 130 ],
         "target_offset": [ 375, 0, 35, -5 ],
         "action": "Click"
@@ -192,7 +194,7 @@
         "skip_review": 6,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Buttons/ThreeStarsFlag.png",
-        "threshold": 0.9,
+        "threshold": 0.8,
         "roi": [ 665, 215, 110, 130 ],
         "target_offset": [ 375, 0, 35, -5 ],
         "action": "Click"
@@ -201,7 +203,7 @@
         "skip_review": 6,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Buttons/ThreeStarsFlag.png",
-        "threshold": 0.9,
+        "threshold": 0.8,
         "roi": [ 665, 130, 110, 130 ],
         "target_offset": [ 375, 0, 35, -5 ],
         "action": "Click"

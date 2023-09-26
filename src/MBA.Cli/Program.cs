@@ -23,32 +23,31 @@ internal class Program
         if (!ResetConfig())
         {
             Log.Fatal("Failed to reset config.");
-            Console.WriteLine("请检查 配置输入 是否正确，按任意键关闭此窗口. . .");
-            Console.ReadKey();
+            Console.WriteLine("请检查 配置输入 是否正确！");
+            TipPause();
             return -1;
         }
 
         if (!ProcArgs(args))
         {
             Log.Fatal("Failed to parse args.");
-            Console.WriteLine("请检查 命令行参数 是否正确，按任意键关闭此窗口. . .");
-            Console.ReadKey();
+            Console.WriteLine("请检查 命令行参数 是否正确！");
+            TipPause();
             return -1;
         }
 
         if (!Config.Tasks.Any())
         {
             Log.Fatal("Task List is empty.");
-            Console.WriteLine("请检查 任务列表 是否为空，按任意键关闭此窗口. . .");
-            Console.ReadKey();
+            Console.WriteLine("请检查 任务列表 是否为空！");
+            TipPause();
             return -1;
         }
 
         Core.Main.Current.Start();
 
         TipNewVersion();
-        Console.WriteLine("按任意键关闭此窗口. . .");
-        Console.ReadKey();
+        TipPause();
         return 0;
     }
 
@@ -73,6 +72,15 @@ internal class Program
         Console.ForegroundColor = ConsoleColor.White;
     }
 
+    private static void TipPause()
+    {
+        if (!s_pasue)
+            return;
+
+        Console.WriteLine("按任意键关闭此窗口. . .");
+        Console.ReadKey();
+    }
+
     static string Greeting =>
 $@"
     MBA.Cli.exe [arg] ...
@@ -80,6 +88,7 @@ $@"
             设备地址:端口号（e.g. 127.0.0.1:5555）
             任务名（e.g. Tasks）
             任务Id（e.g. 1）
+            完成后不暂停（NoPause）
     也可以修改 config.json 来进行相关配置（命令行参数优先于 config.json）
 
     通过命令行执行的任务是一次性的，将不会保存于 config.json
@@ -92,6 +101,8 @@ $@"
 ";
 
     const int WaitTime = 3;
+    const string NoPause = "nopause";
+    private static bool s_pasue = true;
 
     /// <summary>
     ///     启动时重设配置
@@ -139,6 +150,12 @@ $@"
                 continue;
             }
 
+            if (arg.ToLower() == NoPause)
+            {
+                s_pasue = false;
+                continue;
+            }
+
             if (Enum.TryParse(arg, out TaskType task))
             {
                 taskList.Add(task);
@@ -181,7 +198,6 @@ $@"
             _ = SetGameServer();
         }
         while (!Config.Game.LanguageServer.IsValid());
-        Config.Game.PackageEntry = Config.Game.LanguageServer.GetPackageName();
         Console.WriteLine();
         return ret;
     }
