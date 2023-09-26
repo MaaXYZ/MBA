@@ -1,0 +1,9 @@
+{
+    "Scrimmage": {
+        "TODO": {
+            "enabled": false,
+            "doc": "入口任务 enabled 为 false 会死循环"
+        },
+        "next": "Stop"
+    }
+}
