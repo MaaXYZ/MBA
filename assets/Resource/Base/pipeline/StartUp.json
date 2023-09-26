@@ -1,5 +1,6 @@
 {
     "StartUp": {
+        "action": "StartApp",
         "next": [
             "HomeFlag",
             "Sub_Wait_NowLoading_Partial",
@@ -29,6 +30,7 @@
         "is_sub": true,
         "action": "StartApp",
         "next": [
+            "HomeFlag",
             "MenuFlag_Partial",
             "KeyBack_StartApp_Information"
         ]
