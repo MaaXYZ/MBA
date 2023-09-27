@@ -144,25 +144,26 @@ $@"
         var taskList = new List<TaskType>();
         foreach (string arg in args)
         {
-            if (CheckAdbAddress(arg, out var address))
+            var value = arg.Replace("\"", "").Replace(",", "");
+            if (CheckAdbAddress(value, out var address))
             {
                 Config.Core.AdbAddress = address;
                 continue;
             }
 
-            if (arg.ToLower() == NoPause)
+            if (value.ToLower() == NoPause)
             {
                 s_pasue = false;
                 continue;
             }
 
-            if (Enum.TryParse(arg, out TaskType task))
+            if (Enum.TryParse(value, out TaskType task))
             {
                 taskList.Add(task);
             }
             else
             {
-                Log.Error("未知任务名/Id：{arg}", arg);
+                Log.Error("未知任务名/Id：{arg} (解析为：{value})", arg, value);
                 return false;
             }
 
@@ -185,11 +186,11 @@ $@"
     {
         var ret = true;
         Console.WriteLine();
-        ret = ret && SetTasks();
+        ret &= SetTasks();
         Console.WriteLine();
-        ret = ret && SetAdb();
+        ret &= SetAdb();
         Console.WriteLine();
-        ret = ret && SetAdbAddress();
+        ret &= SetAdbAddress();
         do
         {
             Console.WriteLine();
@@ -284,7 +285,6 @@ $@"
     /// <returns>成功与否</returns>
     static bool SetTasks()
     {
-
         Console.Write($"请输入 {DocToConsole(Config.Doc.Tasks)}\n可自定义顺序，以空格分隔，例如 1 2 3\n: ");
         string? read = Console.ReadLine();
         if (string.IsNullOrWhiteSpace(read))
@@ -302,7 +302,7 @@ $@"
 
     static bool CheckAdbAddress(string value, out string result)
     {
-        result = value.Replace('：', ':');
+        result = value.Replace('：', ':').Replace('。', '.');
         var parts = result.Split(':');
         if (parts.Length != 2) return false;
         if (!int.TryParse(parts[1], out int port)) return false;

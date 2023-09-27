@@ -21,6 +21,7 @@
         ]
     },
     "Click_TasksButton": {
+        "skip_review": 6,
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Tasks/Tasks.png",
         "roi": [ 2, 171, 127, 126 ],
