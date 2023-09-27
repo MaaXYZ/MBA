@@ -81,7 +81,7 @@ public class Main
 
         foreach (TaskType task in tasks)
         {
-            Log.Information("{task} start.", task);
+            Log.Information("{task} Started.", task);
 
             var diff = task switch
             {
@@ -97,13 +97,13 @@ public class Main
 
             if (status == MaaJobStatus.Success)
             {
-                Log.Information("{task} done. Result: {status}", task, status);
+                Log.Information("{task} Completed. Result: {status}", task, status);
             }
             else
             {
                 success = false;
                 failedTasks.Add(task);
-                Log.Error("{task} done. Result: {status}", task, status);
+                Log.Error("{task} Completed. Result: {status}", task, status);
             }
         }
 
