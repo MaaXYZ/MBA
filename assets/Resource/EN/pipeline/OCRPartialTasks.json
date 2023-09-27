@@ -213,8 +213,9 @@
     "Sub_Check_RelationshipRankUp_Partial": {
         "text": [
             "Until Next Visit",
-            "Until",
-            "until"
+            "[Un]ntil",
+            "[Nn]ext",
+            "[Vv]isit"
         ]
     },
     "Sub_Click_InvitationButton_Partial": {

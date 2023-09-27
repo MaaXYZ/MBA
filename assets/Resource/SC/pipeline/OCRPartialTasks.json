@@ -226,13 +226,15 @@
     "Sub_Click_CafeEarningsButton_Partial": {
         "text": [
             "可获得",
-            "已满"
+            "已满",
+            "可获."
         ]
     },
     "Click_CafeEarningsButton_Partial": {
         "text": [
             "可获得",
-            "已满"
+            "已满",
+            "可获."
         ]
     },
     "Click_ClaimButton_ForCafeEarnings_Partial": {
