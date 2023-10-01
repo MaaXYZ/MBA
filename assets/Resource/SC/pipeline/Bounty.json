@@ -1,0 +1,88 @@
+{
+    "BountyChinese": {
+        "next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Bounty_Partial",
+            "Sub_Check_OverpassTicket",
+            "Sub_Check_DesertRailroadTicket",
+            "Sub_Check_ClassroomTicket",
+            "Stop"
+        ]
+    },
+    "Check_BountyTicket": {
+        "enabled": false
+    },
+    "Sub_Goto_Bounty_Partial": {
+        "roi": [ 630, 125, 650, 70 ]
+    },
+    "Sub_Check_OverpassTicket": {
+        "skip_review": 4,
+        "model": "../../../Base/model/ocr/",
+        "is_sub": true,
+        "inverse": true,
+        "times_limit": 5,
+        "recognition": "OCR",
+        "text": [ "0/2", "0/" ],
+        "roi": [ 680, 210, 600, 136 ],
+        "next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Overpass_Partial",
+            "Start_SweepMission_OnBounty"
+        ],
+        "runout_next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Bounty_Partial",
+            "Sub_Check_DesertRailroadTicket",
+            "Sub_Check_ClassroomTicket",
+            "StopTask"
+        ]
+    },
+    "Sub_Check_DesertRailroadTicket": {
+        "skip_review": 4,
+        "model": "../../../Base/model/ocr/",
+        "is_sub": true,
+        "inverse": true,
+        "times_limit": 5,
+        "recognition": "OCR",
+        "text": [ "0/2", "0/" ],
+        "roi": [ 680, 346, 600, 136 ],
+        "next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_DesertRailroad_Partial",
+            "Start_SweepMission_OnBounty"
+        ],
+        "runout_next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Bounty_Partial",
+            "Sub_Check_ClassroomTicket",
+            "StopTask"
+        ]
+    },
+    "Sub_Check_ClassroomTicket": {
+        "skip_review": 4,
+        "model": "../../../Base/model/ocr/",
+        "is_sub": true,
+        "inverse": true,
+        "times_limit": 5,
+        "recognition": "OCR",
+        "text": [ "0/2", "0/" ],
+        "roi": [ 680, 482, 600, 136 ],
+        "next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Classroom_Partial",
+            "Start_SweepMission_OnBounty"
+        ],
+        "runout_next": [
+            "StopTask"
+        ]
+    },
+    "Click_Overpass_Partial": {
+        "roi": [ 680, 210, 600, 136 ]
+    },
+    "Click_DesertRailroad_Partial": {
+        "roi": [ 680, 346, 600, 136 ]
+    },
+    "Click_Classroom_Partial": {
+        "roi": [ 680, 482, 600, 136 ]
+    }
+}

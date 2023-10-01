@@ -55,42 +55,39 @@ public class Main
         return maa;
     }
 
-    private IList<TaskType> GetTasks()
+    private List<TaskType> GetTasks()
     {
-        var daily = TaskType.Daily;
-        var dailyTasks = new List<TaskType>(daily.ToList());
         var configTasks = new List<TaskType>(Config.Tasks);
-
-        int i = configTasks.IndexOf(daily);
-        if (i >= 0)
-        {
-            configTasks.RemoveAll(x => x == daily);
-            dailyTasks.RemoveAll(configTasks.Contains);
-            configTasks.InsertRange(i, dailyTasks);
-        }
-
+        configTasks.Replace(TaskType.Daily, Config.Game.Server);
         configTasks.RemoveAll(Config.TasksExcept.Contains);
         return configTasks;
     }
 
-    private bool TryRunTasks(MaaObject maa, IList<TaskType> tasks)
+    private bool TryRunTasks(MaaObject maa, List<TaskType> tasks)
     {
         Log.Information("Task List: {list}.", tasks);
+        tasks.Replace(Config.Game.Server);
+        Log.Debug("Entry Task List: {list}.", tasks);
+
         var success = true;
         var failedTasks = new List<TaskType>(tasks.Count);
+        // remark: lock config
+        var diffTasks = new DiffTasks(Config);
 
         foreach (TaskType task in tasks)
         {
-            Log.Information("{task} Started.", task);
-
-            var diff = task switch
+            if (task.Enabled(diffTasks, out var diffTask))
             {
-                TaskType.Commissions => Config.Daily.DiffTask.Commissions,
-                TaskType.TacticalChallenge => Config.Daily.DiffTask.TacticalChallenge,
-                _ => "{}",
-            };
+                Log.Information("{task} Started.", task);
+            }
+            else
+            {
+                Log.Debug("{task} Skipped.", task);
+                continue;
+            }
+
             var status = maa.Instance
-                            .AppendTask(task.ToString(), diff)
+                            .AppendTask(task.ToString(), diffTask)
                             .Wait();
 
             // TODO: MaaJob 和 MaaJobStatus 包含 任务名 及其参数

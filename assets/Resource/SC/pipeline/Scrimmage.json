@@ -1,0 +1,88 @@
+{
+    "ScrimmageChinese": {
+        "next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Scrimmage_Partial",
+            "Sub_Check_TrinityTicket",
+            "Sub_Check_GehennaTicket",
+            "Sub_Check_MillenniumTicket",
+            "Stop"
+        ]
+    },
+    "Check_ScrimmageTicket": {
+        "enabled": false
+    },
+    "Sub_Goto_Scrimmage_Partial": {
+        "roi": [ 630, 125, 650, 70 ]
+    },
+    "Sub_Check_TrinityTicket": {
+        "skip_review": 4,
+        "model": "../../../Base/model/ocr/",
+        "is_sub": true,
+        "inverse": true,
+        "times_limit": 5,
+        "recognition": "OCR",
+        "text": [ "0/2", "0/" ],
+        "roi": [ 680, 210, 600, 136 ],
+        "next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Trinity_Partial",
+            "Start_SweepMission_OnScrimmage"
+        ],
+        "runout_next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Scrimmage_Partial",
+            "Sub_Check_GehennaTicket",
+            "Sub_Check_MillenniumTicket",
+            "StopTask"
+        ]
+    },
+    "Sub_Check_GehennaTicket": {
+        "skip_review": 4,
+        "model": "../../../Base/model/ocr/",
+        "is_sub": true,
+        "inverse": true,
+        "times_limit": 5,
+        "recognition": "OCR",
+        "text": [ "0/2", "0/" ],
+        "roi": [ 680, 346, 600, 136 ],
+        "next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Gehenna_Partial",
+            "Start_SweepMission_OnScrimmage"
+        ],
+        "runout_next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Scrimmage_Partial",
+            "Sub_Check_MillenniumTicket",
+            "StopTask"
+        ]
+    },
+    "Sub_Check_MillenniumTicket": {
+        "skip_review": 4,
+        "model": "../../../Base/model/ocr/",
+        "is_sub": true,
+        "inverse": true,
+        "times_limit": 5,
+        "recognition": "OCR",
+        "text": [ "0/2", "0/" ],
+        "roi": [ 680, 482, 600, 136 ],
+        "next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Millennium_Partial",
+            "Start_SweepMission_OnScrimmage"
+        ],
+        "runout_next": [
+            "StopTask"
+        ]
+    },
+    "Click_Trinity_Partial": {
+        "roi": [ 680, 210, 600, 136 ]
+    },
+    "Click_Gehenna_Partial": {
+        "roi": [ 680, 346, 600, 136 ]
+    },
+    "Click_Millennium_Partial": {
+        "roi": [ 680, 482, 600, 136 ]
+    }
+}

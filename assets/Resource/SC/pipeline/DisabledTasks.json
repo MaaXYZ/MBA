@@ -1,0 +1,8 @@
+{
+    "Start_SweepMission_Partial": {
+        "doc": "Click_MaxButton disabled，保持不同服之间 diff_task 相同",
+        "next": [
+            "Click_PlusButton"
+        ]
+    }
+}
