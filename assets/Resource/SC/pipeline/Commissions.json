@@ -1,0 +1,18 @@
+{
+    "Sub_Goto_Commissions_Partial": {
+        "roi": [ 630, 125, 650, 83 ]
+    },
+    "Click_BaseDefense_Partial": {
+        "roi": [ 685, 210, 560, 120 ]
+    },
+    "Click_ItemRetrieval_Partial": {
+        "roi": [ 685, 330, 560, 120 ]
+    },
+    "Start_SweepMission_OnCommissions": {
+        "next": [
+            "Start_SweepMission_Partial",
+            "Sub_Click_EnterButton_OnClearedMission_Partial",
+            "StopOnException"
+        ]
+    }
+}
