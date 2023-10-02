@@ -430,6 +430,11 @@
             "Tasks"
         ]
     },
+    "SignInFlag": {
+        "text": [
+            "^Day ?\\d+$"
+        ]
+    },
     "0": {
         "text": [
             "00"
