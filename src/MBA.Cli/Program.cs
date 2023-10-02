@@ -144,7 +144,9 @@ $@"
         var taskList = new List<TaskType>();
         foreach (string arg in args)
         {
-            var value = arg.Replace("\"", "").Replace(",", "");
+            if (string.IsNullOrWhiteSpace(arg)) continue;
+            var value = arg;
+
             if (CheckAdbAddress(value, out var address))
             {
                 Config.Core.AdbAddress = address;
@@ -293,7 +295,7 @@ $@"
             return true;
         }
 
-        var taskIds = read.Split(' ');
+        var taskIds = read.Split(' ', ',', '"');
         return ProcArgs(taskIds);
     }
 
