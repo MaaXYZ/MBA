@@ -17,6 +17,7 @@
             "Sub_Click_BackButton",
             "Sub_Click_CloseButton",
             "Sub_Click_CloseFullscreenButton",
+            "Sub_Click_SignInFlag_Partial",
             "Sub_StartApp"
         ]
     },
@@ -61,5 +62,18 @@
         "runout_next": [
             "StopTaskOnException"
         ]
+    },
+    "Sub_Click_SignInFlag_Partial": {
+        "recognition": "OCR",
+        "text": [
+            "^Day ?\\d+$"
+        ],
+        "roi": [488, 174, 725, 266],
+        "next": ["Sub_Click_SignIn"]
+    },
+    "Sub_Click_SignIn": {
+        "action": "Click",
+        "target": [488, 174, 725, 266],
+        "next": ["Sub_Goto_Home"]
     }
 }
