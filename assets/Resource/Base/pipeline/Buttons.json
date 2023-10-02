@@ -69,28 +69,42 @@
         "text": "MissionInfo",
         "roi": [ 496, 76, 290, 129 ],
         "next": [
-            "Click_PlusButtons",
-            "Stop_Sweep_OnZeroTimes",
-            "Click_StartSweepButton_Partial"
+            "Click_MaxButton",
+            "Click_PlusButton"
         ]
     },
-    "Click_PlusButtons": {
+    "Click_PlusButton": {
         "skip_review": 6,
         "doc": "times_limit setted in code",
         "recognition": "TemplateMatch",
         "template": "../../Base/image/Buttons/Plus.png",
         "threshold": 0.8,
         "roi": [
-            [ 990, 254, 88, 88 ],
-            [ 970, 235, 130, 130 ]
+            [ 970, 255, 90, 90 ]
         ],
         "action": "Click",
         "next": [
-            "Click_PlusButtons",
+            "Click_PlusButton",
             "Stop_Sweep_OnZeroTimes",
             "Click_StartSweepButton_Partial"
         ],
         "runout_next": [
+            "Stop_Sweep_OnZeroTimes",
+            "Click_StartSweepButton_Partial"
+        ]
+    },
+    "Click_MaxButton": {
+        "skip_review": 4,
+        "doc": "enabled setted in code",
+        "enabled": false,
+        "model": "../../../Base/model/ocr/",
+        "recognition": "OCR",
+        "text": "Max",
+        "roi": [
+            [ 740, 200, 395, 260 ]
+        ],
+        "action": "Click",
+        "next": [
             "Stop_Sweep_OnZeroTimes",
             "Click_StartSweepButton_Partial"
         ]

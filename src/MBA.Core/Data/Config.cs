@@ -1,7 +1,6 @@
 using MBA.Core.Enums;
 using MaaToolKit.Extensions.Enums;
 using System.Text.Json.Serialization;
-using System.Text.Json.Nodes;
 
 namespace MBA.Core.Data;
 
@@ -14,7 +13,7 @@ public class Config
     public GameConfig Game { get; set; } = new();
     public DailyConfig Daily { get; set; } = new();
     public WeeklyConfig Weekly { get; set; } = new();
-    public ConfigDoc Doc { get; } = new();
+    public ConfigDocument Document { get; } = new();
 }
 
 public class UIConfig
@@ -53,18 +52,23 @@ public class GameConfig
 
 public class DailyConfig
 {
-    public uint TacticalChallengeTimes { get; set; } = 5;/*
+    public int TacticalChallengeTimes { get; set; } = 5;/*
     public bool DailyNormalMissionDuringActivities { get; set; } = false;
     public string NormalMissionId { get; set; } = "0-0";
-    public uint NormalMissionTimes { get; set; } = 17;
+    public int NormalMissionTimes { get; set; } = 17;
     public string HardMissionId { get; set; } = "H0-0";
-    public uint HardMissionTimes { get; set; } = 3;*/
-    public string CommissionsId { get; set; } = "E";
-    public uint CommissionsTimes { get; set; } = 1;
-
-    [JsonIgnore]
-    public DiffTaskDailyConfig DiffTask { get; }
-    public DailyConfig() => DiffTask = new(this);
+    public int HardMissionTimes { get; set; } = 3;*/
+    public Commissions CommissionsAllIn { get; set; } = Commissions.None;
+    public int CommissionsBaseDefenseTimes { get; set; } = 1;
+    public int CommissionsItemRetrievalTimes { get; set; } = 0;
+    public Bounty BountyAllIn { get; set; } = Bounty.DesertRailroad;
+    public int BountyOverpassTimes { get; set; } = 2;
+    public int BountyDesertRailroadTimes { get; set; } = 2;
+    public int BountyClassroomTimes { get; set; } = 2;
+    public Scrimmage ScrimmageAllIn { get; set; } = Scrimmage.Trinity;
+    public int ScrimmageTrinityTimes { get; set; } = 2;
+    public int ScrimmageGehennaTimes { get; set; } = 2;
+    public int ScrimmageMillenniumTimes { get; set; } = 2;
 }
 
 public class WeeklyConfig
@@ -72,61 +76,7 @@ public class WeeklyConfig
 
 }
 
-public class DiffTaskDailyConfig
-{
-    private readonly DailyConfig _config;
-    public DiffTaskDailyConfig(DailyConfig dailyConfig)
-    {
-        _config = dailyConfig;
-    }
-
-    public string TacticalChallenge => _config.TacticalChallengeTimes == 0
-        ? TacticalChallenge0
-        : TacticalChallenge1;
-    private string TacticalChallenge0 => new JsonObject
-    {
-        ["diff_task"] = new JsonObject
-        {
-            ["Sub_Start_TacticalChallenge_Partial"] = new JsonObject
-            {
-                ["times_limit"] = _config.TacticalChallengeTimes
-            },
-            ["Sub_End_TacticalChallenge_Partial"] = new JsonObject
-            {
-                ["times_limit"] = _config.TacticalChallengeTimes
-            },
-        }
-    }.ToString();
-    private string TacticalChallenge1 => new JsonObject
-    {
-        ["diff_task"] = new JsonObject
-        {
-            ["Sub_Start_TacticalChallenge_Partial"] = new JsonObject
-            {
-                ["times_limit"] = _config.TacticalChallengeTimes
-            },
-        }
-    }.ToString();
-
-    public string Commissions => new JsonObject
-    {
-        ["diff_task"] = new JsonObject
-        {
-            ["Start_Commissions_Partial"] = new JsonObject
-            {
-                ["next"] = _config.CommissionsId == "E"
-                         ? "BaseDefense"
-                         : "ItemRetrieval"
-            },
-            ["Click_PlusButtons"] = new JsonObject
-            {
-                ["times_limit"] = _config.CommissionsTimes - 1
-            },
-        }
-    }.ToString();
-}
-
-public class ConfigDoc
+public class ConfigDocument
 {
     public string Tasks { get; } = $"要执行的任务, {(int)TaskType.Bounty}.{TaskType.Bounty} (悬赏通缉), {(int)TaskType.Cafe}.{TaskType.Cafe} (咖啡厅), {(int)TaskType.Club}.{TaskType.Club} (社团), {(int)TaskType.Commissions}.{TaskType.Commissions} (特殊任务), {/*(int)TaskType.Crafting}.{TaskType.Crafting*/"  TODO"} (制造), {(int)TaskType.Mailbox}.{TaskType.Mailbox} (信箱), {(int)TaskType.Scrimmage}.{TaskType.Scrimmage} (学院交流会), {/*(int)TaskType.Shop}.{TaskType.Shop*/"  TODO"} (商店), {(int)TaskType.TacticalChallenge}.{TaskType.TacticalChallenge} (战术大赛), {(int)TaskType.Tasks}.{TaskType.Tasks} (任务，日常周常奖励收菜), {(int)TaskType.StartUp}.{TaskType.StartUp} (只启动游戏), {(int)TaskType.Daily}.{TaskType.Daily} (做日常), {(int)TaskType.Weekly}.{TaskType.Weekly} (做周常)";
     public string TasksExcept { get; } = $"要排除的任务 (高优先), 以下任务不可被排除: {(int)TaskType.Daily}.{TaskType.Daily}, {(int)TaskType.Weekly}.{TaskType.Weekly}, {(int)TaskType.StartUp}.{TaskType.StartUp}";
@@ -166,8 +116,17 @@ public class ConfigDoc
     public string NormalMissionTimes { get; } = "日活打普通任务的次数, > 0";
     public string HardMissionId { get; } = "困难任务的 Id, H0-0 为打目前打到的一关";
     public string HardMissionTimes { get; } = "日活打困难任务的次数, 1 ~ 3";*/
-    public string CommissionsId { get; } = "特殊任务的 Id, Id 为 E (EXP items) 或 C (Credits)";
-    public string CommissionsTimes { get; } = "日活打特殊任务的次数, > 0";
+    public string CommissionsAllIn { get; } = $"日活剩余的体力要执行的特殊任务, {(int)Commissions.None}.{Commissions.None} (不执行), {(int)Commissions.BaseDefense}.{Commissions.BaseDefense} (据点防御), {(int)Commissions.ItemRetrieval}.{Commissions.ItemRetrieval} (信用回收)";
+    public string CommissionsBaseDefenseTimes { get; } = "日活特殊任务打据点防御的次数";
+    public string CommissionsItemRetrievalTimes { get; } = "日活特殊任务打信用回收的次数";
+    public string BountyAllIn { get; } = $"(国服不可用) 日活剩余的票要执行的悬赏通缉, {(int)Bounty.None}.{Bounty.None} (不执行), {(int)Bounty.Overpass}.{Bounty.Overpass} (高架公路), {(int)Bounty.DesertRailroad}.{Bounty.DesertRailroad} (沙漠铁道), {(int)Bounty.Classroom}.{Bounty.Classroom} (教室)";
+    public string BountyOverpassTimes { get; } = "(国服不可用) 日活悬赏通缉打高架公路的次数";
+    public string BountyDesertRailroadTimes { get; } = "(国服不可用) 日活悬赏通缉打沙漠铁道的次数";
+    public string BountyClassroomTimes { get; } = "(国服不可用) 日活悬赏通缉打教室的次数";
+    public string ScrimmageAllIn { get; } = $"(国服不可用) 日活剩余的票要执行的悬赏通缉, {(int)Scrimmage.None}.{Scrimmage.None} (不执行), {(int)Scrimmage.Trinity}.{Scrimmage.Trinity} (三一), {(int)Scrimmage.Gehenna}.{Scrimmage.Gehenna} (格黑娜), {(int)Scrimmage.Millennium}.{Scrimmage.Millennium} (千年)";
+    public string ScrimmageTrinityTimes { get; } = "(国服不可用) 日活学院交流会打三一的次数";
+    public string ScrimmageGehennaTimes { get; } = "(国服不可用) 日活学院交流会打格黑娜的次数";
+    public string ScrimmageMillenniumTimes { get; } = "(国服不可用) 日活学院交流会打千年的次数";
 
     #endregion
 }

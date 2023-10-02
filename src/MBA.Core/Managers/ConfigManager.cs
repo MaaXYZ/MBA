@@ -61,7 +61,8 @@ public static class ConfigManager
         TaskManager.RunTask(() =>
         {
             Config = JsonSerializer.Deserialize(
-                File.ReadAllText(GlobalInfo.ConfigFileFullPath), ConfigContext.Default.Config
+                File.ReadAllText(GlobalInfo.ConfigFileFullPath),
+                ConfigContext.Default.Config
             ) ?? Config;
         },
         location);

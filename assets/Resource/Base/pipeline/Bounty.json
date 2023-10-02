@@ -1,12 +1,26 @@
 {
-    "Bounty": {
+    "BountyGlobal": {
+        "next": "StopOnException"
+    },
+    "Overpass": {
         "next": [
             "Sub_Wait_NowLoading_Partial",
-            "Sub_Goto_Bounty_Partial",
-            "Sub_Check_OverpassTicket",
-            "Sub_Check_DesertRailroadTicket",
-            "Sub_Check_ClassroomTicket",
-            "Stop"
+            "Sub_Goto_Overpass_Partial",
+            "Start_SweepMission_OnBounty"
+        ]
+    },
+    "DesertRailroad": {
+        "next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_DesertRailroad_Partial",
+            "Start_SweepMission_OnBounty"
+        ]
+    },
+    "Classroom": {
+        "next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Classroom_Partial",
+            "Start_SweepMission_OnBounty"
         ]
     },
     "Sub_Goto_Bounty_Partial": {
@@ -14,7 +28,7 @@
         "inverse": true,
         "recognition": "OCR",
         "text": "LocationSelect",
-        "roi": [ 630, 125, 650, 70 ],
+        "roi": [ 650, 75, 400, 60 ],
         "next": [
             "Click_BountyButton_Partial",
             "BountyFlag_Partial",
@@ -48,27 +62,13 @@
             "StopOnException"
         ]
     },
-    "Sub_Check_OverpassTicket": {
+    "Check_BountyTicket": {
         "skip_review": 4,
         "model": "../../../Base/model/ocr/",
-        "is_sub": true,
-        "inverse": true,
-        "times_limit": 5,
         "recognition": "OCR",
-        "text": [ "0/2", "0/"],
-        "roi": [ 680, 210, 600, 136 ],
-        "next": [
-            "Sub_Wait_NowLoading_Partial",
-            "Sub_Goto_Overpass_Partial",
-            "Start_SweepMission_OnBounty"
-        ],
-        "runout_next": [
-            "Sub_Wait_NowLoading_Partial",
-            "Sub_Goto_Bounty_Partial",
-            "Sub_Check_DesertRailroadTicket",
-            "Sub_Check_ClassroomTicket",
-            "StopTask"
-        ]
+        "text": [ "0/6", "0/" ],
+        "roi": [ 35, 80, 240, 40 ],
+        "next": "StopTask"
     },
     "Sub_Goto_Overpass_Partial": {
         "is_sub": true,
@@ -77,6 +77,7 @@
         "text": "Overpass",
         "roi": [ 90, 130, 530, 85 ],
         "next": [
+            "Check_BountyTicket",
             "Click_Overpass_Partial",
             "Sub_Wait_NowLoading_Partial",
             "Sub_Goto_Bounty_Partial"
@@ -86,32 +87,11 @@
         "recognition": "OCR",
         "text": "Overpass",
         "roi": [
-            [ 680, 210, 600, 136 ],
+            [ 645, 140, 610, 475 ],
             [ 1044, 214, 186, 57 ]
         ],
         "action": "Click",
         "post_delay": 1500
-    },
-    "Sub_Check_DesertRailroadTicket": {
-        "skip_review": 4,
-        "model": "../../../Base/model/ocr/",
-        "is_sub": true,
-        "inverse": true,
-        "times_limit": 5,
-        "recognition": "OCR",
-        "text": [ "0/2", "0/"],
-        "roi": [ 680, 346, 600, 136 ],
-        "next": [
-            "Sub_Wait_NowLoading_Partial",
-            "Sub_Goto_DesertRailroad_Partial",
-            "Start_SweepMission_OnBounty"
-        ],
-        "runout_next": [
-            "Sub_Wait_NowLoading_Partial",
-            "Sub_Goto_Bounty_Partial",
-            "Sub_Check_ClassroomTicket",
-            "StopTask"
-        ]
     },
     "Sub_Goto_DesertRailroad_Partial": {
         "is_sub": true,
@@ -120,6 +100,7 @@
         "text": "DesertRailroad",
         "roi": [ 90, 130, 530, 85 ],
         "next": [
+            "Check_BountyTicket",
             "Click_DesertRailroad_Partial",
             "Sub_Wait_NowLoading_Partial",
             "Sub_Goto_Bounty_Partial"
@@ -129,29 +110,11 @@
         "recognition": "OCR",
         "text": "DesertRailroad",
         "roi": [
-            [ 680, 346, 600, 136 ],
+            [ 645, 140, 610, 475 ],
             [ 1047, 337, 182, 52 ]
         ],
         "action": "Click",
         "post_delay": 1500
-    },
-    "Sub_Check_ClassroomTicket": {
-        "skip_review": 4,
-        "model": "../../../Base/model/ocr/",
-        "is_sub": true,
-        "inverse": true,
-        "times_limit": 5,
-        "recognition": "OCR",
-        "text": [ "0/2", "0/"],
-        "roi": [ 680, 482, 600, 136 ],
-        "next": [
-            "Sub_Wait_NowLoading_Partial",
-            "Sub_Goto_Classroom_Partial",
-            "Start_SweepMission_OnBounty"
-        ],
-        "runout_next": [
-            "StopTask"
-        ]
     },
     "Sub_Goto_Classroom_Partial": {
         "is_sub": true,
@@ -160,6 +123,7 @@
         "text": "Classroom",
         "roi": [ 90, 130, 530, 85 ],
         "next": [
+            "Check_BountyTicket",
             "Click_Classroom_Partial",
             "Sub_Wait_NowLoading_Partial",
             "Sub_Goto_Bounty_Partial"
@@ -169,7 +133,7 @@
         "recognition": "OCR",
         "text": "Classroom",
         "roi": [
-            [ 680, 482, 600, 136 ],
+            [ 645, 140, 610, 475 ],
             [ 1132, 460, 98, 52 ]
         ],
         "action": "Click",

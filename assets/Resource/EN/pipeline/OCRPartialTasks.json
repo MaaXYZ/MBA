@@ -157,7 +157,8 @@
     },
     "Click_TouchButton_Partial": {
         "text": [
-            "TOUCH"
+            "TOUCH",
+            "T O U C H"
         ]
     },
     "Start_SweepMission_Partial": {
@@ -213,8 +214,9 @@
     "Sub_Check_RelationshipRankUp_Partial": {
         "text": [
             "Until Next Visit",
-            "Until",
-            "until"
+            "[Un]ntil",
+            "[Nn]ext",
+            "[Vv]isit"
         ]
     },
     "Sub_Click_InvitationButton_Partial": {

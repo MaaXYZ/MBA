@@ -158,7 +158,8 @@
     "Click_TouchButton_Partial": {
         "model": "../../../Base/model/ocr/",
         "text": [
-            "TOUCH"
+            "TOUCH",
+            "T O U C H"
         ]
     },
     "Start_SweepMission_Partial": {

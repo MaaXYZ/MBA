@@ -1,12 +1,26 @@
 {
-    "Scrimmage": {
+    "ScrimmageGlobal": {
+        "next": "StopOnException"
+    },
+    "Trinity": {
         "next": [
             "Sub_Wait_NowLoading_Partial",
-            "Sub_Goto_Scrimmage_Partial",
-            "Sub_Check_TrinityTicket",
-            "Sub_Check_GehennaTicket",
-            "Sub_Check_MillenniumTicket",
-            "Stop"
+            "Sub_Goto_Trinity_Partial",
+            "Start_SweepMission_OnScrimmage"
+        ]
+    },
+    "Gehenna": {
+        "next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Gehenna_Partial",
+            "Start_SweepMission_OnScrimmage"
+        ]
+    },
+    "Millennium": {
+        "next": [
+            "Sub_Wait_NowLoading_Partial",
+            "Sub_Goto_Millennium_Partial",
+            "Start_SweepMission_OnScrimmage"
         ]
     },
     "Sub_Goto_Scrimmage_Partial": {
@@ -14,7 +28,7 @@
         "inverse": true,
         "recognition": "OCR",
         "text": "AcademySelect",
-        "roi": [ 630, 125, 650, 70 ],
+        "roi": [ 650, 75, 400, 60 ],
         "next": [
             "Click_ScrimmageButton_Partial",
             "ScrimmageFlag_Partial",
@@ -44,27 +58,13 @@
             "StopOnException"
         ]
     },
-    "Sub_Check_TrinityTicket": {
+    "Check_ScrimmageTicket": {
         "skip_review": 4,
         "model": "../../../Base/model/ocr/",
-        "is_sub": true,
-        "inverse": true,
-        "times_limit": 5,
         "recognition": "OCR",
-        "text": [ "0/2", "0/"],
-        "roi": [ 680, 210, 600, 136 ],
-        "next": [
-            "Sub_Wait_NowLoading_Partial",
-            "Sub_Goto_Trinity_Partial",
-            "Start_SweepMission_OnScrimmage"
-        ],
-        "runout_next": [
-            "Sub_Wait_NowLoading_Partial",
-            "Sub_Goto_Scrimmage_Partial",
-            "Sub_Check_GehennaTicket",
-            "Sub_Check_MillenniumTicket",
-            "StopTask"
-        ]
+        "text": [ "0/6", "0/" ],
+        "roi": [ 35, 80, 240, 40 ],
+        "next": "StopTask"
     },
     "Sub_Goto_Trinity_Partial": {
         "is_sub": true,
@@ -73,38 +73,18 @@
         "text": "Trinity",
         "roi": [ 90, 130, 530, 85 ],
         "next": [
+            "Check_ScrimmageTicket",
             "Click_Trinity_Partial",
             "Sub_Wait_NowLoading_Partial",
-            "Sub_Goto_Bounty_Partial"
+            "Sub_Goto_Scrimmage_Partial"
         ]
     },
     "Click_Trinity_Partial": {
         "recognition": "OCR",
         "text": "Trinity",
-        "roi": [ 680, 210, 600, 136 ],
+        "roi": [ 645, 140, 610, 475 ],
         "action": "Click",
         "post_delay": 1500
-    },
-    "Sub_Check_GehennaTicket": {
-        "skip_review": 4,
-        "model": "../../../Base/model/ocr/",
-        "is_sub": true,
-        "inverse": true,
-        "times_limit": 5,
-        "recognition": "OCR",
-        "text": [ "0/2", "0/"],
-        "roi": [ 680, 346, 600, 136 ],
-        "next": [
-            "Sub_Wait_NowLoading_Partial",
-            "Sub_Goto_Gehenna_Partial",
-            "Start_SweepMission_OnScrimmage"
-        ],
-        "runout_next": [
-            "Sub_Wait_NowLoading_Partial",
-            "Sub_Goto_Scrimmage_Partial",
-            "Sub_Check_MillenniumTicket",
-            "StopTask"
-        ]
     },
     "Sub_Goto_Gehenna_Partial": {
         "is_sub": true,
@@ -113,35 +93,18 @@
         "text": "Gehenna",
         "roi": [ 90, 130, 530, 85 ],
         "next": [
+            "Check_ScrimmageTicket",
             "Click_Gehenna_Partial",
             "Sub_Wait_NowLoading_Partial",
-            "Sub_Goto_Bounty_Partial"
+            "Sub_Goto_Scrimmage_Partial"
         ]
     },
     "Click_Gehenna_Partial": {
         "recognition": "OCR",
         "text": "Gehenna",
-        "roi": [ 680, 346, 600, 136 ],
+        "roi": [ 645, 140, 610, 475 ],
         "action": "Click",
         "post_delay": 1500
-    },
-    "Sub_Check_MillenniumTicket": {
-        "skip_review": 4,
-        "model": "../../../Base/model/ocr/",
-        "is_sub": true,
-        "inverse": true,
-        "times_limit": 5,
-        "recognition": "OCR",
-        "text": [ "0/2", "0/"],
-        "roi": [ 680, 482, 600, 136 ],
-        "next": [
-            "Sub_Wait_NowLoading_Partial",
-            "Sub_Goto_Millennium_Partial",
-            "Start_SweepMission_OnScrimmage"
-        ],
-        "runout_next": [
-            "StopTask"
-        ]
     },
     "Sub_Goto_Millennium_Partial": {
         "is_sub": true,
@@ -150,15 +113,16 @@
         "text": "Millennium",
         "roi": [ 90, 130, 530, 85 ],
         "next": [
+            "Check_ScrimmageTicket",
             "Click_Millennium_Partial",
             "Sub_Wait_NowLoading_Partial",
-            "Sub_Goto_Bounty_Partial"
+            "Sub_Goto_Scrimmage_Partial"
         ]
     },
     "Click_Millennium_Partial": {
         "recognition": "OCR",
         "text": "Millennium",
-        "roi": [ 680, 482, 600, 136 ],
+        "roi": [ 645, 140, 610, 475 ],
         "action": "Click",
         "post_delay": 1500
     }

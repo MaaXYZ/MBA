@@ -24,7 +24,7 @@
     "Notice_Unknown": {
         "TODO": "回调通知",
         "next": [
-            "StopTask"
+            "StopOnException"
         ]
     },
     "Sub_Notice_Quit_Partial": {

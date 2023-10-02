@@ -61,11 +61,11 @@ public static class GameLanguageServerExtensions
     private static readonly string _packageEntryBilibili = Encoding.UTF8.GetString(Convert.FromBase64String("Y29tLlJvYW1pbmdTdGFyLkJsdWVBcmNoaXZlLmJpbGliaWxpL2NvbS55b3N0YXIuc3VwZXJzZGsuYWN0aXZpdHkuWW9TdGFyU3BsYXNoQWN0aXZpdHk="));
 
     public static string GetPackageEntry(this G type)
-        => type.IsValidJP() ? _packageEntryJapanese
-         : type.IsValidGL() ? _packageEntryGlobal
-        : type.IsYoStarCN() ? _packageEntryYoStarCN
-        : type.IsBilibili() ? _packageEntryBilibili
-        : ConfigManager.Config.Game.PackageEntry;
+        => type.IsJapanese() ? _packageEntryJapanese
+         : type.IsGlobal() ? _packageEntryGlobal
+         : type.IsYoStarCN() ? _packageEntryYoStarCN
+         : type.IsBilibili() ? _packageEntryBilibili
+         : ConfigManager.Config.Game.PackageEntry;
 
     public static G GetLanguage(this G type)
         => type & G.LanguageMask;
@@ -74,22 +74,25 @@ public static class GameLanguageServerExtensions
         => type & G.ServerMask;
 
     public static bool IsValid(this G type)
-        => type.GetServer() != G.None
+        => type != G.None
+        && type.GetServer() != G.None
         && type.GetLanguage() != G.None
-        && (type.IsValidJP() || type.IsValidGL() || type.IsValidCN());
+        && (type.IsJapanese() || type.IsGlobal() || type.IsChinese());
 
-    internal static bool IsValidJP(this G type)
+    // Used internally only, as there is no confirmation that the type is None
+
+    internal static bool IsJapanese(this G type)
         => (type & G.NonJPMask) == G.None;
 
-    internal static bool IsValidGL(this G type)
+    internal static bool IsGlobal(this G type)
         => (type & G.NonGLMask) == G.None;
 
-    internal static bool IsValidCN(this G type)
+    internal static bool IsChinese(this G type)
         => (type & G.NonCNMask) == G.None;
 
     internal static bool IsYoStarCN(this G type)
-        => type.IsValidCN() && ((type & G.YoStarCN) == G.YoStarCN);
+        => type.IsChinese() && (type & G.YoStarCN) == G.YoStarCN;
 
     internal static bool IsBilibili(this G type)
-        => type.IsValidCN() && ((type & G.Bilibili) == G.Bilibili);
+        => type.IsChinese() && (type & G.Bilibili) == G.Bilibili;
 }

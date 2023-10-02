@@ -1,5 +1,8 @@
 {
     "Stop": {},
+    "None": {
+        "doc": "和 Stop 行为相同，但只会在 Enum.ToString() 时用到"
+    },
     "StopOnException": {
         "TODO": "StopTaskOnException 属于不正常退出，等 focus 完善。"
     },
