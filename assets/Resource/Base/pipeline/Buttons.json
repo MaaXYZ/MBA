@@ -40,15 +40,6 @@
         "action": "Click",
         "post_delay": 1500
     },
-    "Sub_Click_PassButton": {
-        "skip_review": 6,
-        "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": "../../Base/image/Buttons/Pass.png",
-        "roi": [ 1167, 0, 113, 139 ],
-        "action": "Click",
-        "post_delay": 1500
-    },
     "Sub_Click_CloseFullscreenButton": {
         "skip_review": 6,
         "is_sub": true,
