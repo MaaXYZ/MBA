@@ -432,7 +432,7 @@
             "Tasks"
         ]
     },
-    "SignInFlag": {
+    "Sub_SignInFlag_Partial": {
         "text": [
             "^Day ?\\d+$"
         ]
