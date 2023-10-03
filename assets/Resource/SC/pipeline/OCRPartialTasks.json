@@ -391,6 +391,11 @@
             "工作任务"
         ]
     },
+    "Sub_Click_SignInFlag_Partial": {
+        "text": [
+            "^第.*天$"
+        ]
+    },
     "0": {
         "text": [
             "00"
