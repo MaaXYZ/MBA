@@ -100,10 +100,9 @@ public class ConfigDocument
 
     #region GameConfig
 
-    public string Language { get; } = $"游戏内语言：{GameLanguageServer.EN}";
+    public string Language { get; } = $"游戏内语言：{GameLanguageServer.EN} (English), {GameLanguageServer.TC} (Traditional Chinese), {GameLanguageServer.SC} (Simplified Chinese)";
     // $"游戏内语言：{GameLanguageServer.JP}, {GameLanguageServer.KR}, {GameLanguageServer.EN}, {GameLanguageServer.TH}, {GameLanguageServer.TC}, {GameLanguageServer.SC}";
-
-    public string Server { get; } = $"游戏服务器：{GameLanguageServer.Global}, {GameLanguageServer.Korea}, {GameLanguageServer.TaiwanHongKongMacao}, {GameLanguageServer.NorthAmerica}, {GameLanguageServer.Europe}, {GameLanguageServer.Asia}";
+    public string Server { get; } = $"游戏服务器：{GameLanguageServer.Global}, {GameLanguageServer.Korea}, {GameLanguageServer.TaiwanHongKongMacao}, {GameLanguageServer.NorthAmerica}, {GameLanguageServer.Europe}, {GameLanguageServer.Asia}, {GameLanguageServer.Chinese}, {GameLanguageServer.YoStarCN}, {GameLanguageServer.Bilibili}, {GameLanguageServer.OthersCN}";
     // $"游戏服务器：{GameLanguageServer.Japanese}, {GameLanguageServer.Global}, {GameLanguageServer.Korea}, {GameLanguageServer.TaiwanHongKongMacao}, {GameLanguageServer.NorthAmerica}, {GameLanguageServer.Europe}, {GameLanguageServer.Asia}, {GameLanguageServer.Chinese}, {GameLanguageServer.YoStarCN}, {GameLanguageServer.Bilibili}, {GameLanguageServer.Ourplay}, {GameLanguageServer.OthersCN}";
     public string PackageEntry { get; set; } = "备用启动入口, 当 Language 和 Server 不匹配 或 Server 不支持时使用, 需要填入 activity, 例如 com.hypergryph.arknights/com.u8.sdk.U8UnityContext";
 
