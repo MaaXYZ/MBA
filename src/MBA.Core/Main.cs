@@ -21,6 +21,9 @@ public class Main
 
         TaskManager.RunTask(() =>
         {
+            // remark: lock config
+            ConfigManager.LogConfig();
+
             // TODO: GetMaa 抛出的错误应该是可选择的
             using var maa = GetMaa();
             var tasks = GetTasks();
@@ -71,7 +74,6 @@ public class Main
 
         var success = true;
         var failedTasks = new List<TaskType>(tasks.Count);
-        // remark: lock config
         var diffTasks = new DiffTasks(Config);
 
         foreach (TaskType task in tasks)

@@ -1,4 +1,5 @@
 using System.Text.Json;
+using System.Text.Json.Nodes;
 using MBA.Core.Data;
 
 namespace MBA.Core.Managers;
@@ -83,5 +84,15 @@ public static class ConfigManager
             }
         }
         , location);
+    }
+
+    public static void LogConfig()
+    {
+        var jsonObject = JsonNode.Parse(
+            JsonSerializer.Serialize(Config, ConfigContext.Default.Config))
+            as JsonObject ?? new();
+        jsonObject.Remove(nameof(Config.Document));
+        jsonObject.Remove(nameof(Config.UI));
+        Log.Verbose("Current Config: {config}", jsonObject.ToString());
     }
 }
