@@ -174,7 +174,10 @@
     "Click_ConfirmButton_OnBattleComplete_Partial": {
         "recognition": "OCR",
         "text": "Confirm",
-        "roi": [ 533, 624, 215, 72 ],
+        "roi": [
+            [ 1109, 634, 122, 60 ],
+            [ 533, 624, 215, 72 ]
+        ],
         "action": "Click",
         "next": [
             "Click_ConfirmButton_OnRewardAcquired_Partial"
