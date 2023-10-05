@@ -147,9 +147,9 @@ $@"
             if (string.IsNullOrWhiteSpace(arg)) continue;
             var value = arg;
 
-            if (CheckAdbAddress(value, out var address))
+            if (Enum.TryParse(value, out TaskType task))
             {
-                Config.Core.AdbAddress = address;
+                taskList.Add(task);
                 continue;
             }
 
@@ -159,21 +159,18 @@ $@"
                 continue;
             }
 
-            if (Enum.TryParse(value, out TaskType task))
+            if (CheckAdbAddress(value, out var address))
             {
-                taskList.Add(task);
-            }
-            else
-            {
-                Log.Error("未知任务名/Id：{arg} (解析为：{value})", arg, value);
-                return false;
+                Config.Core.AdbAddress = address;
+                continue;
             }
 
-            if (task == TaskType.Test)
-                Log.Warning("解析到测试用任务, 请确保测试任务存在!");
-
+            Log.Error("未知任务名/Id：{arg} (解析为：{value})", arg, value);
+            return false;
         }
 
+        if (taskList.Contains(TaskType.Test))
+            Log.Warning("解析到测试用任务, 请确保测试任务存在!");
         if (taskList.Any())
             Config.Tasks = taskList;
 
@@ -306,7 +303,16 @@ $@"
     {
         result = value.Replace('：', ':').Replace('。', '.');
         var parts = result.Split(':');
-        if (parts.Length != 2) return false;
+        if (parts.Length != 2)
+        {
+            var count = MaaToolKit.Extensions.MaaTool.FindDevice(Config.Core.Adb);
+            for (ulong i = 0; i < count; i++)
+            {
+                if (MaaToolKit.Extensions.MaaTool.GetDeviceAdbSerial(i) == value)
+                    return true;
+            }
+            return false;
+        }
         if (!int.TryParse(parts[1], out int port)) return false;
         if (port < 0 || port > 65535) return false;
         try
