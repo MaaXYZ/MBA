@@ -62,7 +62,7 @@
         "skip_review": 4,
         "model": "../../../Base/model/ocr/",
         "recognition": "OCR",
-        "text": [ "0/6", "0/" ],
+        "text": [ "0/6", "0/", "0.?6" ],
         "roi": [ 35, 80, 240, 40 ],
         "next": "StopTask"
     },
@@ -82,7 +82,11 @@
     "Click_Trinity_Partial": {
         "recognition": "OCR",
         "text": "Trinity",
-        "roi": [ 645, 140, 610, 475 ],
+        "roi": [
+            [ 645, 140, 610, 475 ],
+            [ 1102, 108, 168, 140 ],
+            [ 1151, 166, 71, 36 ]
+        ],
         "action": "Click",
         "post_delay": 1500
     },
@@ -102,7 +106,10 @@
     "Click_Gehenna_Partial": {
         "recognition": "OCR",
         "text": "Gehenna",
-        "roi": [ 645, 140, 610, 475 ],
+        "roi": [
+            [ 645, 140, 610, 475 ],
+            [ 1122, 272, 102, 37 ]
+        ],
         "action": "Click",
         "post_delay": 1500
     },
@@ -111,7 +118,10 @@
         "inverse": true,
         "recognition": "OCR",
         "text": "Millennium",
-        "roi": [ 90, 130, 530, 85 ],
+        "roi": [
+            [ 90, 130, 530, 85 ],
+            [ 1155, 380, 67, 36 ]
+        ],
         "next": [
             "Check_ScrimmageTicket",
             "Click_Millennium_Partial",

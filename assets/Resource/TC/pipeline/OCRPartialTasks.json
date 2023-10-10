@@ -7,6 +7,8 @@
         ]
     },
     "CampaignFlag_Partial": {
+        "doc": "任務（日常）任務（業務區）特殊任務需分開識別",
+        "roi": [ 713, 160, 159, 84 ],
         "text": [
             "任務"
         ]
@@ -328,15 +330,13 @@
     "Click_CommissionsButton_Partial": {
         "text": [
             "特殊任務",
-            "特殊",
-            "任務"
+            "特殊"
         ]
     },
     "CommissionsFlag_Partial": {
         "text": [
             "特殊任務",
-            "特殊",
-            "任務"
+            "特殊"
         ]
     },
     "Sub_Goto_Commissions_Partial": {
@@ -440,8 +440,10 @@
         ]
     },
     "Sub_Goto_Tasks_Partial": {
+        "doc": "任務（日常）任務（業務區）特殊任務需分開識別",
+        "roi": [ 651, 80, 144, 60 ],
         "text": [
-            "任務"
+            "每天"
         ]
     },
     "Sub_SignInFlag_Partial": {

@@ -71,14 +71,20 @@
     "Click_BaseDefense_Partial": {
         "recognition": "OCR",
         "text": "BaseDefense",
-        "roi": [ 645, 140, 610, 475 ],
+        "roi": [
+            [ 645, 140, 610, 475 ],
+            [ 1090, 165, 135, 38 ]
+        ],
         "action": "Click",
         "post_delay": 1500
     },
     "Click_ItemRetrieval_Partial": {
         "recognition": "OCR",
         "text": "ItemRetrieval",
-        "roi": [ 645, 140, 610, 475 ],
+        "roi": [
+            [ 645, 140, 610, 475 ],
+            [ 1031, 273, 193, 37 ]
+        ],
         "action": "Click",
         "post_delay": 1500
     },

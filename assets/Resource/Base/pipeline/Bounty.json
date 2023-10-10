@@ -66,7 +66,7 @@
         "skip_review": 4,
         "model": "../../../Base/model/ocr/",
         "recognition": "OCR",
-        "text": [ "0/6", "0/" ],
+        "text": [ "0/6", "0/", "0.?6" ],
         "roi": [ 35, 80, 240, 40 ],
         "next": "StopTask"
     },
@@ -88,7 +88,7 @@
         "text": "Overpass",
         "roi": [
             [ 645, 140, 610, 475 ],
-            [ 1044, 214, 186, 57 ]
+            [ 1090, 165, 134, 38 ]
         ],
         "action": "Click",
         "post_delay": 1500
@@ -111,7 +111,7 @@
         "text": "DesertRailroad",
         "roi": [
             [ 645, 140, 610, 475 ],
-            [ 1047, 337, 182, 52 ]
+            [ 1032, 273, 192, 37 ]
         ],
         "action": "Click",
         "post_delay": 1500
@@ -134,7 +134,7 @@
         "text": "Classroom",
         "roi": [
             [ 645, 140, 610, 475 ],
-            [ 1132, 460, 98, 52 ]
+            [ 1153, 379, 70, 37 ]
         ],
         "action": "Click",
         "post_delay": 1500
