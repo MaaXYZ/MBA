@@ -1,18 +1,11 @@
-## v0.2.0
+## v0.2.1
 
-### 新增
+### 改进
 
-- 添加简中适配 @hmydgz
-- 适配国际服（繁中） @dongwlin
-- 适配国际服新 UI 及操作逻辑 @Dissectum
-- 添加命令行参数 NoPause @Dissectum
-
-### 修复
-
-- 修复每次启动都创建日志文件的问题 @Dissectum
-- 修复战斗未跳过且成功后没点到 Confirm 的问题 @Dissectum
-- 修复输入配置时 Language 或 Server 解析为 None 的问题 @Dissectum
+- 更新简中 OCR 字段 @Dissectum
+- 适配国际服新 UI @Dissectum
+- 调整 TacticalChallenge 等待方式 @Dissectum
 
 ### 其他
 
-- update Maa.ToolKit.Extensions to 1.0.0-beta.2.1 @Dissectum
+- Update ImageCropper @Dissectum
