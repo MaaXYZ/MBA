@@ -13,6 +13,7 @@
         "enabled": false
     },
     "Sub_Goto_Scrimmage_Partial": {
+        "skip_review": 4,
         "roi": [ 630, 125, 650, 70 ]
     },
     "Sub_Check_TrinityTicket": {
@@ -77,12 +78,15 @@
         ]
     },
     "Click_Trinity_Partial": {
+        "skip_review": 4,
         "roi": [ 680, 210, 600, 136 ]
     },
     "Click_Gehenna_Partial": {
+        "skip_review": 4,
         "roi": [ 680, 346, 600, 136 ]
     },
     "Click_Millennium_Partial": {
+        "skip_review": 4,
         "roi": [ 680, 482, 600, 136 ]
     }
 }

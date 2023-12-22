@@ -17,7 +17,7 @@
             "Sub_Click_BackButton",
             "Sub_Click_CloseButton",
             "Sub_Click_CloseFullscreenButton",
-            "Sub_SignInFlag_Partial",
+            "Sub_Click_SignIn_Partial",
             "Sub_StartApp"
         ]
     },
@@ -63,7 +63,8 @@
             "StopTaskOnException"
         ]
     },
-    "Sub_SignInFlag_Partial": {
+    "Sub_Click_SignIn_Partial": {
+        "is_sub": true,
         "recognition": "OCR",
         "text": "SignIn",
         "action": "Click",

@@ -341,13 +341,6 @@
             "R.*Select"
         ]
     },
-    "Start_Commissions_Partial": {
-        "text": [
-            "Request Select",
-            "RequestSelect",
-            "R.*Select"
-        ]
-    },
     "Sub_Goto_BaseDefense_Partial": {
         "text": [
             "Base Defense",
@@ -432,7 +425,7 @@
             "Tasks"
         ]
     },
-    "Sub_SignInFlag_Partial": {
+    "Sub_Click_SignIn_Partial": {
         "text": [
             "^Day ?\\d+$"
         ]
