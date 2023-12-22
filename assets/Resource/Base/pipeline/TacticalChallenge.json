@@ -32,8 +32,10 @@
     "Click_TacticalChallenge_Partial": {
         "recognition": "OCR",
         "text": "TacticalChallenge",
-        "roi": [ 1031, 397, 155, 87 ],
-        "target": [ 1031, 397, 155, 87 ],
+        "roi": [
+            [ 1031, 397, 155, 87 ],
+            [ 1010, 519, 145, 108 ]
+        ],
         "action": "Click",
         "post_delay": 1500
     },
