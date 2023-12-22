@@ -225,7 +225,7 @@
         "roi": [ 360, 135, 560, 440 ],
         "target": [ 531, 431, 217, 71 ],
         "action": "Click",
-        "post_delay": 50000,
+        "pre_delay": 50000,
         "next": [
             "Click_MobilizeButton_Partial"
         ]
