@@ -454,8 +454,7 @@ $RECYCLE.BIN/
 !.vscode/extensions.json
 
 # MBA
-tools/CropRoi/src/*
-tools/CropRoi/dst/*
-tools/CropRoi/run.py
-!tools/CropRoi/src/.gitkeep
-!tools/CropRoi/dst/.gitkeep
+tools/ImageCropper/src/*
+tools/ImageCropper/dst/*
+!tools/ImageCropper/src/.gitkeep
+!tools/ImageCropper/dst/.gitkeep
