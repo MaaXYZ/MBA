@@ -1,33 +1,31 @@
-using MaaToolKit.Extensions;
-using MaaToolKit.Extensions.Enums;
+using MaaFramework.Binding;
 using MBA.Core.Data;
 using MBA.Core.Enums;
 using MBA.Core.Managers;
 
 namespace MBA.Core;
 
-public class Main
+public class Sensei
 {
     private static Serilog.ILogger Log => LogManager.Logger;
 
-    public static Main Current { get; } = new();
+    public static Sensei Agent { get; } = new();
 
     // TODO: 去除静态
     private static Config Config { get; } = ConfigManager.Config;
 
     public void Start()
     {
-        var location = $"{nameof(Main)}.{nameof(Start)}";
+        var location = $"{nameof(Sensei)}.{nameof(Start)}";
 
         TaskManager.RunTask(() =>
         {
             // remark: lock config
             ConfigManager.LogConfig();
 
-            // TODO: GetMaa 抛出的错误应该是可选择的
             using var maa = GetMaa();
             var tasks = GetTasks();
-            if (!maa.Instance.Initialized)
+            if (!maa.Initialized)
                 Log.Error("Failed to init Maa instance, a connection error or resource file corruption occurred, please refer to the log.");
 
             if (TryRunTasks(maa, tasks))
@@ -38,19 +36,15 @@ public class Main
         location);
     }
 
-    private MaaObject GetMaa()
+    private MaaInstance GetMaa()
     {
-        var maa = new MaaObject(
-                Config.Core.Adb,
-                Config.Core.AdbAddress,
-                Config.Core.ControlType,
-                ConfigManager.AdbConfig,
-                GlobalInfo.BaseResourceFullPath,
-                $"{GlobalInfo.ResourceFullPath}/{Config.Game.Language}");
+        var maa = new MaaInstance
+        {
+            Controller = new MaaAdbController(Config.Core.Adb, Config.Core.AdbAddress, Config.Core.ControlType, ConfigManager.AdbConfig, "./MaaAgentBinary"),
+            Resource = new MaaResource(GlobalInfo.BaseResourceFullPath, $"{GlobalInfo.ResourceFullPath}/{Config.Game.Language}"),
+            DisposeOptions = DisposeOptions.All,
+        };
 
-        maa.Controller.SetOption(
-            ControllerOption.ScreenshotTargetShortSide,
-            GlobalInfo.ScreenshotHeight);
         maa.Controller.SetOption(
             ControllerOption.DefaultAppPackageEntry,
             Config.Game.LanguageServer.GetPackageEntry());
@@ -66,7 +60,7 @@ public class Main
         return configTasks;
     }
 
-    private bool TryRunTasks(MaaObject maa, List<TaskType> tasks)
+    private bool TryRunTasks(MaaInstance maa, List<TaskType> tasks)
     {
         Log.Information("Task List: {list}.", tasks);
         tasks.Replace(Config.Game.Server);
@@ -88,8 +82,7 @@ public class Main
                 continue;
             }
 
-            var status = maa.Instance
-                            .AppendTask(task.ToString(), diffTask)
+            var status = maa.AppendTask(task.ToString(), diffTask)
                             .Wait();
 
             // TODO: MaaJob 和 MaaJobStatus 包含 任务名 及其参数

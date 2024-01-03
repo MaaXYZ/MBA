@@ -1,4 +1,4 @@
-using MaaToolKit.Extensions;
+using MaaFramework.Binding;
 using MBA.Core.Data;
 using Serilog;
 using Serilog.Core;
@@ -61,8 +61,8 @@ public static class LogManager
 
     private static void SetFrameworkLog(bool enableDebugMode)
     {
-        MaaObject.FrameworkLogDir = GlobalInfo.DebugFullPath;
-        MaaObject.DebugMode = enableDebugMode;
+        Maa.Utility.SetOption(GlobalOption.LogDir, GlobalInfo.DebugFullPath);
+        Maa.Utility.SetOption(GlobalOption.SaveDraw, enableDebugMode);
     }
 
     private static bool _logStarted = false;

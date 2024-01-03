@@ -2,19 +2,14 @@
   "version": 2,
   "dependencies": {
     "net7.0": {
-      "Maa.AgentBinary": {
+      "Maa.Framework": {
         "type": "Direct",
-        "requested": "[1.0.0, )",
-        "resolved": "1.0.0",
-        "contentHash": "09TsLd4LbaxoK68AZAg4MZFle/kkX8JZTbjRbkJYptyUCPCtdbVr8odukKG1CUzL4Wumbu+Fk7ppNX/OSlRMOA=="
-      },
-      "Maa.ToolKit.Extensions": {
-        "type": "Direct",
-        "requested": "[1.0.0-beta.2.1, )",
-        "resolved": "1.0.0-beta.2.1",
-        "contentHash": "thrl7AxC1syPjp3ls5BLaK3dnECjCcCJyLxAM42bqrMuoHqQ7E8gsrbOmy1w862CJYtSAdAVXY8HSa6PoeIH5w==",
+        "requested": "[1.4.0, )",
+        "resolved": "1.4.0",
+        "contentHash": "lDbbTkU06pjJPLChXaqE3vPeC1nfrU3wPkDvI32YD4HrNYZKpvl3LFNyF+6+vupbX4mRDsRge0KgKCiiEMljOw==",
         "dependencies": {
-          "Maa.Framework.Runtimes": "1.0.0-beta.2"
+          "Maa.AgentBinary": "1.0.0",
+          "Maa.Framework.Binding.Native": "1.4.0"
         }
       },
       "Serilog": {
@@ -50,59 +45,71 @@
           "Serilog": "2.10.0"
         }
       },
+      "Maa.AgentBinary": {
+        "type": "Transitive",
+        "resolved": "1.0.0",
+        "contentHash": "09TsLd4LbaxoK68AZAg4MZFle/kkX8JZTbjRbkJYptyUCPCtdbVr8odukKG1CUzL4Wumbu+Fk7ppNX/OSlRMOA=="
+      },
+      "Maa.Framework.Binding": {
+        "type": "Transitive",
+        "resolved": "1.4.0",
+        "contentHash": "WODdI8FaiRdrfVtY8iuYuLsWcJ02Nf4AZsU89U4zw/08cdwI3SmlwZCRYtiNcUM/M7h9wSccuokdAxssIGd1mg=="
+      },
+      "Maa.Framework.Binding.Native": {
+        "type": "Transitive",
+        "resolved": "1.4.0",
+        "contentHash": "v5Fs+L0Aedg3ozD2ZTy61Q1/wOu/Ch2G0LYorygbY0Sz+1U97XcOf3oTF79T5rQKtyMMpqv+GA2LHmYoiWy6Gw==",
+        "dependencies": {
+          "Maa.Framework.Binding": "1.4.0",
+          "Maa.Framework.Runtimes": "1.4.0"
+        }
+      },
       "Maa.Framework.Runtimes": {
-        "type": "CentralTransitive",
-        "requested": "[0.3.7, )",
-        "resolved": "1.0.0-beta.2",
-        "contentHash": "QKOddDHKVdSeps/l1qw8AAI4hxhGEisRNIZE8YEHVB1Q9vliM3Lo8C+UEOLdvWS7yZhUlRq9oUo7ju9hhOlk+A=="
+        "type": "Transitive",
+        "resolved": "1.4.0",
+        "contentHash": "d3ihdTmR9IejyMb/e7gWfjZ6jRchZaJ5GicK4p0ipC1za2oZ2Ji6zW5bX477Li4c14AfuEvl7CPG72rX5ezO0g=="
       }
     },
     "net7.0/linux-arm64": {
       "Maa.Framework.Runtimes": {
-        "type": "CentralTransitive",
-        "requested": "[0.3.7, )",
-        "resolved": "1.0.0-beta.2",
-        "contentHash": "QKOddDHKVdSeps/l1qw8AAI4hxhGEisRNIZE8YEHVB1Q9vliM3Lo8C+UEOLdvWS7yZhUlRq9oUo7ju9hhOlk+A=="
+        "type": "Transitive",
+        "resolved": "1.4.0",
+        "contentHash": "d3ihdTmR9IejyMb/e7gWfjZ6jRchZaJ5GicK4p0ipC1za2oZ2Ji6zW5bX477Li4c14AfuEvl7CPG72rX5ezO0g=="
       }
     },
     "net7.0/linux-x64": {
       "Maa.Framework.Runtimes": {
-        "type": "CentralTransitive",
-        "requested": "[0.3.7, )",
-        "resolved": "1.0.0-beta.2",
-        "contentHash": "QKOddDHKVdSeps/l1qw8AAI4hxhGEisRNIZE8YEHVB1Q9vliM3Lo8C+UEOLdvWS7yZhUlRq9oUo7ju9hhOlk+A=="
+        "type": "Transitive",
+        "resolved": "1.4.0",
+        "contentHash": "d3ihdTmR9IejyMb/e7gWfjZ6jRchZaJ5GicK4p0ipC1za2oZ2Ji6zW5bX477Li4c14AfuEvl7CPG72rX5ezO0g=="
       }
     },
     "net7.0/osx-arm64": {
       "Maa.Framework.Runtimes": {
-        "type": "CentralTransitive",
-        "requested": "[0.3.7, )",
-        "resolved": "1.0.0-beta.2",
-        "contentHash": "QKOddDHKVdSeps/l1qw8AAI4hxhGEisRNIZE8YEHVB1Q9vliM3Lo8C+UEOLdvWS7yZhUlRq9oUo7ju9hhOlk+A=="
+        "type": "Transitive",
+        "resolved": "1.4.0",
+        "contentHash": "d3ihdTmR9IejyMb/e7gWfjZ6jRchZaJ5GicK4p0ipC1za2oZ2Ji6zW5bX477Li4c14AfuEvl7CPG72rX5ezO0g=="
       }
     },
     "net7.0/osx-x64": {
       "Maa.Framework.Runtimes": {
-        "type": "CentralTransitive",
-        "requested": "[0.3.7, )",
-        "resolved": "1.0.0-beta.2",
-        "contentHash": "QKOddDHKVdSeps/l1qw8AAI4hxhGEisRNIZE8YEHVB1Q9vliM3Lo8C+UEOLdvWS7yZhUlRq9oUo7ju9hhOlk+A=="
+        "type": "Transitive",
+        "resolved": "1.4.0",
+        "contentHash": "d3ihdTmR9IejyMb/e7gWfjZ6jRchZaJ5GicK4p0ipC1za2oZ2Ji6zW5bX477Li4c14AfuEvl7CPG72rX5ezO0g=="
       }
     },
     "net7.0/win-arm64": {
       "Maa.Framework.Runtimes": {
-        "type": "CentralTransitive",
-        "requested": "[0.3.7, )",
-        "resolved": "1.0.0-beta.2",
-        "contentHash": "QKOddDHKVdSeps/l1qw8AAI4hxhGEisRNIZE8YEHVB1Q9vliM3Lo8C+UEOLdvWS7yZhUlRq9oUo7ju9hhOlk+A=="
+        "type": "Transitive",
+        "resolved": "1.4.0",
+        "contentHash": "d3ihdTmR9IejyMb/e7gWfjZ6jRchZaJ5GicK4p0ipC1za2oZ2Ji6zW5bX477Li4c14AfuEvl7CPG72rX5ezO0g=="
       }
     },
     "net7.0/win-x64": {
       "Maa.Framework.Runtimes": {
-        "type": "CentralTransitive",
-        "requested": "[0.3.7, )",
-        "resolved": "1.0.0-beta.2",
-        "contentHash": "QKOddDHKVdSeps/l1qw8AAI4hxhGEisRNIZE8YEHVB1Q9vliM3Lo8C+UEOLdvWS7yZhUlRq9oUo7ju9hhOlk+A=="
+        "type": "Transitive",
+        "resolved": "1.4.0",
+        "contentHash": "d3ihdTmR9IejyMb/e7gWfjZ6jRchZaJ5GicK4p0ipC1za2oZ2Ji6zW5bX477Li4c14AfuEvl7CPG72rX5ezO0g=="
       }
     }
   }

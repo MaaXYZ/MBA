@@ -93,6 +93,6 @@ public static class ConfigManager
             as JsonObject ?? new();
         jsonObject.Remove(nameof(Config.Document));
         jsonObject.Remove(nameof(Config.UI));
-        Log.Verbose("Current Config: {config}", jsonObject.ToString());
+        Log.Verbose("Native Config: {config}", jsonObject.ToString());
     }
 }

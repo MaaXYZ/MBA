@@ -1,5 +1,5 @@
 using MBA.Core.Enums;
-using MaaToolKit.Extensions.Enums;
+using MaaFramework.Binding;
 using System.Text.Json.Serialization;
 
 namespace MBA.Core.Data;
@@ -33,11 +33,11 @@ public class CoreConfig
 {
     public string Adb { get; set; } = "adb";
     public string AdbAddress { get; set; } = "127.0.0.1:5555";
-    public AdbControllerType Touch { get; set; } = AdbControllerType.InputPresetAdb;
-    public AdbControllerType ScreenCap { get; set; } = AdbControllerType.ScreenCapRawWithGzip;
+    public AdbControllerTypes Touch { get; set; } = AdbControllerTypes.InputPresetAdb;
+    public AdbControllerTypes ScreenCap { get; set; } = AdbControllerTypes.ScreencapRawWithGzip;
 
     [JsonIgnore]
-    public AdbControllerType ControlType => Touch | ScreenCap;
+    public AdbControllerTypes ControlType => Touch | ScreenCap;
 }
 
 public class GameConfig
@@ -93,8 +93,8 @@ public class ConfigDocument
 
     public string Adb { get; } = "adb.exe 所在路径，相对绝对均可，例如 C:/adb.exe，不要有中文";
     public string AdbAddress { get; } = "adb 连接地址，例如 127.0.0.1:5555";
-    public string Touch { get; } = $"点击方式：{AdbControllerType.InputPresetAdb}, {AdbControllerType.InputPresetMinitouch}, {AdbControllerType.InputPresetMaatouch}";
-    public string ScreenCap { get; } = $"截图方式：{AdbControllerType.ScreenCapFastestWay}, {AdbControllerType.ScreenCapRawByNetcat}, {AdbControllerType.ScreenCapRawWithGzip}, {AdbControllerType.ScreenCapEncode}, {AdbControllerType.ScreenCapEncodeToFile}, {AdbControllerType.ScreenCapMinicapDirect}, {AdbControllerType.ScreenCapMinicapStream}";
+    public string Touch { get; } = $"点击方式：{AdbControllerTypes.InputPresetAdb}, {AdbControllerTypes.InputPresetMinitouch}, {AdbControllerTypes.InputPresetMaatouch}";
+    public string ScreenCap { get; } = $"截图方式：{AdbControllerTypes.ScreencapFastestWay}, {AdbControllerTypes.ScreencapRawByNetcat}, {AdbControllerTypes.ScreencapRawWithGzip}, {AdbControllerTypes.ScreencapEncode}, {AdbControllerTypes.ScreencapEncodeToFile}, {AdbControllerTypes.ScreencapMinicapDirect}, {AdbControllerTypes.ScreencapMinicapStream}";
 
     #endregion
 

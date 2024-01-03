@@ -1,3 +1,4 @@
+using MBA.Core;
 using MBA.Core.Data;
 using MBA.Core.Enums;
 using MBA.Core.Managers;
@@ -44,7 +45,7 @@ internal class Program
             return -1;
         }
 
-        Core.Main.Current.Start();
+        Sensei.Agent.Start();
 
         TipNewVersion();
         TipPause();
@@ -305,10 +306,10 @@ $@"
         var parts = result.Split(':');
         if (parts.Length != 2)
         {
-            var count = MaaToolKit.Extensions.MaaTool.FindDevice(Config.Core.Adb);
-            for (ulong i = 0; i < count; i++)
+            var devices = Maa.Toolkit.Find(Config.Core.Adb);
+            foreach (var device in devices)
             {
-                if (MaaToolKit.Extensions.MaaTool.GetDeviceAdbSerial(i) == value)
+                if (device.AdbSerial == value)
                     return true;
             }
             return false;

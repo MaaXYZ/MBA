@@ -1,8 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <PackageReference Include="Maa.AgentBinary" />
-    <PackageReference Include="Maa.ToolKit.Extensions" />
+    <PackageReference Include="Maa.Framework" />
   </ItemGroup>
 
   <ItemGroup>

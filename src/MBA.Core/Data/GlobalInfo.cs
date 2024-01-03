@@ -23,7 +23,5 @@ public static class GlobalInfo
     internal static readonly string BaseResourceFullPath = Path.GetFullPath(BaseResource);
     internal static readonly string AdbConfigFileFullPath = Path.GetFullPath(AdbConfigFile);
 
-    internal static readonly int ScreenshotHeight = 720;
-
     public static bool IsCli { get; set; }
 }
