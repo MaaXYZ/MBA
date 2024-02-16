@@ -1,3 +1,8 @@
+> [!IMPORTANT]  
+> 由于开发者是个单线程生物，在 MaaFramework 的一些基础设施可用之前，此仓库中断维护（咕了）。
+> 
+> Since the developer is a single-threaded creature, this repository is in hiatus until some of the MaaFramework infrastructure is available.
+
 <div align="center">
 <img alt="LOGO" src="./assets/logo.ico" width="256" height="256" />
 
