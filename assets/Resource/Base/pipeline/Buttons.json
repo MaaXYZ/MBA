@@ -165,8 +165,25 @@
             "Click_EnterButton_OnTheRightSideOfThreeStarsFlag4",
             "Click_EnterButton_OnTheRightSideOfThreeStarsFlag5",
             "Click_EnterButton_OnTheRightSideOfThreeStarsFlag6",
+            "Sub_UpSwipe_OnClearedMission_Partial",
             "Stop"
         ]
+    },
+    "Sub_UpSwipe_OnClearedMission_Partial": {
+        "is_sub": false,
+        "action": "Swipe",
+        "end": [ 665, 555, 110, 130 ],
+        "begin": [ 665, 130, 110, 130 ],
+        "next": [
+            "Click_EnterButton_OnTheRightSideOfThreeStarsFlag1",
+            "Click_EnterButton_OnTheRightSideOfThreeStarsFlag2",
+            "Click_EnterButton_OnTheRightSideOfThreeStarsFlag3",
+            "Click_EnterButton_OnTheRightSideOfThreeStarsFlag4",
+            "Click_EnterButton_OnTheRightSideOfThreeStarsFlag5",
+            "Click_EnterButton_OnTheRightSideOfThreeStarsFlag6",
+            "Stop"
+        ],
+        "post_delay": 1500
     },
     "Click_EnterButton_OnTheRightSideOfThreeStarsFlag1": {
         "skip_review": 6,
